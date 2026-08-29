@@ -34,21 +34,21 @@ Metro demographic data and city-level wage data are also not perfectly aligned. 
 
 ## Consumer base
 
-| Metro | Population | Median household income | Bachelor’s degree or higher | Foreign-born | Non-English spoken at home |
-|---|---:|---:|---:|---:|---:|
-| **Los Angeles** | 12.93M | $96,405 | 39.0% | 33.4% | 53.5% ([Census Reporter](https://censusreporter.org/profiles/31000US31080-los-angeles-long-beach-anaheim-ca-metro-area/)) |
-| **San Francisco Bay Area** | 4.65M | $135,590 | 53.8% | 32.4% | 43.4% ([Census Reporter](https://censusreporter.org/profiles/31000US41860-san-francisco-oakland-fremont-ca-metro-area/)) |
-| **Seattle** | 4.15M | $112,388 | 48.5% | 22.1% | 27.9% ([Census Reporter](https://censusreporter.org/profiles/31000US42660-seattle-tacoma-bellevue-wa-metro-area/)) |
-| **New York City metro** | 19.94M | $99,852 | 45.0% | 30.8% | 41.3% ([Census Reporter](https://censusreporter.org/profiles/31000US35620-new-york-newark-jersey-city-ny-nj-metro-area/)) |
-| **Austin** | 2.55M | $99,897 | 52.3% | 18.5% | 30.1% ([Census Reporter](https://censusreporter.org/profiles/31000US12420-austin-round-rock-san-marcos-tx-metro-area/)) |
+| Metro | Population | Median household income | Bachelor’s degree or higher | Non-English spoken at home |
+|---|---:|---:|---:|---:|
+| **Los Angeles** | 12.93M | $96,405 | 39.0% | 53.5% ([Census Reporter](https://censusreporter.org/profiles/31000US31080-los-angeles-long-beach-anaheim-ca-metro-area/)) |
+| **San Francisco Bay Area** | 4.65M | $135,590 | 53.8% | 43.4% ([Census Reporter](https://censusreporter.org/profiles/31000US41860-san-francisco-oakland-fremont-ca-metro-area/)) |
+| **Seattle** | 4.15M | $112,388 | 48.5% | 27.9% ([Census Reporter](https://censusreporter.org/profiles/31000US42660-seattle-tacoma-bellevue-wa-metro-area/)) |
+| **New York City metro** | 19.94M | $99,852 | 45.0% | 41.3% ([Census Reporter](https://censusreporter.org/profiles/31000US35620-new-york-newark-jersey-city-ny-nj-metro-area/)) |
+| **Austin** | 2.55M | $99,897 | 52.3% | 30.1% ([Census Reporter](https://censusreporter.org/profiles/31000US12420-austin-round-rock-san-marcos-tx-metro-area/)) |
 
 ### Immediate implications
 
 **San Francisco has the greatest purchasing power and educational attainment**, but not necessarily the greatest number of customers.
 
-**Los Angeles has the strongest cultural bridge.** More than half the metro speaks a language other than English at home, and one-third is foreign-born. That makes it unusually suitable for a concept that must connect an authentic Chinese product with a broader American audience. ([Census Reporter](https://censusreporter.org/profiles/31000US31080-los-angeles-long-beach-anaheim-ca-metro-area/))
+**Los Angeles has a strong cultural bridge.** More than half the metro speaks a language other than English at home, alongside a large Asian population and several established Chinese commercial districts. That makes it unusually suitable for testing whether an authentic Chinese product can connect with a broader American audience. ([Census Reporter](https://censusreporter.org/profiles/31000US31080-los-angeles-long-beach-anaheim-ca-metro-area/))
 
-**New York has the largest addressable population and international audience**, but it is not one unified market. Flushing, the East Village, Williamsburg and Midtown serve completely different customers and economics.
+**New York has the largest addressable population and visitor/business audience**, but it is not one unified market. Flushing, the East Village, Williamsburg and Midtown serve completely different customers and economics.
 
 **Austin is younger, highly educated and highly mobile.** About 17% of residents had moved during the previous year, which suggests a population regularly forming new social connections and habits—but also less cultural depth in specialist Chinese tea than LA or New York. ([Census Reporter](https://censusreporter.org/profiles/31000US12420-austin-round-rock-san-marcos-tx-metro-area/))
 

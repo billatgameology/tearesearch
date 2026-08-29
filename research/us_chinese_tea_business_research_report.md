@@ -13,7 +13,7 @@
 
 For the next 12 months, build the business as a **content-led Chinese tea brand supported by paid tastings, pop-ups, sampler sales, e-commerce, corporate/private events, and selective wholesale**. Use the first 90 days to test Los Angeles / the San Gabriel Valley, Seattle, and Austin. Choose one market for a longer operating test only after paid demand and repeat purchasing are visible.
 
-The first physical location, if one becomes justified, should be an **appointment-led tasting studio or small showroom**, not a full manager-operated tea house. A conventional staffed tea house is the last escalation because it combines the highest capital requirement with the founder's immigration constraint and likely mismatch with daily retail operations.
+The first physical location, if one becomes justified, should be an **appointment-led tasting studio or small showroom**, not a full manager-operated tea house. A conventional staffed tea house is the last escalation because it combines the highest capital requirement with the greatest operating complexity and dependence on reliable daily retail execution.
 
 ### Why
 
@@ -25,19 +25,11 @@ The first physical location, if one becomes justified, should be an **appointmen
 
 4. **Physical retail has visible failure and contraction cases.** Denong ended its original Pasadena retail operation in April 2024; Tao of Tea ended its Lan Su operation after a long run while continuing other channels; T2 exited U.S. physical operations in 2023. These examples do not prove that tea stores cannot work, but they show that brand quality and beautiful spaces do not neutralize rent, labor and geography risk.[S26][S27][S28]
 
-5. **The founder can own a U.S. company, but the business cannot rely on the founder performing daily U.S. work as a visitor.** USCIS distinguishes meetings, funding, space and contract negotiation from operating or working for the business. That makes manager-independent systems a design requirement, not an optional future improvement.[S04][S05]
+5. **The business must work through repeatable local systems, not founder heroics.** The LLC should be able to deliver consistent service, protect inventory and customer data, and generate repeat purchase through a trained paid operator. That makes manager-independent systems a design requirement, not an optional future improvement.
 
 ### The core question
 
-The business should not be organized around:
-
-> How can the founder remain in the United States?
-
-It should be organized around:
-
 > Can the company repeatedly acquire U.S. customers who pay enough, reorder often enough, and refer enough people to support a paid local operator?
-
-Immigration strategy should follow a proven business—not substitute for proof.
 
 ---
 
@@ -313,35 +305,18 @@ At 30% below break-even revenue, the tea-house scenario loses about **$19,500 pe
 
 ---
 
-## 8. Ownership, immigration, tax and controls
+## 8. U.S. LLC administration, tax and controls
 
-### Entity ownership is not work authorization
-
-A foreign owner can participate in ownership and strategic governance, but visitor status does not authorize running shifts or performing ordinary productive labor. USCIS specifically notes that a B-1 visitor may not begin operating or working for the new business.[S04]
-
-Permissible activities can include meetings, securing space/funding and negotiating contracts, depending on the facts.[S04][S05] Each trip should have a defined business purpose, and the I-94 admitted-until date—not a theoretical annual allowance—controls the authorized stay.[S06]
-
-### E-2 is not the straightforward route for a mainland Chinese founder
-
-E-2 depends on treaty-country nationality. Mainland China is not on the current E-2 treaty list.[S07] Another nationality, a qualifying existing Chinese company with a potential L-1 structure, or other pathways may change the analysis, but that requires individual immigration counsel.
-
-### LLC tax compliance is easy to underestimate
-
-A wholly foreign-owned single-member LLC can be disregarded for ordinary income-tax classification while still being treated as a reporting corporation for Form 5472 purposes. Failure to file correctly can trigger a $25,000 initial penalty.[S08][S09]
+This research assumes a Chinese founder owns a U.S. LLC. It does not analyze personal legal status. Entity classification, federal and state tax, sales tax, payroll, related-party payments, financing and reporting obligations should be confirmed for the actual company with qualified U.S. legal and tax advisers.
 
 Before capital moves:
 
-- select entity/tax classification with a cross-border CPA,
-- document capital contributions and owner payments,
+- select the LLC's entity and tax treatment with a qualified CPA,
+- document capital contributions, owner payments, loans and reimbursements,
 - separate company and personal funds,
-- determine sales tax, payroll and state filing duties,
-- establish monthly bookkeeping.
-
-### BOI and financing are time-sensitive
-
-FinCEN's August 11, 2026 final rule currently exempts U.S.-created companies from federal BOI reporting.[S10] This should be rechecked at formation.
-
-Current 2026 SBA policy bars foreign nationals from SBA-backed lending.[S11] The plan should not assume SBA startup financing. Conventional bank credit, founder capital, private investors, equipment leasing or a local partner's financing may still be possible, but each has different control consequences.
+- determine sales-tax, payroll and state filing duties,
+- establish monthly bookkeeping and inventory controls,
+- recheck then-current ownership-reporting and lender requirements.
 
 ### Recommended local operating structure
 
@@ -462,7 +437,7 @@ This can be reduced if the founder personally creates content and has low travel
   3. guided sensory/cultural experience.
 - Select four to six beginner-friendly teas from a U.S. importer.
 - Build landed cost, packaging and margin assumptions.
-- Engage a cross-border CPA and immigration/business attorney for issue spotting.
+- Engage a qualified U.S. CPA and business attorney for entity, tax, contract and compliance issue spotting.
 
 ### Weeks 2–4: test language and payment
 
@@ -549,7 +524,7 @@ Passing these gates does not automatically make a lease good. It merely makes si
 - 90-day repeat stays below 20% after product and follow-up changes,
 - sales occur only when the founder personally hosts,
 - physical economics cannot support a paid manager,
-- the plan relies on visitor status to perform daily labor,
+- the economics rely on unpaid or unavailable founder labor,
 - the business needs more than $350,000 before showing repeat demand.
 
 ### Change customer or offer when
@@ -597,9 +572,9 @@ The opportunity is credible enough to test and too unproven to justify a store.
 
 The best near-term company is not “a tea shop.” It is:
 
-> **A cross-border Chinese tea education and commerce brand that uses content to create discovery, paid experiences to create trust, and repeat product sales to prove the business before adding real estate.**
+> **A U.S.-based Chinese tea education and commerce brand that uses content to create discovery, paid experiences to create trust, and repeat product sales to prove the business before adding real estate.**
 
-That structure preserves both China and U.S. options, fits the founder's likely strengths, and makes immigration and store operations downstream problems rather than the first bet.
+That structure preserves operating flexibility, fits the founder's likely strengths, and makes store operations a later decision rather than the first bet.
 
 ## Selected source register
 
@@ -608,11 +583,6 @@ The complete source ledger is included in the accompanying workbook. Key referen
 - [S01] U.S. Census Bureau, National Hot Tea Month: https://www.census.gov/newsroom/stories/hot-tea-month.html
 - [S02] Beverage Industry / Circana: https://www.bevindustry.com/articles/97646-2025-state-of-the-beverage-industry-tea-market-sees-sales-up-volume-declines
 - [S03] Eater, Tea Is So Hot Right Now: https://www.eater.com/drinks/981280/modern-late-night-teahouse-trend-heytea-expansion
-- [S04] USCIS entrepreneur pathways: https://www.uscis.gov/working-in-the-united-states/options-for-alien-entrepreneurs-to-work-in-the-united-states
-- [S06] State Department I-94 guidance: https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/visa-expiration-date.html
-- [S08] IRS Publication 519: https://www.irs.gov/publications/p519
-- [S09] IRS Form 5472 instructions: https://www.irs.gov/instructions/i5472
-- [S10] FinCEN BOI: https://www.fincen.gov/boi
 - [S12] FDA importing food: https://www.fda.gov/food/food-imports-exports/importing-food-products-united-states
 - [S13] FDA FSVP: https://www.fda.gov/food/food-safety-modernization-act-fsma/fsma-final-rule-foreign-supplier-verification-programs-fsvp-importers-food-humans-and-animals
 - [S14] U.S. Harmonized Tariff Schedule: https://hts.usitc.gov/

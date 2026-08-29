@@ -2,7 +2,8 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   output: "static",
-  site: "https://example.github.io",
+  site: "https://billatgameology.github.io",
+  base: "/tearesearch",
   build: {
     format: "directory"
   },

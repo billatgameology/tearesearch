@@ -271,13 +271,13 @@ Interpretation notes:
 
 7.1 Consumer base
 
-  Market                    Population  Median household  Bachelor's+  Foreign-born  Non-English at home
-  ------------------------  ----------  ----------------  -----------  ------------  -------------------
-  Los Angeles metro          12.93M       $96,405           39.0%        33.4%         53.5%
-  San Francisco metro         4.65M      $135,590           53.8%        32.4%         43.4%
-  Seattle metro               4.15M      $112,388           48.5%        22.1%         27.9%
-  New York City metro        19.94M       $99,852           45.0%        30.8%         41.3%
-  Austin metro                2.55M       $99,897           52.3%        18.5%         30.1%
+  Market                    Population  Median household  Bachelor's+  Non-English at home
+  ------------------------  ----------  ----------------  -----------  -------------------
+  Los Angeles metro          12.93M       $96,405           39.0%         53.5%
+  San Francisco metro         4.65M      $135,590           53.8%         43.4%
+  Seattle metro               4.15M      $112,388           48.5%         27.9%
+  New York City metro        19.94M       $99,852           45.0%         41.3%
+  Austin metro                2.55M       $99,897           52.3%         30.1%
 
 Sources:
   https://censusreporter.org/profiles/31000US31080-los-angeles-long-beach-anaheim-ca-metro-area/

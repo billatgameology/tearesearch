@@ -5,7 +5,8 @@ const browser = await chromium.launch({
   headless: true
 });
 const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
-await page.goto("http://127.0.0.1:4321/", { waitUntil: "networkidle" });
+const siteUrl = process.env.SITE_URL ?? "http://127.0.0.1:4321/tearesearch/";
+await page.goto(siteUrl, { waitUntil: "networkidle" });
 await page.locator("[data-language-toggle]").click();
 await page.waitForTimeout(300);
 

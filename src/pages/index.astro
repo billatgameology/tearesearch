@@ -10,8 +10,8 @@ import {
   customerNeeds,
   models,
   cities,
+  marketDossiers,
   cases,
-  laWorkstreams,
   leaseGates,
   roadmap
 } from "../data/research";
@@ -32,6 +32,11 @@ const cityMapPoints = cities.map((city) => {
   const point = projection(city.coordinates as [number, number]) || [0, 0];
   return { ...city, x: point[0], y: point[1] };
 });
+
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const publicUrl = (path: string) => `${baseUrl}${path.replace(/^\/+/, "")}`;
 ---
 
 <BaseLayout
@@ -275,10 +280,111 @@ const cityMapPoints = cities.map((city) => {
       </div>
     </section>
 
+    <section class="chapter market-reports-section" id="market-reports">
+      <div class="shell">
+        <header class="section-heading reveal">
+          <span class="section-index">05 / COMPLETED MARKET RESEARCH</span>
+          <p class="eyebrow">Five metros, one decision framework</p>
+          <h2>The location research is complete enough to compare—not to lease.</h2>
+          <p>
+            Each report separates observed evidence from inference and scores neighborhoods for three different uses. The scores describe structural fit; they are not sales forecasts or site recommendations.
+          </p>
+        </header>
+
+        <div class="report-status-grid reveal" aria-label="Market research status">
+          <article><strong>5</strong><span>Completed metro reports</span></article>
+          <article><strong>5</strong><span>Markets ready for paid tests</span></article>
+          <article><strong>0</strong><span>Markets ready for a lease</span></article>
+        </div>
+
+        <div class="market-readout reveal">
+          <p class="eyebrow">Cross-market readout</p>
+          <div class="market-readout__grid">
+            {marketDossiers.map((market) => (
+              <article>
+                <span>{market.code}</span>
+                <h3>{market.name}</h3>
+                <p>{market.advantage}</p>
+                <small>{market.constraint}</small>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div class="market-dossiers">
+          {marketDossiers.map((market, index) => (
+            <article class="market-dossier reveal" style={`--delay:${Math.min(index * 70, 210)}ms`}>
+              <header class="market-dossier__header">
+                <div>
+                  <span class="market-dossier__index">{String(index + 1).padStart(2, "0")} / {market.code}</span>
+                  <h3>{market.name}</h3>
+                </div>
+                <span class="status status--verified">{market.status}</span>
+              </header>
+
+              <div class="market-dossier__question">
+                <p class="eyebrow">The market question</p>
+                <h4>{market.question}</h4>
+                <p>{market.thesis}</p>
+              </div>
+
+              <div class="market-dossier__strategy">
+                <dl>
+                  <div><dt>Best-fit format</dt><dd>{market.format}</dd></div>
+                  <div><dt>Validation lanes</dt><dd>{market.lanes}</dd></div>
+                </dl>
+                <div class="market-dossier__offers" aria-label={`${market.name} observed price bands`}>
+                  {market.offers.map(([label, value]) => (
+                    <div><span>{label}</span><strong>{value}</strong></div>
+                  ))}
+                </div>
+              </div>
+
+              <div class="location-scorecard">
+                <div class="location-scorecard__heading">
+                  <div>
+                    <p class="eyebrow">Selected location readout</p>
+                    <h4>Different formats produce different winners.</h4>
+                  </div>
+                  <div class="location-scorecard__legend" aria-label="Score columns">
+                    <span><i>C</i> Community</span>
+                    <span><i>F</i> Flagship</span>
+                    <span><i>B</i> Pop-up / B2B</span>
+                  </div>
+                </div>
+                <div class="location-scorecard__rows">
+                  {market.locations.map((location) => (
+                    <article>
+                      <div><h5>{location.name}</h5><p>{location.use}</p></div>
+                      <div class="location-scorecard__scores">
+                        <span aria-label={`Community score ${location.community}`}><i>C</i>{location.community.toFixed(1)}</span>
+                        <span aria-label={`Flagship score ${location.flagship}`}><i>F</i>{location.flagship.toFixed(1)}</span>
+                        <span aria-label={`Pop-up or B2B score ${location.b2b}`}><i>B</i>{location.b2b.toFixed(1)}</span>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+
+              <footer class="market-dossier__footer">
+                <div><span>Next evidence step</span><p>{market.nextMove}</p></div>
+                <a href={publicUrl(market.report)} target="_blank" rel="noopener">Read full market report <span aria-hidden="true">↗</span></a>
+              </footer>
+            </article>
+          ))}
+        </div>
+
+        <div class="market-pattern reveal">
+          <p class="eyebrow">Pattern across all five reports</p>
+          <blockquote>Demand should be proved through portable, paid experiences and tracked replenishment before any market is asked to carry permanent occupancy.</blockquote>
+        </div>
+      </div>
+    </section>
+
     <section class="chapter evidence-section" id="evidence">
       <div class="shell">
         <header class="section-heading reveal">
-          <span class="section-index">05 / COMPARABLE EVIDENCE</span>
+          <span class="section-index">06 / COMPARABLE EVIDENCE</span>
           <p class="eyebrow">What prior attempts reveal</p>
           <h2>A beloved room can still be a fragile business.</h2>
           <p>
@@ -313,7 +419,7 @@ const cityMapPoints = cities.map((city) => {
     <section class="chapter economics-section" id="economics">
       <div class="shell">
         <header class="section-heading reveal">
-          <span class="section-index">06 / UNIT ECONOMICS</span>
+          <span class="section-index">07 / UNIT ECONOMICS</span>
           <p class="eyebrow">The cost of being wrong</p>
           <h2>Rent turns uncertainty into a monthly obligation.</h2>
           <p>
@@ -359,49 +465,6 @@ const cityMapPoints = cities.map((city) => {
             </div>
             <p class="economics-results__note">Excludes debt service and investor return. Change the inputs; do not mistake precision for certainty.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="chapter la-section" id="los-angeles">
-      <div class="la-section__glow" aria-hidden="true"></div>
-      <div class="shell">
-        <header class="section-heading section-heading--light reveal">
-          <span class="section-index">07 / NEXT RESEARCH LAYER</span>
-          <p class="eyebrow">Los Angeles / San Gabriel Valley</p>
-          <h2>From directional ranking to decision-grade local evidence.</h2>
-          <p>
-            A separate research workstream is now developing the first consistent metro-level dataset. This section is structured to accept verified rows, not another standalone narrative.
-          </p>
-        </header>
-
-        <div class="la-dashboard reveal">
-          <div class="la-dashboard__topline">
-            <div>
-              <span class="pulse" aria-hidden="true"></span>
-              <p>Deep-dive research in progress</p>
-            </div>
-            <span>Schema v1.0</span>
-          </div>
-          <div class="la-workstreams">
-            {laWorkstreams.map((item) => (
-              <article>
-                <span class="la-workstreams__number">{item.number}</span>
-                <div><h3>{item.title}</h3><p>{item.detail}</p></div>
-                <span class="la-workstreams__state">{item.state}</span>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        <div class="la-schema reveal">
-          <div>
-            <p class="eyebrow">Designed for comparison</p>
-            <h3>One schema, five future markets.</h3>
-          </div>
-          <p>
-            Each business, neighborhood and evidence row will carry a source URL, publication or access date, represented data period and confidence level. Once LA/SGV is complete, the same structure can be applied to Seattle, Austin, San Francisco and New York.
-          </p>
         </div>
       </div>
     </section>
@@ -494,10 +557,10 @@ const cityMapPoints = cities.map((city) => {
         <h2>Evidence before real estate.</h2>
       </div>
       <div class="site-footer__links">
-        <a href="/research/us-chinese-tea-business-report.txt" target="_blank" rel="noopener">Open research report <span>↗</span></a>
-        <a href="/research/full-research-transcript.txt" target="_blank" rel="noopener">Open full research transcript <span>↗</span></a>
-        <a href="/research/five-market-study.txt" target="_blank" rel="noopener">Open five-market study <span>↗</span></a>
-        <a href="/research/comparable-business-cases.txt" target="_blank" rel="noopener">Open comparable cases <span>↗</span></a>
+        <a href={publicUrl("research/us-chinese-tea-business-report.txt")} target="_blank" rel="noopener">Open research report <span>↗</span></a>
+        <a href={publicUrl("research/full-research-transcript.txt")} target="_blank" rel="noopener">Open full research transcript <span>↗</span></a>
+        <a href={publicUrl("research/five-market-study.txt")} target="_blank" rel="noopener">Open five-market study <span>↗</span></a>
+        <a href={publicUrl("research/comparable-business-cases.txt")} target="_blank" rel="noopener">Open comparable cases <span>↗</span></a>
       </div>
       <div class="site-footer__fineprint">
         <p>Research date: August 2026</p>
@@ -802,24 +865,58 @@ const cityMapPoints = cities.map((city) => {
   .result-grid strong { display: block; margin-top: 4px; font-family: var(--serif); font-size: 1.7rem; font-weight: 400; }
   .economics-results__note { margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: .68rem; }
 
-  .la-section { position: relative; overflow: hidden; background: var(--forest-deep); color: var(--paper-bright); }
-  .la-section__glow { position: absolute; top: -300px; right: -300px; width: 720px; height: 720px; border-radius: 50%; background: rgba(99,163,134,.13); filter: blur(30px); }
-  .section-heading--light .eyebrow { color: var(--celadon); }
-  .section-heading--light p { color: rgba(255,255,255,.62); }
-  .la-dashboard { position: relative; overflow: hidden; border: 1px solid var(--line-light); border-radius: var(--radius); background: rgba(255,255,255,.035); }
-  .la-dashboard__topline { display: flex; justify-content: space-between; gap: 16px; padding: 18px 20px; border-bottom: 1px solid var(--line-light); color: rgba(255,255,255,.55); font-family: var(--mono); font-size: .58rem; letter-spacing: .06em; text-transform: uppercase; }
-  .la-dashboard__topline div { display: flex; align-items: center; gap: 8px; }
-  .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--celadon); box-shadow: 0 0 0 0 rgba(171,196,183,.6); animation: pulse 2s infinite; }
-  @keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(171,196,183,0); } 100% { box-shadow: 0 0 0 0 rgba(171,196,183,0); } }
-  .la-workstreams article { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 20px; border-bottom: 1px solid var(--line-light); }
-  .la-workstreams article:last-child { border-bottom: 0; }
-  .la-workstreams__number { color: var(--brass); font-family: var(--mono); font-size: .62rem; }
-  .la-workstreams h3 { font-family: var(--serif); font-size: 1.22rem; font-weight: 400; }
-  .la-workstreams p { margin-top: 3px; color: rgba(255,255,255,.52); font-size: .75rem; }
-  .la-workstreams__state { grid-column: 2; width: max-content; margin-top: 7px; color: var(--celadon); font-family: var(--mono); font-size: .55rem; letter-spacing: .05em; text-transform: uppercase; }
-  .la-schema { display: grid; gap: 24px; margin-top: 52px; padding-top: 34px; border-top: 1px solid var(--line-light); }
-  .la-schema h3 { margin-top: 12px; font-family: var(--serif); font-size: 2.4rem; font-weight: 400; letter-spacing: -.04em; line-height: 1; }
-  .la-schema > p { color: rgba(255,255,255,.6); font-size: .9rem; }
+  .market-reports-section { background: var(--forest-deep); color: var(--paper-bright); }
+  .market-reports-section .section-heading .eyebrow { color: var(--celadon); }
+  .market-reports-section .section-heading > p:last-child { color: rgba(255,255,255,.62); }
+  .report-status-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-bottom: 18px; border: 1px solid var(--line-light); }
+  .report-status-grid article { min-width: 0; padding: 18px 12px; border-right: 1px solid var(--line-light); }
+  .report-status-grid article:last-child { border-right: 0; }
+  .report-status-grid strong { display: block; color: var(--celadon); font-family: var(--serif); font-size: clamp(2.2rem, 10vw, 4rem); font-weight: 400; line-height: .85; }
+  .report-status-grid span { display: block; margin-top: 10px; color: rgba(255,255,255,.5); font-family: var(--mono); font-size: .52rem; line-height: 1.4; text-transform: uppercase; }
+  .market-readout { padding: 24px; border: 1px solid var(--line-light); background: rgba(255,255,255,.035); }
+  .market-readout > .eyebrow { color: var(--brass); }
+  .market-readout__grid { display: grid; gap: 1px; margin-top: 22px; background: var(--line-light); }
+  .market-readout__grid article { padding: 22px 18px; background: var(--forest-deep); }
+  .market-readout__grid article > span { color: var(--brass); font-family: var(--mono); font-size: .58rem; }
+  .market-readout__grid h3 { margin-top: 18px; font-family: var(--serif); font-size: 1.65rem; font-weight: 400; line-height: 1; }
+  .market-readout__grid p { margin-top: 12px; color: rgba(255,255,255,.72); font-size: .78rem; }
+  .market-readout__grid small { display: block; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line-light); color: rgba(255,255,255,.42); font-size: .68rem; line-height: 1.5; }
+  .market-dossiers { display: grid; gap: 18px; margin-top: 54px; }
+  .market-dossier { overflow: hidden; border-radius: var(--radius); background: var(--paper-bright); color: var(--ink); box-shadow: 0 24px 70px rgba(0,0,0,.15); }
+  .market-dossier__header { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; padding: 24px; border-bottom: 1px solid var(--line); }
+  .market-dossier__index { color: var(--brass); font-family: var(--mono); font-size: .58rem; }
+  .market-dossier__header h3 { margin-top: 9px; font-family: var(--serif); font-size: clamp(2rem, 9vw, 4.4rem); font-weight: 400; letter-spacing: -.045em; line-height: .9; }
+  .market-dossier__header .status { flex: 0 0 auto; margin-top: 2px; }
+  .market-dossier__question { padding: 30px 24px; }
+  .market-dossier__question h4 { max-width: 860px; margin-top: 16px; font-family: var(--serif); font-size: clamp(1.9rem, 8vw, 3.6rem); font-weight: 400; letter-spacing: -.035em; line-height: 1.02; }
+  .market-dossier__question > p:last-child { max-width: 780px; margin-top: 18px; color: var(--ink-soft); font-size: .9rem; }
+  .market-dossier__strategy { display: grid; gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .market-dossier__strategy > dl { display: grid; gap: 24px; padding: 24px; background: var(--paper); }
+  .market-dossier__strategy dt { color: var(--ink-soft); font-family: var(--mono); font-size: .55rem; letter-spacing: .06em; text-transform: uppercase; }
+  .market-dossier__strategy dd { margin-top: 7px; font-family: var(--serif); font-size: 1.22rem; line-height: 1.18; }
+  .market-dossier__offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); }
+  .market-dossier__offers div { min-width: 0; padding: 22px 12px; background: var(--celadon-pale); }
+  .market-dossier__offers span { display: block; min-height: 30px; color: var(--ink-soft); font-family: var(--mono); font-size: .49rem; line-height: 1.35; text-transform: uppercase; }
+  .market-dossier__offers strong { display: block; margin-top: 8px; font-family: var(--serif); font-size: clamp(1.15rem, 5vw, 1.8rem); font-weight: 400; letter-spacing: -.03em; line-height: 1; white-space: nowrap; }
+  .location-scorecard { padding: 28px 24px; }
+  .location-scorecard__heading { display: grid; gap: 18px; }
+  .location-scorecard__heading h4 { margin-top: 8px; font-family: var(--serif); font-size: 1.5rem; font-weight: 400; line-height: 1.1; }
+  .location-scorecard__legend { display: flex; flex-wrap: wrap; gap: 8px 14px; color: var(--ink-soft); font-size: .58rem; }
+  .location-scorecard__legend i, .location-scorecard__scores i { display: inline-grid; place-items: center; width: 18px; height: 18px; border: 1px solid var(--line); border-radius: 50%; color: var(--brass); font-family: var(--mono); font-size: .5rem; font-style: normal; }
+  .location-scorecard__rows { margin-top: 20px; border-top: 1px solid var(--line); }
+  .location-scorecard__rows article { display: grid; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .location-scorecard__rows h5 { font-family: var(--serif); font-size: 1.25rem; font-weight: 400; }
+  .location-scorecard__rows p { margin-top: 3px; color: var(--ink-soft); font-size: .68rem; }
+  .location-scorecard__scores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+  .location-scorecard__scores span { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: .66rem; }
+  .market-dossier__footer { display: grid; gap: 20px; padding: 24px; background: var(--paper-deep); }
+  .market-dossier__footer > div > span { color: var(--vermillion); font-family: var(--mono); font-size: .55rem; letter-spacing: .05em; text-transform: uppercase; }
+  .market-dossier__footer p { max-width: 720px; margin-top: 7px; color: var(--ink-soft); font-size: .78rem; }
+  .market-dossier__footer a { display: inline-flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; padding: 12px 14px; border-radius: 4px; background: var(--forest); color: var(--paper-bright); font-size: .68rem; font-weight: 700; }
+  .market-dossier__footer a:hover { background: var(--jade); }
+  .market-pattern { margin-top: 54px; padding-top: 30px; border-top: 1px solid var(--line-light); }
+  .market-pattern .eyebrow { color: var(--celadon); }
+  .market-pattern blockquote { max-width: 960px; margin-top: 18px; font-family: var(--serif); font-size: clamp(2rem, 8vw, 4.8rem); letter-spacing: -.045em; line-height: 1.02; }
 
   .synthesis-grid { display: grid; gap: 12px; }
   .synthesis-grid article { min-height: 245px; padding: 24px; border: 1px solid var(--line); background: rgba(250,247,239,.45); }
@@ -870,8 +967,8 @@ const cityMapPoints = cities.map((city) => {
     .signal-grid, .synthesis-grid { grid-template-columns: repeat(2, 1fr); }
     .proof-grid { grid-template-columns: repeat(2, 1fr); }
     .opportunity-grid, .city-card-grid { grid-template-columns: repeat(2, 1fr); }
-    .la-workstreams { display: grid; grid-template-columns: repeat(2, 1fr); }
-    .la-workstreams article:nth-child(odd) { border-right: 1px solid var(--line-light); }
+    .market-readout__grid { grid-template-columns: repeat(2, 1fr); }
+    .location-scorecard__rows article { grid-template-columns: minmax(180px, 1fr) 280px; align-items: center; }
     .sequence { grid-template-columns: repeat(5, 1fr); }
     .sequence article:not(:last-child)::after { right: -10px; bottom: 50%; content: "→"; transform: translateY(50%); }
   }
@@ -910,7 +1007,9 @@ const cityMapPoints = cities.map((city) => {
     .economics-controls, .economics-results { padding: 48px; }
     .result-grid { grid-template-columns: repeat(3, 1fr); }
     .result-grid div:last-child { grid-column: auto; }
-    .la-schema { grid-template-columns: .8fr 1.2fr; align-items: end; }
+    .market-dossier__strategy { grid-template-columns: 1fr 1fr; }
+    .market-dossier__footer { grid-template-columns: 1fr auto; align-items: center; }
+    .market-dossier__footer a { width: auto; min-width: 210px; }
     .synthesis-grid { grid-template-columns: repeat(3, 1fr); }
     .recommendation-section { padding: 170px 0 110px; }
     .recommendation-grid { grid-template-columns: 1fr 1fr; }
@@ -927,9 +1026,11 @@ const cityMapPoints = cities.map((city) => {
     .city-card-grid { grid-template-columns: repeat(6, 1fr); }
     .city-card { grid-column: span 2; }
     .city-card:nth-child(4) { grid-column: 2 / span 2; }
-    .la-workstreams { grid-template-columns: repeat(5, 1fr); }
-    .la-workstreams article { min-height: 180px; grid-template-columns: 1fr; align-content: space-between; border-right: 1px solid var(--line-light); }
-    .la-workstreams article:nth-child(5n) { border-right: 0; }
-    .la-workstreams__state { grid-column: 1; }
+    .report-status-grid article { padding: 26px 24px; }
+    .market-readout__grid { grid-template-columns: repeat(5, 1fr); }
+    .market-dossier__header, .market-dossier__question, .location-scorecard, .market-dossier__footer { padding-inline: 38px; }
+    .market-dossier__strategy > dl { padding: 32px 38px; }
+    .market-dossier__offers div { padding: 30px 22px; }
+    .location-scorecard__heading { grid-template-columns: 1fr auto; align-items: end; }
   }
 </style>

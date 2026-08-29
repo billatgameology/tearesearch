@@ -206,6 +206,124 @@ export const cities = [
   }
 ];
 
+export const marketDossiers = [
+  {
+    code: "LA",
+    name: "Los Angeles / SGV",
+    status: "Paid validation justified",
+    question: "Can one metro prove both mainstream appeal and specialist credibility?",
+    thesis: "Use Pasadena to test a polished beginner experience and Arcadia/SGV to test provenance, product authority and repeat purchasing.",
+    format: "Reservation-led studio + mobile events",
+    lanes: "Pasadena mainstream-premium · Arcadia/SGV authenticity and product",
+    advantage: "The strongest two-sided test: visitor and institutional demand alongside a deep Chinese community.",
+    constraint: "High rent, high labor cost and several distinct submarkets make a single storefront thesis unreliable.",
+    nextMove: "Run matched paid sessions in Pasadena and Arcadia before extending to Monterey Park and Alhambra.",
+    offers: [
+      ["Hero drink", "$5–$10"],
+      ["Guided tasting", "$35–$55"],
+      ["Premium occasion", "$69–$100"]
+    ],
+    locations: [
+      { name: "Arcadia", use: "Authenticity + product", community: 77.6, flagship: 70.7, b2b: 69.4 },
+      { name: "Pasadena", use: "Mainstream paid test", community: 48.2, flagship: 68.2, b2b: 66.9 },
+      { name: "Culver City", use: "B2B + private events", community: 53.8, flagship: 75.0, b2b: 72.8 }
+    ],
+    report: "/research/la-sgv-market-research.txt"
+  },
+  {
+    code: "SF",
+    name: "San Francisco Bay Area",
+    status: "Paid validation justified",
+    question: "Can a new offer earn its place in an already tea-literate region?",
+    thesis: "Separate San Francisco destination demand, East Bay education demand and South Bay product/B2B demand instead of treating the Bay Area as one market.",
+    format: "Reservation-led studio + portable events",
+    lanes: "SF destination · East Bay education · South Bay product and B2B",
+    advantage: "The deepest specialist ecosystem and multiple institutional, visitor and employer channels.",
+    constraint: "Free retail tastings raise the bar for paid education while wages and occupancy remain exceptionally high.",
+    nextMove: "Sequence Chinatown/North Beach collaborations, Mission ticketed sessions, resident repeat tests, then South Bay B2B.",
+    offers: [
+      ["Hero drink", "$5–$8"],
+      ["Guided class", "$30–$75"],
+      ["Membership signal", "$59–$108/mo"]
+    ],
+    locations: [
+      { name: "Cupertino", use: "Product + B2B", community: 68.8, flagship: 73.9, b2b: 71.8 },
+      { name: "North San Jose", use: "Employer groups", community: 65.3, flagship: 67.6, b2b: 71.1 },
+      { name: "SF Chinatown / North Beach", use: "Heritage + visitors", community: 65.0, flagship: 59.7, b2b: 65.6 }
+    ],
+    report: "/research/sf-bay-area-market-research.txt"
+  },
+  {
+    code: "SEA",
+    name: "Seattle / Eastside",
+    status: "Paid validation justified",
+    question: "Can Eastside purchasing power and Seattle tea literacy become repeat behavior?",
+    thesis: "Use Bellevue and Redmond for premium groups and corporate demand; use the Chinatown–International District and Ballard/Fremont for cultural and specialist tests.",
+    format: "Reservation-led experience + mobile retail",
+    lanes: "Bellevue/Redmond premium groups · Seattle culture and specialist retail",
+    advantage: "Strong Eastside income, Chinese-community and employer signals now linked more directly by regional rail.",
+    constraint: "Specialist incumbents, a high wage floor and uncertain storefront leisure conversion remain unresolved.",
+    nextMove: "Launch matched beginner sessions in four contexts, sell private groups, then measure retail attachment and 30-day replenishment.",
+    offers: [
+      ["Hero drink", "$5–$8.50"],
+      ["Guided tasting", "$30–$38"],
+      ["Premium occasion", "$55–$75"]
+    ],
+    locations: [
+      { name: "Bellevue", use: "First Eastside test", community: 73.8, flagship: 77.8, b2b: 79.2 },
+      { name: "Redmond", use: "Employer + repeat", community: 65.9, flagship: 72.8, b2b: 74.8 },
+      { name: "Downtown / SLU", use: "B2B territory", community: 67.4, flagship: 78.9, b2b: 81.3 }
+    ],
+    report: "/research/seattle-market-research.txt"
+  },
+  {
+    code: "NYC",
+    name: "New York City",
+    status: "Paid validation justified",
+    question: "Can density and a visible paid-tea ladder overcome New York’s fixed-cost trap?",
+    thesis: "Test Flushing and Sunset Park for product conversion, downtown Manhattan for destination demand, and workplace corridors for portable private events.",
+    format: "Portable tea school + reservation studio",
+    lanes: "Flushing/Sunset Park product · Downtown destination · Workplace B2B · North Brooklyn lifestyle",
+    advantage: "The clearest paid-education ladder, dense transit and unusually large visitor, workplace and institutional channels.",
+    constraint: "Crowded specialists, free tastings, high wages, extreme rent dispersion and repeated physical retreats.",
+    nextMove: "Run comparable paid tests in Flushing, downtown Manhattan, a workplace corridor and Sunset Park; require repeat across two demand systems.",
+    offers: [
+      ["First comparative flight", "$18–$24"],
+      ["Regional journey", "$48–$62"],
+      ["Private team", "$650 min."]
+    ],
+    locations: [
+      { name: "Flushing North / core", use: "Product + community", community: 56.0, flagship: 48.5, b2b: 52.6 },
+      { name: "Manhattan Chinatown / LES", use: "Destination + culture", community: 55.8, flagship: 58.0, b2b: 61.9 },
+      { name: "Koreatown / Herald", use: "Workplace + private events", community: 57.3, flagship: 71.0, b2b: 75.1 }
+    ],
+    report: "/research/nyc-market-research.txt"
+  },
+  {
+    code: "AUS",
+    name: "Austin",
+    status: "Event-led test justified",
+    question: "Can a differentiated portable offer grow beside an incumbent community clubhouse?",
+    thesis: "Enter through events, employers, cultural partners and education—not by copying West China Tea or opening another all-day specialist room.",
+    format: "Portable experience + online replenishment",
+    lanes: "East lifestyle · North community · Downtown/Domain B2B · UT education",
+    advantage: "A large visitor, university and technology-employer economy with proven serious-tea spending.",
+    constraint: "West China Tea owns the obvious community position and Zhi Tea makes discovery inexpensive.",
+    nextMove: "Test a fast cold tea and timed beginner session across four acquisition lanes, with local-host delivery as a core gate.",
+    offers: [
+      ["Hero cold tea", "$7–$9"],
+      ["Timed introduction", "$25–$35"],
+      ["Deeper class", "$55–$65"]
+    ],
+    locations: [
+      { name: "Downtown", use: "Visitor + B2B", community: 59.8, flagship: 77.8, b2b: 75.0 },
+      { name: "UT / West Campus", use: "Education test", community: 70.1, flagship: 56.8, b2b: 66.2 },
+      { name: "North Burnet / Domain", use: "Corporate events", community: 47.9, flagship: 47.6, b2b: 57.2 }
+    ],
+    report: "/research/austin-market-research.txt"
+  }
+];
+
 export const cases = [
   {
     company: "Seven Cups",
@@ -255,19 +373,6 @@ export const cases = [
     mechanism: "supply-risk",
     url: "https://www.denongtea.com/pages/temporary-pause-in-u-s-shipments"
   }
-];
-
-export const laWorkstreams = [
-  { number: "01", title: "Business database", detail: "≈100 verified tea and adjacent businesses", state: "In research" },
-  { number: "02", title: "Offer comparison", detail: "Prices, products and revenue models", state: "In research" },
-  { number: "03", title: "Neighborhood scorecard", detail: "15 SGV and central/east LA markets", state: "In research" },
-  { number: "04", title: "Business history", detail: "Openings, closures and longevity", state: "In research" },
-  { number: "05", title: "Demand signals", detail: "Search interest and paid-event evidence", state: "Planned" },
-  { number: "06", title: "Occupancy + labor", detail: "Live listings and staffing scenarios", state: "Planned" },
-  { number: "07", title: "Import risk", detail: "Tariff, FDA and supply-chain analysis", state: "Planned" },
-  { number: "08", title: "Partner pipeline", detail: "Venues, wholesale and corporate prospects", state: "Planned" },
-  { number: "09", title: "Source ledger", detail: "URL, access date, data period and confidence", state: "Schema ready" },
-  { number: "10", title: "Decision", detail: "Neighborhood, proposition, products and price", state: "After analysis" }
 ];
 
 export const leaseGates = [

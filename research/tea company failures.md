@@ -543,7 +543,7 @@ They show something more specific:
 
 > **Chinese tea can support a durable niche brand, a respected educational business, an online retailer, an appointment tasting room, a community club, or a hybrid hospitality concept. It has much less evidence supporting a large, remotely managed, pure traditional teahouse whose primary revenue comes from walk-in tea service.**
 
-The most serious hidden risk is not the LLC or immigration arrangement. It is that the founder’s knowledge, personality, taste, and hospitality may be the core product—and those qualities cannot automatically be delegated to a store manager.
+The most serious hidden risk is not the LLC structure. It is that the founder’s knowledge, personality, taste, and hospitality may be the core product—and those qualities cannot automatically be delegated to a store manager.
 
 So the decisive experiment is no longer just, “Will Americans pay for this tea?”
 
