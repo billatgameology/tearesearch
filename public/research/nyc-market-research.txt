@@ -30,10 +30,10 @@ The first offer ladder should test distinct jobs rather than one complicated men
 |---|---:|---|
 | Fast unsweetened tea or short comparative flight | Prepared specialty drinks commonly occupy roughly the mid-single digits to low teens; Brooklyn Tea lists a self-guided five-pour flight at **$25** | Accessible discovery and event throughput |
 | Beginner guided tasting | Fang posts **from $20 for 45 minutes** | Low-friction paid trial; must be clearly more than a retail sample |
-| Personal guided journey | T Shop posts **$60 for about one hour and three teas** | Core reservation benchmark |
+| Personal guided journey | T Shop posts **$60 per person for about one hour and three teas** | Core reservation benchmark |
 | Structured class | Té Company lists **$68-$78 for 90 minutes**; Kettl lists **$70-$90** education products | Education, community and customer acquisition |
 | Luxury/collector tasting | Bellocq lists **$90-$120** tastings | Upper-end presentation benchmark, not the default mass offer |
-| Private/corporate session | Mansa lists **$60 per person with a $650 event minimum** | Portable revenue and employer acquisition |
+| Private/corporate session | Mansa displays a **$60 class product and a $650 event minimum**; the public page does not state a simple per-person event rate | Portable revenue and employer acquisition |
 | Product, subscription and gifting | Current operators visibly sell tea, teaware, subscriptions, corporate gifts and wholesale | Repeat revenue beyond seat-hours |
 
 Sources: [Fang booking](https://www.fangtea.com/service-page/exclusive-tea-tasting-experience), [T Shop Tea Journey](https://www.tshopny.com/tea-journey), [Té classes](https://tecompanytea.com/pages/classes-and-events), [Kettl class voucher](https://kettl.co/products/gift-a-class-class-credit), [Bellocq tastings](https://www.bellocqtea.com/collections/tea-tastings-nyc), [Mansa private class](https://mansatea.com/products/tea-class), [Brooklyn Tea tasting room](https://brooklyntea.com/pages/brooklyn-tearoom-lewis).
@@ -81,7 +81,7 @@ The specialist market shows that customers can encounter Chinese or adjacent tea
 | Customer job | Current observable evidence | Competitive meaning |
 |---|---|---|
 | “Let me try serious tea cheaply” | Fang: **from $20**, 45 minutes | A beginner offer cannot assume $50+ is the entry point |
-| “Guide me personally” | T Shop Tea Journey: **$60**, about one hour, three teas, one to four guests | Personal curation is already monetized and clearly explained |
+| “Guide me personally” | T Shop Tea Journey: **$60 per person**, about one hour, three teas, parties of one to four | Personal curation is already monetized and clearly explained |
 | “Teach me a reusable skill” | Té Company: **$68-$78**, 90 minutes | Technique and curriculum can justify a higher ticket |
 | “Give me a luxury ritual” | Bellocq: **$90-$120** focused tastings | Design, scarcity and setting support a premium tier |
 | “Let me brew or gather on my own” | Puerh Brooklyn offers self-guided gongfu and a dedicated downstairs tearoom | Host labor does not have to scale one-for-one with room time |
@@ -135,7 +135,7 @@ Those figures support outreach to hotels, destination managers, convention plann
 | Operator | Area and status at cutoff | Format and current price evidence | Visible revenue layers | Decision lesson |
 |---|---|---|---|---|
 | [Fang Gourmet Tea](https://www.fangtea.com/book-online) | 3660 Main St, rear first floor, Flushing 11354; active daily | Reservation tasting **from $20**, 45 minutes; premium-tea difference paid in store | Guided tasting, Chinese tea/teaware retail, e-commerce, gifts, school/group inquiries | Direct Flushing benchmark: low entry price plus retail conversion |
-| [T Shop](https://www.tshopny.com/visit-our-tearoom) | 247 Elizabeth St, rear, NoHo/Nolita 10012; active | Cup/to-go, brief guided service, brew-at-table and **$60** one-hour Tea Journey for one to four | Tearoom, tasting, retail/e-commerce, tea club, wholesale, gifts, private/corporate | One of the clearest small-footprint, high-guidance models |
+| [T Shop](https://www.tshopny.com/visit-our-tearoom) | 247 Elizabeth St, rear, NoHo/Nolita 10012; active | Cup/to-go, brief guided service, brew-at-table and **$60 per person** one-hour Tea Journey for parties of one to four | Tearoom, tasting, retail/e-commerce, tea club, wholesale, gifts, private/corporate | One of the clearest small-footprint, high-guidance models |
 | [Té Company](https://tecompanytea.com/pages/tea-shop) | 163 W 10th and 314 E 9th; both active; limited seating and walk-in waitlist | Table/takeaway tea and snacks; current classes **$68-$78** for 90 minutes | Two tearooms, food/snacks, classes/events, retail/e-commerce, subscriptions, corporate catering/gifts, retail partners | Small rooms can support a large revenue system; East Village expansion is positive observed evidence |
 | [Jin Yun Fu Tea Shop](https://www.jinyunfuteashop.com/) | 12 W 29th, 10001; active with posted hours | Gongfu, horizontal three-tea flight, Song Dynasty dian cha, rare collection and private events; no reliable public current experience price | Experiences, private events, tea/teaware retail and e-commerce | Strong cultural presentation in the K-town/NoMad employment corridor; price/bookability must be confirmed |
 | [Ten Ren Fine Tea](https://tenrenfinetea.com/pages/stores) | Current official locator lists 73 Mott and 135-18 Roosevelt, both active with posted hours | Legacy Chinese/Taiwanese tea retail plus customizable prepared drinks | Retail tea/ginseng/teaware, e-commerce, prepared drinks | Long-lived product authority and accessible drinks; only the two units on the current locator are counted as confirmed |
@@ -148,13 +148,13 @@ Those figures support outreach to hotels, destination managers, convention plann
 
 | Operator | Current observable format | Current price/status signal | Visible revenue layers | Competitive meaning |
 |---|---|---|---|---|
-| [Mansa Tea](https://mansatea.com/products/tea-class) | Private NYC/NJ and virtual education; hotel/restaurant consulting and pop-ups | **$60 per person**, one hour, **$650 minimum** for a private event | Tea/e-commerce, private/corporate events, kits, consulting and pop-ups | Closest public B2B price anchor; a fixed room is not required |
+| [Mansa Tea](https://mansatea.com/products/tea-class) | Private NYC/NJ and virtual education; hotel/restaurant consulting and pop-ups | **$60 displayed product price**, one hour, and **$650 minimum per event**; the public page does not state a simple per-person event price | Tea/e-commerce, private/corporate events, kits, consulting and pop-ups | Closest public B2B minimum-spend anchor; a fixed room is not required |
 | [Kettl](https://kettl.co/pages/locations) | Greenpoint flagship café/tasting counter, matcha specialty store and non-public studio | **$70** class voucher; current 90-minute omakase example **$90** | Prepared drinks, tastings/classes, retail/e-commerce, wholesale and chef collaborations | Premium Japanese tea is a strong adjacent substitute in Greenpoint |
 | [Bellocq Tea Atelier](https://www.bellocqtea.com/pages/contact) | Greenpoint retail atelier with daily shop tastings | Focused tasting sessions **$90-$120** | Premium tea/blends, tastings, gifts/home goods, e-commerce, wholesale and corporate gifting | Luxury design and ritual already occupy the upper end |
 | [Brooklyn Tea](https://brooklyntea.com/pages/brooklyn-tearoom-lewis) | Tea café/tasting room outside scored core | **$25** self-guided five-pour flight; **$50** guided four-tea tasting with gift box | Prepared tea/food, tastings, retail/e-commerce, subscriptions and product gifting | Clear, beginner-readable comparison and bundled product benchmark |
 | [Cha-An](https://www.chaanteahouse.com/story) | Japanese East Village tea house, active since 2004 | Tea, desserts/food, afternoon-tea and cultural programming; stable official current price not exposed | Dine-in, desserts/food, tea, afternoon occasions and events | Competes for East Village ritual, date and dessert occasions |
 | [Prince Tea House](https://www.princeteahouse.com/locations) | Multi-unit NYC afternoon-tea/dessert chain; locations include Flushing, Chinatown, East Village, K-town and Sunset Park | Active official location pages; public prices vary by unit/menu | Afternoon tea, desserts, food, late-night use, private events and franchising | Occasion and social-group substitute across several candidate markets |
-| [HEYTEA](https://www.linkedin.com/company/heytea) | Rapid modern prepared-tea footprint; official company updates confirm a 2025 Times Square lab and 2026 Upper East Side teabar | The company’s direct posts show continued NYC format experimentation; an independent June 2026 locator counted 16 metro stores, so exact count should be rechecked in the app | Prepared drinks, digital order/delivery, high-throughput stores and concept labs | Validates tea attention and convenience demand, not willingness to pay for slow Chinese tea |
+| [HEYTEA](https://www.linkedin.com/company/heytea) | Rapid modern prepared-tea footprint; official company updates confirm a 2025 Times Square lab and June 2026 Upper East Side teabar | The company’s direct posts show continued NYC format experimentation; its exact current metro unit count should be rechecked in the app | Prepared drinks, digital order/delivery, high-throughput stores and concept labs | Validates tea attention and convenience demand, not willingness to pay for slow Chinese tea |
 | [Physical Graffitea](https://physicalgraffitea.com/our-cafe/) | Active East Village café/retail at 96 St Marks | Daily noon-7 café, prepared hot/cold tea and loose tea/accessories | Prepared tea, retail and e-commerce | Long-running accessible specialist substitute |
 
 ### 4.3 What pricing actually says
@@ -273,12 +273,12 @@ Every figure above is a proposed test informed by observed competitor bands. Non
 
 | Channel | Evidence | First test | Required measure |
 |---|---|---|---|
-| Cultural institutions | MOCA rents event/class spaces and used Té Company in a 2026 event; Flushing Town Hall and China Institute run cultural education | Co-produced ticket, sponsor-funded workshop or member event | Paid seats, partner fee, opt-in leads, repeat inquiry |
-| Hotels and destination planners | NYC reported 38.1 million hotel room nights sold in 2025; Mansa cites Baccarat Hotel work | Concierge/DMC package or in-hotel private service | Inquiry-to-booking, party size, net contribution |
+| Cultural institutions | [MOCA](https://www.mocanyc.org/get-involved/event-rentals/) rents event/class spaces and used Té Company in a 2026 event; [Flushing Town Hall](https://www.flushingtownhall.org/) and [China Institute](https://chinainstitute.org/wp-content/uploads/2024/12/School-Brochure-24-25.pdf) publish cultural education programs | Co-produced ticket, sponsor-funded workshop or member event | Paid seats, partner fee, opt-in leads, repeat inquiry |
+| Hotels and destination planners | NYC reported 38.1 million hotel room nights sold in 2025; [Mansa documents Baccarat Hotel work](https://mansatea.com/pages/visit) | Concierge/DMC package or in-hotel private service | Inquiry-to-booking, party size, net contribution |
 | Employers and professional services | T Shop, Té and Mansa publish company programs; LODES shows very large job clusters | HR, employee resource group, client-event and off-site proposals | Outreach-to-meeting, close rate, repeat/annual budget |
 | Restaurants and chefs | T Shop and Kettl publish restaurant/chef relationships; Té publishes catering | Tea pairing, staff training or menu/wholesale pilot | Wholesale reorder, service labor, menu sell-through |
-| Universities and schools | Fang accepts school group inquiries; MOCA sells school programs; HEYTEA has campus-area stores | Student organization, continuing education or faculty event | Attendance mix, price sensitivity, repeat club demand |
-| BIDs and public plazas | Downtown Brooklyn accepts plaza activations; Urbanspace operates Herald and other markets | Short comparative flight/product activation | Samples-to-paid conversion, hourly throughput, weather effect |
+| Universities and schools | [Fang accepts school-group inquiries](https://www.fangtea.com/service-page/exclusive-tea-tasting-experience); [MOCA publishes school programs](https://www.mocanyc.org/learn/schools/) | Student organization, continuing education or faculty event | Attendance mix, price sensitivity, repeat club demand |
+| BIDs and public plazas | [Downtown Brooklyn accepts plaza activations](https://downtownbrooklyn.typeform.com/to/gRkunY5C); [Urbanspace publishes a 2026 Herald Holiday Market vendor route](https://urbanspacemarkets.com/pages/herald-holiday-market) | Short comparative flight/product activation | Samples-to-paid conversion, hourly throughput, weather effect |
 | Night and maker markets | Queens Night Market has a current 2026 vendor platform | Fast unsweetened hero drink plus packaged tea, not a long ceremony | Transactions/hour, waste, attach and opt-in |
 | Corporate gifting | Té and Bellocq publish corporate gifts; T Shop sells gifts/subscription | Tea kit plus private session | Average order, lead time, reorder and gross contribution |
 | E-commerce/subscription | T Shop, Té, Ten Ren, Bellocq and others sell online/subscription | QR-linked event kit and replenishment reminder | 30/60/90-day reorder, channel attribution |
@@ -511,7 +511,7 @@ Component audit table:
 | Sunset Park | 60.1 | 15.0 | 23.2 | 66.1 | 14.6 | 90.0 | 85 | 43.04 | 88 |
 | Jackson Heights/Elmhurst | 17.2 | 21.1 | 11.6 | 77.5 | 8.1 | 88.5 | 75 | 45.0 | 100 |
 
-The cut points and analyst scores are explicit modeling choices. Reasonable alternatives will change the order, which is why no score authorizes a lease.
+The cut points and analyst scores are explicit modeling choices. Reasonable alternatives will change the order, which is why no score authorizes a lease. Published format scores were calculated from unrounded components; recomputing from the one-decimal audit table can therefore differ by 0.1 point.
 
 ### A2. ACS 2024 five-year exact variables
 

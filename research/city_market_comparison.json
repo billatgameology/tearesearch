@@ -1,0 +1,612 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-08-28",
+  "business_assumption": "A Chinese-founded U.S. LLC selling premium Chinese tea, guided experiences, take-home tea, gifting and related services.",
+  "decision_summary": {
+    "paid_validation_supported": true,
+    "permanent_lease_supported": false,
+    "statement": "All five markets justify paid validation. None currently justifies a permanent lease."
+  },
+  "comparison_warning": "This dataset is not a city ranking. Structural scores are normalized separately within each report, and prices, rents, visitor measures and competitor counts are not directly comparable without format and geography controls.",
+  "cities": [
+    {
+      "id": "la_sgv",
+      "name": "Los Angeles / San Gabriel Valley",
+      "research_date": "2026-08-27",
+      "report_path": "research/la_sgv_market_research.md",
+      "source_count": 101,
+      "decision": {
+        "paid_validation": true,
+        "lease_now": false,
+        "summary": "Run paid two-lane validation in Pasadena/Central LA and Arcadia/SGV; do not sign a permanent lease."
+      },
+      "operating_role": "Reservation-led Chinese tea studio plus mobile events, with a mainstream-premium lane and a culturally knowledgeable product/reorder lane.",
+      "test_geographies": [
+        { "rank": 1, "name": "Pasadena", "format": "Beginner-friendly premium experience and institutional/private-event test" },
+        { "rank": 2, "name": "Arcadia", "format": "Product authority, community credibility and repeat-purchase test" },
+        { "rank": 3, "name": "Monterey Park / Alhambra / San Gabriel", "format": "Follow-on community and retail test" },
+        { "rank": 4, "name": "Chinatown / Arts District / Little Tokyo", "format": "Limited visitor or evening pop-up" },
+        { "rank": 5, "name": "Culver City", "format": "B2B and private-event prospecting" }
+      ],
+      "price_bands": [
+        {
+          "offer": "Fast hot/cold tea or hero drink",
+          "evidence_class": "observed",
+          "min_usd": 5,
+          "max_usd": 10,
+          "unit": "per drink",
+          "note": "Observed LA reference band; not a launch-price recommendation.",
+          "source_urls": ["https://steepla.com/", "https://teamastermatcha.com/pages/menu"]
+        },
+        {
+          "offer": "Guided introductory tasting",
+          "evidence_class": "observed",
+          "min_usd": 35,
+          "max_usd": 55,
+          "unit": "per person",
+          "note": "Formats and durations differ.",
+          "source_urls": ["https://callistoteahouse.com/pages/tea-tastings", "https://www.kiohtea.com/services-contact"]
+        },
+        {
+          "offer": "Premium or occasion experience",
+          "evidence_class": "observed",
+          "min_usd": 69,
+          "max_usd": 100,
+          "unit": "per person",
+          "note": "Includes adjacent premium experience formats, not a uniform product.",
+          "source_urls": ["https://kettl.co/pages/reservations", "https://thetasteofbeauty.com/"]
+        },
+        {
+          "offer": "Collector experience",
+          "evidence_class": "observed",
+          "min_usd": 180,
+          "max_usd": 325,
+          "unit": "per reservation or listed experience",
+          "note": "Later-stage specialist benchmark, not a launch focus.",
+          "source_urls": ["https://teahabitat.com/collections/tea-tasting"]
+        }
+      ],
+      "structural_scores": {
+        "within_city_only": true,
+        "formats": {
+          "community_storefront": [
+            { "location": "Arcadia", "score": 77.6, "confidence": "high", "caveat": "A citywide proxy does not replace block-level demand evidence." },
+            { "location": "Monterey Park", "score": 73.3, "confidence": "high", "caveat": "Competitive product depth can reduce headroom." }
+          ],
+          "mainstream_flagship": [
+            { "location": "Culver City", "score": 75.0, "confidence": "medium", "caveat": "High cost and weaker cultural fit make this a test territory, not the preferred first room." },
+            { "location": "Arcadia", "score": 70.7, "confidence": "high", "caveat": "Mainstream discovery still requires validation." }
+          ],
+          "popup_b2b": [
+            { "location": "Culver City", "score": 72.8, "confidence": "medium", "caveat": "Use named employers and venues rather than city averages." },
+            { "location": "Chinatown", "score": 72.2, "confidence": "medium", "caveat": "The ZIP includes Civic Center jobs and is geographically distorted." }
+          ]
+        }
+      },
+      "strengths": [
+        "One metro supports both mainstream-premium and knowledgeable Chinese-community tests.",
+        "A broad observable experience and product price ladder exists.",
+        "Visitor, museum, employer, market and private-event channels are deep."
+      ],
+      "risks": [
+        "Labor, occupancy and slow-service economics are demanding.",
+        "Specialist, prepared-tea, matcha and SGV retail competition is strong.",
+        "Founder dependence, import working capital and repeat purchase remain unproven."
+      ],
+      "key_sources": [
+        { "label": "LA County minimum wage", "url": "https://dcba.lacounty.gov/minimum-wage/" },
+        { "label": "California tea import data", "url": "https://www.census.gov/foreign-trade/data/ISTHSM.html" },
+        { "label": "Ten Ren current store locator", "url": "https://tenrenfinetea.com/pages/stores" },
+        { "label": "LA County temporary food events", "url": "https://publichealth.lacounty.gov/EH/business/community-events.htm" }
+      ]
+    },
+    {
+      "id": "sf_bay_area",
+      "name": "San Francisco Bay Area",
+      "research_date": "2026-08-27",
+      "report_path": "research/sf_bay_area_market_research.md",
+      "source_count": 92,
+      "decision": {
+        "paid_validation": true,
+        "lease_now": false,
+        "summary": "Run portable, paid tests across San Francisco, the East Bay and South Bay; do not sign a permanent lease."
+      },
+      "operating_role": "Reservation-led studio plus portable events across SF destination, East Bay education/community and South Bay product/B2B lanes.",
+      "test_geographies": [
+        { "rank": 1, "name": "SF Chinatown / North Beach", "format": "Heritage, visitor and cultural-partner collaboration" },
+        { "rank": 2, "name": "Mission", "format": "Lifestyle and ticketed-event test" },
+        { "rank": 3, "name": "Inner Sunset / Richmond", "format": "Resident product-attachment and repeat test" },
+        { "rank": 4, "name": "Berkeley / Oakland", "format": "Education, community and curriculum test" },
+        { "rank": 5, "name": "Cupertino / North San Jose", "format": "Product, community and employer/private-event test" }
+      ],
+      "price_bands": [
+        {
+          "offer": "Fast tea, milk tea or matcha",
+          "evidence_class": "observed",
+          "min_usd": 5,
+          "max_usd": 8,
+          "unit": "per drink",
+          "note": "Observed prepared-beverage range; formats differ.",
+          "source_urls": ["https://www.ashateahouse.com/", "https://www.imperialtea.com/"]
+        },
+        {
+          "offer": "Retail sampling",
+          "evidence_class": "observed",
+          "min_usd": 0,
+          "max_usd": 0,
+          "unit": "per sample",
+          "note": "Free sampling is an acquisition method for product sales, not a paid class benchmark.",
+          "source_urls": ["https://vitaltealeaf.net/pages/store-locator", "https://aromateashop.com/pages/about-us"]
+        },
+        {
+          "offer": "Guided class or pairing",
+          "evidence_class": "observed",
+          "min_usd": 30,
+          "max_usd": 75,
+          "unit": "per person",
+          "note": "Duration, partner tier and inclusions differ.",
+          "source_urls": ["https://taptwicetea.com/pages/events", "https://www.sfzc.org/calendar/events/city-center/tea-chocolate-mindfulness-cc-711"]
+        },
+        {
+          "offer": "Membership",
+          "evidence_class": "observed",
+          "min_usd": 59,
+          "max_usd": 108,
+          "unit": "per month",
+          "note": "Benefits and access rules differ by operator.",
+          "source_urls": ["https://www.farleaves.com/", "https://www.lalunetea.com/"]
+        },
+        {
+          "offer": "Specialist tea and ceramics",
+          "evidence_class": "observed",
+          "min_usd": 15,
+          "max_usd": 480,
+          "unit": "per retail item",
+          "note": "Tea commonly begins around $15-$50+, while selected ceramics reach roughly $90-$480; this is not one continuous comparable range.",
+          "source_urls": ["https://songtea.com/"]
+        }
+      ],
+      "structural_scores": {
+        "within_city_only": true,
+        "formats": {
+          "community_storefront": [
+            { "location": "Cupertino", "score": 68.8, "confidence": "medium", "caveat": "Car-oriented; relevant rent asks were largely undisclosed." },
+            { "location": "North San Jose", "score": 65.3, "confidence": "medium", "caveat": "The ZIP includes a large employment geography." }
+          ],
+          "mainstream_flagship": [
+            { "location": "Cupertino", "score": 73.9, "confidence": "medium", "caveat": "High score does not establish walk-in traffic or lease economics." },
+            { "location": "North San Jose", "score": 67.6, "confidence": "medium", "caveat": "Car access and exact retail node require field work." }
+          ],
+          "popup_b2b": [
+            { "location": "Cupertino", "score": 71.8, "confidence": "medium", "caveat": "Use named employers and venues." },
+            { "location": "North San Jose", "score": 71.1, "confidence": "medium", "caveat": "Aggregate workplace jobs are not event demand." }
+          ]
+        }
+      },
+      "strengths": [
+        "The five-city set's deepest observed specialist and traditional-tea ecosystem.",
+        "Distinct visitor, education/community and technology-employer demand systems.",
+        "Visible paid education, membership, retail, ceramics and corporate-program demand."
+      ],
+      "risks": [
+        "Free specialist tastings raise the differentiation burden for paid experiences.",
+        "High wages, prime rents and physical-store retreat increase fixed-cost risk.",
+        "East Bay competition and South Bay car/geographic dependence complicate one-site strategy."
+      ],
+      "key_sources": [
+        { "label": "San Francisco minimum wage", "url": "https://media.api.sf.gov/documents/2026_Historical_San_Francisco_Minimum_Wage_Rates_M9ynRNo.pdf" },
+        { "label": "Berkeley 2026 minimum wage", "url": "https://berkeleyca.gov/sites/default/files/2026-04/MinimumWagePublicNotice-July2026-English-ADA_0.pdf" },
+        { "label": "SF visitor statistics", "url": "https://www.sftravel.com/media/press-release/san-francisco-travel-reports-visitor-spending-milestone-projects-continued" },
+        { "label": "Vital Tea Leaf locations and tastings", "url": "https://vitaltealeaf.net/pages/store-locator" }
+      ]
+    },
+    {
+      "id": "seattle_eastside",
+      "name": "Seattle / Eastside",
+      "research_date": "2026-08-28",
+      "report_path": "research/seattle_market_research.md",
+      "source_count": 99,
+      "decision": {
+        "paid_validation": true,
+        "lease_now": false,
+        "summary": "Run paid tests across Eastside premium/B2B and Seattle cultural/specialist lanes; do not sign a permanent lease."
+      },
+      "operating_role": "Reservation-led studio plus mobile events and retail, split between an Eastside premium/B2B lane and a Seattle cultural/specialist lane.",
+      "test_geographies": [
+        { "rank": 1, "name": "Bellevue", "format": "Premium community, gifting and B2B test" },
+        { "rank": 2, "name": "Redmond", "format": "Employer/community and rail-linked follow-on test" },
+        { "rank": 3, "name": "Chinatown-International District", "format": "Cultural credibility and specialist comparison" },
+        { "rank": 4, "name": "Ballard / Fremont", "format": "Resident lifestyle and collaboration test" },
+        { "rank": 5, "name": "Downtown / South Lake Union", "format": "Corporate, visitor and private-event territory" }
+      ],
+      "price_bands": [
+        {
+          "offer": "Fast tea or milk-tea drink",
+          "evidence_class": "observed",
+          "min_usd": 5,
+          "max_usd": 8.5,
+          "unit": "per drink",
+          "note": "Prepared-beverage reference band.",
+          "source_urls": ["https://www.toasttab.com/local/order/tp-tea-king-st/item-b9-brown-sugar-pearl-w-fresh-milk-_6d8903f1-4bdb-4c5f-8154-a60966fde24c", "https://order.toasttab.com/online/drip-tea-seattle-rebook-1416-10th-avenue"]
+        },
+        {
+          "offer": "Guided introductory tasting",
+          "evidence_class": "observed",
+          "min_usd": 30,
+          "max_usd": 38,
+          "unit": "per person",
+          "note": "Observed across several guided specialist formats.",
+          "source_urls": ["https://floatingleaves.com/", "https://teafairy.com/", "https://www.teahousegallery.com/"]
+        },
+        {
+          "offer": "Take-home loose-leaf tea",
+          "evidence_class": "observed",
+          "min_usd": 15,
+          "max_usd": 100,
+          "unit": "per retail item",
+          "note": "Many products exceed $100; weights and tea grades vary.",
+          "source_urls": ["https://floatingleaves.com/", "https://crimsonlotustea.com/"]
+        },
+        {
+          "offer": "Hero drink",
+          "evidence_class": "proposed",
+          "min_usd": 6,
+          "max_usd": 8,
+          "unit": "per drink",
+          "note": "Pilot input, not an observed industry benchmark.",
+          "source_urls": []
+        },
+        {
+          "offer": "Beginner journey",
+          "evidence_class": "proposed",
+          "min_usd": 32,
+          "max_usd": 38,
+          "unit": "per person",
+          "note": "Pilot input, not an observed industry benchmark.",
+          "source_urls": []
+        },
+        {
+          "offer": "Private group minimum",
+          "evidence_class": "proposed",
+          "min_usd": 300,
+          "max_usd": 450,
+          "unit": "per booking",
+          "note": "Pilot input; venue, travel and staffing must be priced separately.",
+          "source_urls": []
+        },
+        {
+          "offer": "Premium occasion experience",
+          "evidence_class": "proposed",
+          "min_usd": 55,
+          "max_usd": 75,
+          "unit": "per person",
+          "note": "Indirectly anchored by local afternoon-tea pricing, not an established Chinese-tea market band.",
+          "source_urls": ["https://queenmarytea.com/pages/menus"]
+        }
+      ],
+      "structural_scores": {
+        "within_city_only": true,
+        "formats": {
+          "community_storefront": [
+            { "location": "Bellevue", "score": 73.8, "confidence": "medium-high", "caveat": "High asking rents and car access still require site-level proof." },
+            { "location": "Downtown / South Lake Union", "score": 67.4, "confidence": "medium", "caveat": "Workplace and visitor structure does not prove leisure conversion." },
+            { "location": "Redmond", "score": 65.9, "confidence": "medium-high", "caveat": "Employer and resident channels should be tested separately." }
+          ],
+          "mainstream_flagship": [
+            { "location": "Downtown / South Lake Union", "score": 78.9, "confidence": "medium", "caveat": "The lead is driven by workplace jobs and access." },
+            { "location": "Bellevue", "score": 77.8, "confidence": "medium-high", "caveat": "The score does not support a lease." }
+          ],
+          "popup_b2b": [
+            { "location": "Downtown / South Lake Union", "score": 81.3, "confidence": "medium", "caveat": "Use named employers, hotels and venues." },
+            { "location": "Bellevue", "score": 79.2, "confidence": "medium-high", "caveat": "Aggregate employer counts are prospecting signals only." }
+          ]
+        }
+      },
+      "strengths": [
+        "Bellevue and Redmond combine income, cultural proxies, employers and direct rail.",
+        "A fragmented specialist ecosystem leaves room for a beginner-accessible bridge.",
+        "Tourism, museums, gardens, festivals and corporate-event channels are visible."
+      ],
+      "risks": [
+        "Trusted incumbents already offer expertise and sometimes free tasting.",
+        "Seattle wages and relevant asking rents create fixed-cost pressure.",
+        "The cross-lake geography can increase travel and operational complexity."
+      ],
+      "key_sources": [
+        { "label": "Sound Transit 2 Line", "url": "https://www.soundtransit.org/ride-with-us/routes-schedules/2-line" },
+        { "label": "Bellevue economic development", "url": "https://bellevuewa.gov/expand-bellevue" },
+        { "label": "Redmond largest employers", "url": "https://www.redmond.gov/943/Largest-Employers" },
+        { "label": "Seattle minimum wage", "url": "https://www.seattle.gov/laborstandards/ordinances/minimum-wage" }
+      ]
+    },
+    {
+      "id": "austin",
+      "name": "Austin",
+      "research_date": "2026-08-28",
+      "report_path": "research/austin_market_research.md",
+      "source_count": 93,
+      "decision": {
+        "paid_validation": true,
+        "lease_now": false,
+        "summary": "Run an event-led paid test that does not copy the incumbent community clubhouse; do not sign a permanent lease."
+      },
+      "operating_role": "Event-first mobile Chinese tea company with online replenishment, private groups and a climate-appropriate cold-tea entry product.",
+      "test_geographies": [
+        { "rank": 1, "name": "North Austin / AARC / night-market network", "format": "Fast hero drink plus timed beginner flight" },
+        { "rank": 2, "name": "East Austin / Mueller", "format": "Venue collaboration and prepaid lifestyle tasting" },
+        { "rank": 3, "name": "Downtown / Domain", "format": "Employer, hotel and client-event test" },
+        { "rank": 4, "name": "UT / West Campus", "format": "Lower-ticket education and sampler retail" },
+        { "rank": 5, "name": "Arboretum / Highland", "format": "Shared-room or appointment-studio test" }
+      ],
+      "price_bands": [
+        {
+          "offer": "Fast brewed tea or hero cold tea",
+          "evidence_class": "observed",
+          "min_usd": 3,
+          "max_usd": 8,
+          "unit": "per drink",
+          "note": "Observed across specialist and modern prepared-beverage formats.",
+          "source_urls": ["https://zhitea.com/pages/zhi-tea-menu", "https://www.sa-ten.com/"]
+        },
+        {
+          "offer": "Tea flight",
+          "evidence_class": "observed",
+          "min_usd": 7.5,
+          "max_usd": 15,
+          "unit": "per flight",
+          "note": "Two- and four-tea options from one operator.",
+          "source_urls": ["https://zhitea.com/pages/zhi-tea-menu"]
+        },
+        {
+          "offer": "Guided class",
+          "evidence_class": "observed",
+          "min_usd": 65,
+          "max_usd": 65,
+          "unit": "per person",
+          "note": "Observed introductory gongfu class benchmark.",
+          "source_urls": ["https://westchinatea.com/"]
+        },
+        {
+          "offer": "Community membership",
+          "evidence_class": "observed",
+          "min_usd": 130,
+          "max_usd": 130,
+          "unit": "per month",
+          "note": "Established-incumbent membership, not a launch recommendation.",
+          "source_urls": ["https://westchinatea.com/monthly-teahouse-membership/"]
+        },
+        {
+          "offer": "Hero cold tea",
+          "evidence_class": "proposed",
+          "min_usd": 7,
+          "max_usd": 9,
+          "unit": "per drink",
+          "note": "Pilot input, not an observed market benchmark.",
+          "source_urls": []
+        },
+        {
+          "offer": "Timed introduction",
+          "evidence_class": "proposed",
+          "min_usd": 25,
+          "max_usd": 35,
+          "unit": "per person",
+          "note": "Pilot input, not an observed market benchmark.",
+          "source_urls": []
+        },
+        {
+          "offer": "Deeper class",
+          "evidence_class": "proposed",
+          "min_usd": 55,
+          "max_usd": 65,
+          "unit": "per person",
+          "note": "Pilot input, not an observed market benchmark.",
+          "source_urls": []
+        }
+      ],
+      "structural_scores": {
+        "within_city_only": true,
+        "formats": {
+          "community_storefront": [
+            { "location": "UT / West Campus", "score": 71.5, "confidence": "low-medium", "caveat": "Student demographics and seasonality strongly distort the ZIP." },
+            { "location": "Arboretum / Northwest", "score": 59.9, "confidence": "medium-high", "caveat": "Suburban and car-oriented." },
+            { "location": "Downtown", "score": 59.8, "confidence": "medium", "caveat": "Jobs and device counts do not equal storefront traffic." }
+          ],
+          "mainstream_flagship": [
+            { "location": "Downtown", "score": 77.8, "confidence": "medium", "caveat": "Convention-center construction and hybrid work weaken walk-in assumptions." },
+            { "location": "UT / West Campus", "score": 58.8, "confidence": "low-medium", "caveat": "Student purchasing power and seasonality matter." },
+            { "location": "Arboretum / Northwest", "score": 51.3, "confidence": "medium-high", "caveat": "Parking and destination marketing matter more than pedestrian traffic." }
+          ],
+          "popup_b2b": [
+            { "location": "Downtown", "score": 75.0, "confidence": "medium", "caveat": "Use named employers, hotels and venues." },
+            { "location": "UT / West Campus", "score": 67.6, "confidence": "low-medium", "caveat": "Separate student from faculty/employer demand." },
+            { "location": "North Burnet / Domain", "score": 58.2, "confidence": "medium-high", "caveat": "Car-oriented and better for planned B2B than discovery." }
+          ]
+        }
+      },
+      "strengths": [
+        "Durable specialists prove serious-tea demand and a broad price ladder.",
+        "Technology employers, UT, visitors and events create portable-sales channels.",
+        "Warm weather supports a differentiated unsweetened cold-tea entry product."
+      ],
+      "risks": [
+        "West China Tea already owns the clearest community-clubhouse position.",
+        "A small direct field may indicate a limited specialist ceiling rather than whitespace.",
+        "Car dependence, student turnover, service throughput and founder dependence complicate scale."
+      ],
+      "key_sources": [
+        { "label": "Asian American Resource Center rentals", "url": "https://www.austintexas.gov/aarc/asian-american-resource-center-rentals-and-reservations" },
+        { "label": "Visit Austin annual meeting data", "url": "https://www.austintexas.org/about-acvb/annual-meeting/" },
+        { "label": "Austin minimum wage and compensation", "url": "https://www.austintexas.gov/department/compensation" },
+        { "label": "Texas tea import data", "url": "https://www.census.gov/foreign-trade/data/ISTHSM.html" }
+      ]
+    },
+    {
+      "id": "new_york_city",
+      "name": "New York City",
+      "research_date": "2026-08-28",
+      "report_path": "research/nyc_market_research.md",
+      "source_count": 79,
+      "decision": {
+        "paid_validation": true,
+        "lease_now": false,
+        "summary": "Run four-lane paid validation across Chinese-community, downtown destination, workplace/private-event and Brooklyn lifestyle markets; do not sign a permanent lease."
+      },
+      "operating_role": "Portable and reservation-led Chinese tea school with take-home product, gifting and B2B programs.",
+      "test_geographies": [
+        { "rank": 1, "name": "Flushing North / core", "format": "Six-seat cultural/product tasting in a compliant host venue" },
+        { "rank": 2, "name": "Manhattan Chinatown / Lower East Side", "format": "Co-produced cultural and visitor session" },
+        { "rank": 3, "name": "Koreatown / Herald or Midtown East", "format": "Portable private tea program" },
+        { "rank": 4, "name": "Sunset Park", "format": "Affordable community tasting plus retail pickup" },
+        { "rank": 5, "name": "East Village / NoHo", "format": "Advanced regional class or pairing" }
+      ],
+      "price_bands": [
+        {
+          "offer": "Entry guided tasting",
+          "evidence_class": "observed",
+          "min_usd": 20,
+          "max_usd": 20,
+          "unit": "from-price per person",
+          "note": "Fang lists a 45-minute reservation tasting from $20.",
+          "source_urls": ["https://www.fangtea.com/book-online"]
+        },
+        {
+          "offer": "Personal guided journey",
+          "evidence_class": "observed",
+          "min_usd": 60,
+          "max_usd": 60,
+          "unit": "per booking or listed journey",
+          "note": "T Shop lists about one hour and three teas; confirm party pricing before comparison.",
+          "source_urls": ["https://www.tshopny.com/visit-our-tearoom"]
+        },
+        {
+          "offer": "Structured class",
+          "evidence_class": "observed",
+          "min_usd": 68,
+          "max_usd": 78,
+          "unit": "per person",
+          "note": "Current Té Company examples; topics and inclusions differ.",
+          "source_urls": ["https://tecompanytea.com/pages/tea-shop"]
+        },
+        {
+          "offer": "Premium focused tasting",
+          "evidence_class": "observed",
+          "min_usd": 90,
+          "max_usd": 120,
+          "unit": "per person",
+          "note": "Adjacent premium examples; not a uniform Chinese-tea product.",
+          "source_urls": ["https://kettl.co/pages/locations", "https://www.bellocqtea.com/pages/contact"]
+        },
+        {
+          "offer": "Private event minimum",
+          "evidence_class": "observed",
+          "min_usd": 650,
+          "max_usd": 650,
+          "unit": "minimum per booking",
+          "note": "Mansa lists $60 per person with a $650 minimum.",
+          "source_urls": ["https://mansatea.com/products/tea-class"]
+        },
+        {
+          "offer": "Two-tea discovery flight",
+          "evidence_class": "proposed",
+          "min_usd": 18,
+          "max_usd": 24,
+          "unit": "per person",
+          "note": "25-minute pilot input, not an industry benchmark.",
+          "source_urls": []
+        },
+        {
+          "offer": "Three-tea regional journey",
+          "evidence_class": "proposed",
+          "min_usd": 48,
+          "max_usd": 62,
+          "unit": "per person",
+          "note": "60-minute pilot input, not an industry benchmark.",
+          "source_urls": []
+        },
+        {
+          "offer": "Brewing skill lab",
+          "evidence_class": "proposed",
+          "min_usd": 68,
+          "max_usd": 82,
+          "unit": "per person",
+          "note": "90-minute pilot input, not an industry benchmark.",
+          "source_urls": []
+        },
+        {
+          "offer": "Tea and food or design pairing",
+          "evidence_class": "proposed",
+          "min_usd": 72,
+          "max_usd": 95,
+          "unit": "per person",
+          "note": "75-90 minute pilot input, not an industry benchmark.",
+          "source_urls": []
+        },
+        {
+          "offer": "Take-home practice kit",
+          "evidence_class": "proposed",
+          "min_usd": 28,
+          "max_usd": 58,
+          "unit": "per kit",
+          "note": "Pilot input tied to reorder measurement.",
+          "source_urls": []
+        }
+      ],
+      "structural_scores": {
+        "within_city_only": true,
+        "formats": {
+          "community_storefront": [
+            { "location": "Koreatown / Herald", "score": 57.3, "confidence": "medium", "caveat": "The ZIP is broader than Koreatown and the score is driven partly by commercial structure." },
+            { "location": "Midtown East", "score": 56.1, "confidence": "medium", "caveat": "The cultural score is weak; this area is strategically stronger for private events." },
+            { "location": "Flushing North / core", "score": 56.0, "confidence": "medium", "caveat": "The strongest direct cultural/product benchmark is strategically more important than the small score difference." }
+          ],
+          "mainstream_flagship": [
+            { "location": "Koreatown / Herald", "score": 71.0, "confidence": "medium", "caveat": "Jobs and access do not prove walk-in demand or affordable frontage." },
+            { "location": "Midtown East", "score": 69.2, "confidence": "medium", "caveat": "Hybrid office occupancy is unknown." },
+            { "location": "Long Island City", "score": 60.6, "confidence": "medium", "caveat": "The employment ZIP is heterogeneous." }
+          ],
+          "popup_b2b": [
+            { "location": "Koreatown / Herald", "score": 75.1, "confidence": "medium", "caveat": "Use named employers, hotels and venues." },
+            { "location": "Midtown East", "score": 70.6, "confidence": "medium", "caveat": "Workplace counts are not bookings." },
+            { "location": "Long Island City", "score": 63.6, "confidence": "medium", "caveat": "Sell into named buildings and companies rather than extrapolating from totals." }
+          ]
+        }
+      },
+      "strengths": [
+        "Large Chinese-community districts coexist with visitor and business-event demand systems.",
+        "A visible paid ladder spans low-cost tasting, education, premium ritual and private programs.",
+        "Dense transit and multiple distinct neighborhoods permit disciplined comparative testing."
+      ],
+      "risks": [
+        "High-skill specialists, free tastings and prepared-tea chains raise the differentiation burden.",
+        "High wages and wide rent dispersion make lease-first execution dangerous.",
+        "Physical retreats and stale operator pages show that status and channel resilience require verification."
+      ],
+      "key_sources": [
+        { "label": "NYC Tourism 2025 report", "url": "https://www.business.nyctourism.com/press-media/press-releases/NYC-Tourism-Annual-Report-March-2026?pubDate=20260419" },
+        { "label": "NYC food-service establishment permits", "url": "https://www.nyc.gov/site/doh/business/food-operators/opening-a-restaurant.page" },
+        { "label": "NYC minimum wage", "url": "https://dol.ny.gov/minimum-wage-0" },
+        { "label": "Fang tasting bookings", "url": "https://www.fangtea.com/book-online" }
+      ]
+    }
+  ],
+  "not_directly_comparable": [
+    "Structural scores: each report uses its own candidate set, normalization, geography and analyst inputs.",
+    "Competitor counts: definitions, transparency and geographic scope differ.",
+    "Price bands: duration, food, group size, inclusions, take-home value and membership access differ.",
+    "Asking rents: samples mix gross, NNN, expense-excluded, shell, sublease and second-generation space.",
+    "Tourism: cities publish different boundaries and measures such as visitors, passengers, room nights and spending.",
+    "LODES jobs and jobs per resident: ZIP sizes, campuses, government centers and hybrid work distort results.",
+    "Food-service density: small downtown resident denominators can inflate per-capita figures.",
+    "ACS cultural proxies: demographics and language do not equal identity, product preference or purchase intent.",
+    "State import value: destination can be an importer or warehouse and is not local consumption.",
+    "Minimum wage: the floor excludes payroll load, scheduling rules, training, travel and market wages."
+  ],
+  "shared_validation_gates": [
+    "Measure full-price conversion separately from free, partner and creator attendance.",
+    "Track contribution after tea, food, venue, permit, payment, labor, travel and acquisition costs.",
+    "Track take-home attachment and 30-, 60- and 90-day cohort reorder.",
+    "Repeat the same offer at least three times before treating launch novelty as demand.",
+    "Require delivery by a trained non-founder host before considering fixed occupancy.",
+    "Obtain site-specific permitted-use, build-out, utilities, accessibility, lease and total-occupancy diligence before any lease."
+  ]
+}
