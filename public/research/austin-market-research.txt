@@ -41,7 +41,7 @@ These are competitor observations, not proof of the new company's optimal price.
 
 ### What the online evidence supports
 
-- Austin has durable specialist-tea demand, but the direct field is extremely concentrated: West China Tea and Zhi Tea are the two clearest continuously operating specialist rooms.
+- Austin has observed paid specialist-tea demand, but the direct field is extremely concentrated: West China Tea and Zhi Tea are the two clearest continuously operating specialist rooms.
 - Customers currently pay for table-service tea, flights, guided classes, memberships, afternoon tea, private events and retail subscriptions.
 - Austin has large visitor, university and technology-employer channels that can support portable group sales. These are channel opportunities, not proof of interest from any named organization.
 - Public asking-rent evidence is materially friendlier in North Central Austin than in prime East Austin, South Congress, Downtown or West Campus.
@@ -74,7 +74,7 @@ ZIP Code Tabulation Areas are large statistical approximations, not retail distr
 
 ## 3. Why Austin is worth testing
 
-### 3.1 Two durable specialists prove the category, but one owns the obvious position
+### 3.1 Two durable specialists support the category, but one owns the obvious position
 
 | Business | Area | Current format and price evidence | Strategic meaning |
 |---|---|---|---|
@@ -112,7 +112,7 @@ Downtown Austin Alliance's Q2 2026 Vitality Index reported a device-derived dail
 
 ### 3.4 University and employer channels are unusually concentrated
 
-UT Austin reported record 2025-26 enrollment; **5,140 international students represented 9.3%** of enrollment. That supports education and campus-adjacent testing, but household-income and language data in ZIP 78705 are heavily shaped by students and should not be read like a stable affluent residential market. ([UT Austin](https://news.utexas.edu/2025/09/18/ut-sets-all-time-highs-for-enrollment-and-student-performance/))
+UT Austin reported record 2025-26 enrollment of **56,232 students**. That scale supports education and campus-adjacent testing, but household-income and language data in ZIP 78705 are heavily shaped by students and should not be read like a stable affluent residential market. ([UT Austin](https://news.utexas.edu/2025/09/18/ut-sets-all-time-highs-for-enrollment-and-student-performance/))
 
 The Austin Chamber's 2022 high-tech analysis counted **195,879 high-tech jobs**, or **16.3%** of Austin metro employment. Opportunity Austin's employer map identifies large workforces at UT, Tesla, Apple, Dell, Samsung, Oracle and numerous technology and health employers. These counts are regional and not a prospect list; their practical value is to support corporate workshop and gifting experiments in Downtown, North Burnet/Domain and on-site employer venues. ([Austin Chamber](https://www.austinchamber.com/blog/07-05-2023-high-tech-industry), [Opportunity Austin employer map](https://opportunityaustin.com/wp-content/uploads/2024/08/AustinMajorEmployersMap.pdf))
 
@@ -168,7 +168,7 @@ In 2025, West China Tea described tariff pressure and a reopening process in loc
 
 ### 4.4 Competitive implications
 
-- Austin has fewer continuously operating direct specialist rooms than LA, New York or the Bay Area, but the leading incumbent is unusually broad and community-oriented.
+- Austin's audited direct-specialist set is small, while its leading incumbent is unusually broad and community-oriented. Because each city report uses a different geographic scope and verification cutoff, the count should not be used as a cross-market ranking.
 - The most visible durable models layer several revenue streams: product, service, classes, memberships, wholesale, food or events.
 - A new company should not use “authentic Chinese tea” as its only differentiation. West China Tea already makes that claim credibly.
 - Zhi's **$7.50-$15** flights and **$12** gongfu service create a low-priced substitute for introductory discovery.
@@ -184,17 +184,17 @@ A ZIP can score well for an employer event and poorly for a neighborhood tea roo
 
 | Area / ZIP proxy | Community showroom | Mainstream flagship | Pop-up / B2B | Confidence |
 |---|---:|---:|---:|---|
-| Downtown / 78701 | 59.8 | **77.8** | **75.0** | Medium; jobs and device counts do not equal storefront traffic |
-| East Austin / 78702 | 25.4 | 39.9 | 43.4 | Medium |
-| South Congress / South Lamar / 78704 | 29.9 | 45.8 | 49.4 | Medium |
-| UT / West Campus / 78705 | **70.1** | **56.8** | **66.2** | Low-medium; student distortion is large |
-| Springdale / 78721 | 24.9 | 25.6 | 27.1 | Medium; small ZCTA and direct Zhi presence |
-| Mueller / Windsor Park / 78723 | 35.2 | 34.9 | 37.6 | Medium |
-| North Loop / Hyde Park / 78751 | 29.8 | 42.0 | 42.2 | Medium; West China Tea creates a deliberate headroom penalty |
-| Highland / North Central / 78752 | 51.7 | 42.6 | 50.9 | Medium |
-| North Lamar / Chinatown / 78753 | 37.0 | 32.1 | 41.2 | Low-medium; ZCTA is much larger than the retail node |
-| North Burnet / Domain / 78758 | 47.9 | 47.6 | **57.2** | Medium-high for B2B; car-oriented |
-| Arboretum / Northwest / 78759 | **59.5** | 50.7 | 55.5 | Medium-high; suburban and car-oriented |
+| Downtown / 78701 | **59.8** | **77.8** | **75.0** | Medium; jobs and device counts do not equal storefront traffic |
+| East Austin / 78702 | 29.3 | 45.7 | 47.3 | Medium |
+| South Congress / South Lamar / 78704 | 32.4 | 49.7 | 52.0 | Medium |
+| UT / West Campus / 78705 | **71.5** | **58.8** | **67.6** | Low-medium; student distortion is large |
+| Springdale / 78721 | 26.2 | 27.5 | 28.4 | Medium; small ZCTA and direct Zhi presence |
+| Mueller / Windsor Park / 78723 | 35.6 | 35.5 | 38.0 | Medium |
+| North Loop / Hyde Park / 78751 | 32.1 | 45.5 | 44.6 | Medium; West China Tea creates a deliberate headroom penalty |
+| Highland / North Central / 78752 | 53.2 | 44.9 | 52.4 | Medium |
+| North Lamar / Chinatown / 78753 | 37.1 | 32.2 | 41.2 | Low-medium; ZCTA is much larger than the retail node |
+| North Burnet / Domain / 78758 | 48.8 | 49.0 | **58.2** | Medium-high for B2B; car-oriented |
+| Arboretum / Northwest / 78759 | **59.9** | 51.3 | 55.9 | Medium-high; suburban and car-oriented |
 
 The raw metrics, weights and analyst inputs appear in Appendix A. The interpretation matters more than the decimal:
 
@@ -205,7 +205,7 @@ The raw metrics, weights and analyst inputs appear in Appendix A. The interpreta
 5. **Highland / North Central -- low-occupancy-cost event or small-studio watchlist.** Visible asking examples cluster around **$20-$28.50/SF/year**, and rail/high-frequency access is better than much of Austin. Purchasing-power and food-ecosystem measures are weaker.
 6. **North Lamar / Chinatown -- cultural retail and market test.** The actual retail node is much smaller than ZIP 78753. Use a host venue or market; do not infer a storefront from ZCTA averages.
 7. **East Austin / Mueller -- lifestyle pop-up test.** These districts are useful for brand and collaboration experiments even though their demographic/cost scores do not justify a first fixed room.
-8. **North Loop / Springdale -- incumbent benchmark zones.** West China Tea and Zhi prove demand but reduce headroom. Test adjacent partnerships or differentiated formats; do not assume proximity will create spillover.
+8. **North Loop / Springdale -- incumbent benchmark zones.** West China Tea and Zhi provide evidence of paid specialist demand but reduce headroom. Test adjacent partnerships or differentiated formats; do not assume proximity will create spillover.
 
 ### 5.3 Practical sequence before a lease
 
@@ -479,7 +479,7 @@ Exact ACS variables:
 - Work from home: B08006_017 divided by B08006_001
 - Zero-vehicle household: B08201_002 divided by B08201_001
 
-The exact machine-readable query is the [Census Reporter ACS 2024 five-year API request](https://api.censusreporter.org/1.0/data/show/acs2024_5yr?table_ids=B01003,B19013,B02001,B02015,B05002,C16001,B15003,B08006,B08201&geo_ids=86000US78701,86000US78702,86000US78704,86000US78705,86000US78721,86000US78723,86000US78751,86000US78752,86000US78753,86000US78758,86000US78759).
+The exact machine-readable query is the [Census Reporter ACS 2024 five-year API request](https://api.censusreporter.org/1.0/data/show/acs2024_5yr?table_ids=B01003,B19013,B02001,B02015,C16001,B15003,B08006,B08201&geo_ids=86000US78701,86000US78702,86000US78704,86000US78705,86000US78721,86000US78723,86000US78751,86000US78752,86000US78753,86000US78758,86000US78759).
 
 Sampling error is material for small groups and ZCTAs. The cultural fields describe residents and language, not tea preference, identity, purchasing intent or event attendance.
 

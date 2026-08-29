@@ -214,7 +214,7 @@ Downtown/South Lake Union's numerical lead is driven heavily by workplace jobs a
 
 #### Chinatown-International District
 
-**Measured facts:** ZCTA 98104 has the lowest income and education proxies in the comparison but the strongest Seattle-side Chinese and Chinese-language proxies, direct 1/2 Line access and multiple incumbent tea specialists. Alterations, signs, uses and exterior work in the International Special Review District can require review. ([City of Seattle](https://www.cityofseattle.org/neighborhoods/historic-preservation/historic-districts/international-special-review-district))
+**Measured facts:** ZCTA 98104 has the lowest income and education proxies in the comparison but the strongest Seattle-side Chinese and Chinese-language proxies, direct 1/2 Line access and multiple incumbent tea specialists. Alterations, signs, uses and exterior work in the International Special Review District can require review. ([City of Seattle](https://www.seattle.gov/neighborhoods/historic-preservation/historic-districts/international-special-review-district))
 
 **Inference:** cultural legitimacy and destination fit are strong, but “authenticity” is not automatic permission to charge a premium. The company would enter an established specialist ecosystem.
 

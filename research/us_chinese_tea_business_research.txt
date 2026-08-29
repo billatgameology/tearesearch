@@ -31,15 +31,15 @@ The durable businesses tend to combine several revenue streams: paid tea service
 
 The central operating question for this LLC is not merely whether customers like the founder's tea. It is whether a trained local operator can consistently deliver the experience, build trust and community, sell products, protect the brand, and generate repeat purchases. That must be demonstrated in paid manager-led events before a lease is considered.
 
-Best uses of the five leading markets:
+Current roles of the five researched markets:
 
-  Los Angeles / San Gabriel Valley: best overall demand-validation market.
-  San Francisco Bay Area: best premium product, provenance, design, and gifting market.
-  Seattle: best recurring education, club, and membership market.
-  New York City: best compact high-ticket destination and private-event market.
-  Austin: best low-commitment white-space and event-led community experiment.
+  Los Angeles / San Gabriel Valley: dual mainstream-premium and knowledgeable community/product validation.
+  San Francisco Bay Area: SF destination, East Bay education/community and South Bay product/B2B validation.
+  Seattle / Eastside: Eastside premium/B2B plus Seattle cultural/specialist validation.
+  New York City: Chinese-community/product, downtown destination, workplace/private-event and Brooklyn lifestyle validation.
+  Austin: event-first mobile validation built around a differentiated cold-tea and guided-experience system.
 
-Recommended testing order: Los Angeles first, Seattle second, Austin third, with premium pop-up and corporate tests in San Francisco and New York. These are tests of different hypotheses, not a simple city ranking.
+All five support paid testing and none supports a permanent lease. Select the first operating markets based on budget, local-host availability and the ability to run comparable offers; do not treat this list as a city ranking. See research/five_city_market_comparison.md for the current synthesis.
 
 
 1. WHAT THE BUSINESS IS REALLY SELLING

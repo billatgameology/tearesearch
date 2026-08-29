@@ -125,7 +125,7 @@ In January-June 2026, California represented **34.54%** of U.S. tea customs valu
 | Callisto | Pasadena | Accessible specialist tea and education | Tea/food, afternoon tea, tastings, events, retail/e-commerce | Active; founded 2020; acquired Bana Tea Company in 2026 ([company news](https://callistoteahouse.com/pages/news)) |
 | Tea Habitat | Alhambra | Collector Chinese tea and expert guidance | High-end tea/teaware, tastings, wholesale, consulting | Active online/by appointment; current tasting cards displayed sold out, so availability must be confirmed |
 | Yoshan | Arcadia | Producer-backed Taiwanese oolong | Tastings, drinks, retail/e-commerce, gifts, teaware | Active; official pages publish conflicting hours |
-| Wing Hop Fung | Monterey Park / Arcadia | Large Chinese tea, herb, food and gift retailer | Retail, e-commerce, wholesale, group buy, gifts, food, alcohol | Active; strongest assortment incumbent ([locations](https://winghopfung.com/pages/store-locations)) |
+| Wing Hop Fung | Monterey Park / Arcadia | Large Chinese tea, herb, food and gift retailer | Retail, e-commerce, wholesale, group buy, gifts, food, alcohol | Active; broad-assortment incumbent ([locations](https://winghopfung.com/pages/store-locations)) |
 | Ten Ren / Tea Station | Chinatown / Arcadia / Alhambra / San Gabriel / Monterey Park | Legacy tea retail plus Taiwanese food and boba | Food, drinks, delivery, packaged tea, teaware, ginseng | Active; the current [official locator](https://tenrenfinetea.com/pages/stores) lists all five locations with hours. Because some public directories conflict, field-check the exact unit before using it in a site-level trade-area count. |
 | The Loose Teas Cafe | Monrovia | Loose tea differentiated by substantial cafe food | Food, drinks, delivery, tea/teaware/gifts, e-commerce | Official site indicates active despite conflicting directories ([hours](https://www.thelooseteas.com/pages/location-hours)) |
 | Golden Dragon Tea Room | West LA | Two-table tea room inside martial-arts club | Tea service, tea/teaware and martial-arts memberships | Active, very limited hours; co-location lowers occupancy exposure ([operator](https://goldendragon.club/)) |
@@ -160,7 +160,7 @@ In January-June 2026, California represented **34.54%** of U.S. tea customs valu
 | Business | Verified event | Confirmed cause | What can responsibly be inferred |
 |---|---|---|---|
 | Denong Tea | Former Pasadena room closed; all U.S. sales suspended after May 10, 2026 | The 2026 suspension was caused by exhausted inventory and inability to replenish/import it ([company notice](https://www.denongtea.com/pages/temporary-pause-in-u-s-shipments)) | Import continuity and safety stock are material risks. The earlier store-closure cause is not public. |
-| International Tea Importers | Ceased operation in October 2025 after 35 years | Founder cited tea prices, production/climate disruption, post-COVID shipping costs, customer closures and tariffs; AP reported a tariff-driven cash-flow crunch ([letter](https://teavendor.com/2025/10/01/a-letter-to-our-valued-customers/), [AP](https://apnews.com/article/9ea92d8d87c3afd233356ac728de41c0)) | Importers finance both inventory and duties; landed-cost changes affect working capital, not only margin. This company was separate from the still-active Chado rooms. |
+| International Tea Importers | Ceased operation in 2025 after 35 years | AP reported that the company was already under financial strain from climate and pandemic effects and that tariffs created an untenable cash-flow crunch ([AP](https://apnews.com/article/9ea92d8d87c3afd233356ac728de41c0)) | Importers finance both inventory and duties; landed-cost changes affect working capital, not only margin. This company was separate from the still-active Chado rooms. |
 | American Tea Room | All three stores abruptly closed in November 2017; e-commerce later ended | Founder said the company was reevaluating retail; detailed financial cause was not published ([report](https://la.eater.com/2017/11/29/16715288/american-tea-room-closed-shutter-all-locations)) | A costly multi-store footprint preceded closure. Overexpansion is plausible but remains an inference. |
 | Bird Pick Tea & Herb | Pasadena and Culver City rooms closed; online brand/wholesale survives | Cause and precise closure chronology not publicly confirmed ([current site](https://birdpicktea.com/)) | Product brands can survive after physical retreat; do not treat a room as necessary to brand survival. |
 
@@ -378,13 +378,13 @@ The company should proceed to paid tests, not a lease. If the same offer cannot 
 
 The score is an analyst-built comparison designed to make assumptions visible. Define `clip(x) = max(0, min(100, x))`; every component is clipped before weighting, full precision is retained through the final sum, and the displayed score is rounded once to one decimal.
 
-- **Culture `C`:** `0.65 × clip(100 × Chinese proxy / 47) + 0.35 × clip(100 × Chinese-language share / 42.1)`.
-- **Purchasing `P`:** `0.55 × clip(100 × (income - 50,000) / 70,000) + 0.45 × clip(100 × (BA+ - 20) / 52)`.
-- **Daytime `D`:** `0.55 × clip(100 × ln(jobs / 10,000) / ln(18)) + 0.45 × clip(100 × (jobs / population) / 1.5)`.
-- **Competitive headroom `H`:** `clip(100 × (12 - NAICS 722515 per 10,000) / 12)`.
-- **Ecosystem/headroom `E`:** `0.65 × clip(100 × NAICS 722 per 10,000 / 50) + 0.35 × H`.
+- **Culture `C`:** `0.65 * clip(100 * Chinese proxy / 47) + 0.35 * clip(100 * Chinese-language share / 42.1)`.
+- **Purchasing `P`:** `0.55 * clip(100 * (income - 50,000) / 70,000) + 0.45 * clip(100 * (BA+ - 20) / 52)`.
+- **Daytime `D`:** `0.55 * clip(100 * ln(jobs / 10,000) / ln(18)) + 0.45 * clip(100 * (jobs / population) / 1.5)`.
+- **Competitive headroom `H`:** `clip(100 * (12 - NAICS 722515 per 10,000) / 12)`.
+- **Ecosystem/headroom `E`:** `0.65 * clip(100 * NAICS 722 per 10,000 / 50) + 0.35 * H`.
 - **Access:** analyst index combining Metro rail, ACS transit/no-car measures and documented parking. This is the most subjective input.
-- **Cost `K`:** `0.75 × clip(100 × (55 - rent) / 25) + 0.25 × clip(100 × (18.57 - wage) / 1.67)`.
+- **Cost `K`:** `0.75 * clip(100 * (55 - rent) / 25) + 0.25 * clip(100 * (18.57 - wage) / 1.67)`.
 - **Testability:** analyst index based on visitor/event evidence, partner density and the ability to run a reversible experiment.
 
 Scenario weights:

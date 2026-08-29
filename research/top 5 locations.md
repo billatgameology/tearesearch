@@ -1,5 +1,7 @@
 # Five-market tea-business landscape
 
+> **Earlier directional screen:** use [five_city_market_comparison.md](five_city_market_comparison.md) and the five detailed city reports for current decisions. This file remains as background research and should not be published as a current city ranking.
+
 I reviewed the five markets previously identified:
 
 1. Los Angeles / San Gabriel Valley  

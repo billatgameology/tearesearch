@@ -102,7 +102,7 @@ The Blue Willow listing is evidence of the format and posted price; its event da
 
 **San Francisco:** heritage, tourism, conventions, restaurants, hotels, culture and dense transit create high-value group and visitor opportunities, but direct incumbents and occupancy/labor costs are substantial.
 
-**East Bay:** Berkeley and Oakland contain multiple serious tea operators, campus/community programming and BART-accessible districts. This proves category awareness but also means a generic “authentic tea house” enters a crowded specialist ecosystem.
+**East Bay:** Berkeley and Oakland contain multiple serious tea operators, campus/community programming and BART-accessible districts. This supports category awareness but also means a generic “authentic tea house” enters a crowded specialist ecosystem.
 
 **South Bay:** Cupertino and North San Jose combine high incomes, large Chinese-community proxies and large workplace-job counts. Their weaker walkability and rail access make an appointment, employer or destination format more plausible than a spontaneous walk-in room.
 
@@ -187,19 +187,19 @@ Scores are 0-100 structural-fit indices. The formulas, data, geography and limit
 
 | Market | Community storefront | Mainstream flagship | Pop-up / B2B | Confidence |
 |---|---:|---:|---:|---|
-| Cupertino | **68.8** | **73.9** | **71.8** | Medium; rent asks largely undisclosed and access is car-oriented |
-| North San Jose | **65.3** | **67.6** | **71.1** | Medium; ZIP includes large employment geography |
-| SF Chinatown / North Beach | **65.0** | 59.7 | 65.6 | Low-medium; two-ZIP proxy and sparse comparable rent |
-| Oakland Chinatown | 60.8 | **64.4** | **69.8** | Medium-low; low rent example may not be food-ready |
+| Cupertino | 68.8 | 73.9 | 71.8 | Medium; rent asks largely undisclosed and access is car-oriented |
+| North San Jose | 65.3 | 67.6 | 71.1 | Medium; ZIP includes large employment geography |
+| SF Chinatown / North Beach | 65.0 | 59.7 | 65.6 | Low-medium; two-ZIP proxy and sparse comparable rent |
+| Oakland Chinatown | 60.8 | 64.4 | 69.8 | Medium-low; low rent example may not be food-ready |
 | Inner Sunset | 58.7 | 57.6 | 58.6 | Medium; rent uses a nearby Richmond proxy |
 | Richmond District | 51.4 | 55.1 | 55.1 | Medium |
-| Oakland Rockridge / Piedmont Ave proxy | 49.0 | **62.6** | **60.4** | Medium; 94611 is broader than the retail corridors |
+| Oakland Rockridge / Piedmont Ave proxy | 49.0 | 62.6 | 60.4 | Medium; 94611 is broader than the retail corridors |
 | Berkeley West / Downtown | 46.0 | 54.4 | 57.5 | Medium; two different submarkets combined |
 | West San Jose / Santana Row proxy | 42.1 | 51.1 | 54.0 | Medium |
 | Mission | 40.6 | 55.6 | 56.8 | High for inputs; cultural fit remains a judgment |
 | Hayes Valley / Japantown | 38.8 | 53.6 | 58.9 | Medium-low; 94102 extends well beyond Hayes |
 
-Bold indicates the strongest one or two uses within each row, not a recommendation to lease.
+Use the scores to compare candidate locations within this Bay Area study only. They are not a recommendation to lease and are not comparable with scores in the other city reports.
 
 ### 5.3 Decision interpretation
 
@@ -234,7 +234,7 @@ The market already has authenticity, inventory depth and beautiful rooms. The mo
 - Few continuously available Chinese-tea experiences show a clear public price, duration, skill level and guaranteed booking time.
 - Free retail tastings are common enough that a paid session must sell education, curation, hospitality or social value—not just sips.
 - SF specialist retail and East Bay tea communities are strong, but the path from a first guided visit to a tracked home reorder is usually invisible online.
-- Mobile workshops prove demand, yet a standardized Chinese regional curriculum, retail sampler and follow-up system are not clearly owned by one dominant operator.
+- Mobile workshops provide observed evidence of paid event demand, yet a standardized Chinese regional curriculum, retail sampler and follow-up system are not clearly owned by one dominant operator.
 - South Bay modern chains provide high-design prepared tea and some tastings, but the public evidence for small-group, prepaid, provenance-led Chinese education is thinner.
 
 ### Inferred opening
@@ -328,7 +328,7 @@ General minimum wages in force at the research cutoff:
 | Jurisdiction | Effective date | General minimum wage |
 |---|---|---:|
 | San Francisco | July 1, 2026 | **$19.61/hour** ([official historical-rate notice](https://media.api.sf.gov/documents/2026_Historical_San_Francisco_Minimum_Wage_Rates_M9ynRNo.pdf)) |
-| Berkeley | July 1, 2026 | **$19.61/hour** ([official notice](https://berkeleyca.gov/sites/default/files/2026-04/MinimumWagePublicNotice-July2026-English-ADA.pdf)) |
+| Berkeley | July 1, 2026 | **$19.61/hour** ([official notice](https://berkeleyca.gov/sites/default/files/2026-04/MinimumWagePublicNotice-July2026-English-ADA_0.pdf)) |
 | Oakland | January 1, 2026 | **$17.34/hour** ([City of Oakland](https://www.oaklandca.gov/Government/Departments/Workplace-Employment-Standards/Download-Minimum-Wage-and-Hotel-Wage-Posters)) |
 | Cupertino | January 1, 2026 | **$18.70/hour** ([City of Cupertino](https://www.cupertino.gov/Your-City/Divisions/Economic-Development/Cupertino-Minimum-Wage)) |
 | San Jose | January 1, 2026 | **$18.45/hour** ([official notice PDF](https://www.sanjoseca.gov/home/showpublisheddocument/125072/638949248001170000)) |

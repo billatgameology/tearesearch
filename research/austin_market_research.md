@@ -41,7 +41,7 @@ These are competitor observations, not proof of the new company's optimal price.
 
 ### What the online evidence supports
 
-- Austin has durable specialist-tea demand, but the direct field is extremely concentrated: West China Tea and Zhi Tea are the two clearest continuously operating specialist rooms.
+- Austin has observed paid specialist-tea demand, but the direct field is extremely concentrated: West China Tea and Zhi Tea are the two clearest continuously operating specialist rooms.
 - Customers currently pay for table-service tea, flights, guided classes, memberships, afternoon tea, private events and retail subscriptions.
 - Austin has large visitor, university and technology-employer channels that can support portable group sales. These are channel opportunities, not proof of interest from any named organization.
 - Public asking-rent evidence is materially friendlier in North Central Austin than in prime East Austin, South Congress, Downtown or West Campus.
@@ -74,7 +74,7 @@ ZIP Code Tabulation Areas are large statistical approximations, not retail distr
 
 ## 3. Why Austin is worth testing
 
-### 3.1 Two durable specialists prove the category, but one owns the obvious position
+### 3.1 Two durable specialists support the category, but one owns the obvious position
 
 | Business | Area | Current format and price evidence | Strategic meaning |
 |---|---|---|---|
@@ -205,7 +205,7 @@ The raw metrics, weights and analyst inputs appear in Appendix A. The interpreta
 5. **Highland / North Central -- low-occupancy-cost event or small-studio watchlist.** Visible asking examples cluster around **$20-$28.50/SF/year**, and rail/high-frequency access is better than much of Austin. Purchasing-power and food-ecosystem measures are weaker.
 6. **North Lamar / Chinatown -- cultural retail and market test.** The actual retail node is much smaller than ZIP 78753. Use a host venue or market; do not infer a storefront from ZCTA averages.
 7. **East Austin / Mueller -- lifestyle pop-up test.** These districts are useful for brand and collaboration experiments even though their demographic/cost scores do not justify a first fixed room.
-8. **North Loop / Springdale -- incumbent benchmark zones.** West China Tea and Zhi prove demand but reduce headroom. Test adjacent partnerships or differentiated formats; do not assume proximity will create spillover.
+8. **North Loop / Springdale -- incumbent benchmark zones.** West China Tea and Zhi provide evidence of paid specialist demand but reduce headroom. Test adjacent partnerships or differentiated formats; do not assume proximity will create spillover.
 
 ### 5.3 Practical sequence before a lease
 

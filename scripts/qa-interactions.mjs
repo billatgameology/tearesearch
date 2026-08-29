@@ -36,10 +36,15 @@ if (visiblePhysicalModels !== 3) throw new Error(`Expected 3 physical models, fo
 if (await page.locator(".city-card").count() !== 5) throw new Error("Expected five always-visible city cards");
 if (await page.locator(".city-map__marker").count() !== 5) throw new Error("Expected five labeled map markers");
 if (await page.locator("#cities button").count() !== 0) throw new Error("City analysis still requires a click");
+if ((await page.locator("#cities").innerText()).includes("directional rank")) throw new Error("Legacy cross-city ranking is still published");
 if (await page.locator(".market-dossier").count() !== 5) throw new Error("Expected five completed market dossiers");
 if (await page.locator(".location-scorecard__rows article").count() !== 15) throw new Error("Expected fifteen visible location score rows");
 if (await page.locator('.market-dossier__footer a[target="_blank"]').count() !== 5) throw new Error("Full market report links are incomplete");
 if (await page.locator("#market-reports button").count() !== 0) throw new Error("Market findings should not require a click");
+if (await page.locator(".market-dossier__offers small").count() !== 15) throw new Error("Price evidence classes are incomplete");
+if (await page.locator(".market-dossier__offers small", { hasText: "Observed evidence" }).count() !== 8) throw new Error("Observed price labels are incorrect");
+if (await page.locator(".market-dossier__offers small", { hasText: "Proposed pilot" }).count() !== 7) throw new Error("Proposed pilot labels are incorrect");
+if (!(await page.locator(".market-dossier", { hasText: "Austin" }).innerText()).includes("71.5")) throw new Error("Updated Austin score is missing");
 if (await page.locator(".case-item__actions a").count() !== 6) throw new Error("Prior-attempt source links are incomplete");
 
 await page.locator('[data-scenario="65000,68,26"]').click();
@@ -49,7 +54,7 @@ if (revenue !== "$95,588") throw new Error(`Unexpected tea-house break-even resu
 const textResponses = await Promise.all([
   page.request.get(`${siteUrl}research/us-chinese-tea-business-report.txt`),
   page.request.get(`${siteUrl}research/full-research-transcript.txt`),
-  page.request.get(`${siteUrl}research/five-market-study.txt`),
+  page.request.get(`${siteUrl}research/five-city-market-comparison.txt`),
   page.request.get(`${siteUrl}research/comparable-business-cases.txt`),
   page.request.get(`${siteUrl}research/la-sgv-market-research.txt`),
   page.request.get(`${siteUrl}research/sf-bay-area-market-research.txt`),

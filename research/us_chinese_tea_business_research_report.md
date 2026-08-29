@@ -5,13 +5,15 @@
 
 > This is a decision-grade first research package, not completed market validation. The interviews, paid ads, product sales, tastings, site quotes, legal opinions, and lease negotiations described below still have to be performed in the real market.
 
+> **City-research update:** the later five-city work covers LA/SGV, the Bay Area, Seattle/Eastside, Austin and New York City. Use [five_city_market_comparison.md](five_city_market_comparison.md) and the detailed city reports for current geographic decisions.
+
 ## 1. Executive decision
 
 ### Recommendation
 
 **Do not open a permanent U.S. store yet.**
 
-For the next 12 months, build the business as a **content-led Chinese tea brand supported by paid tastings, pop-ups, sampler sales, e-commerce, corporate/private events, and selective wholesale**. Use the first 90 days to test Los Angeles / the San Gabriel Valley, Seattle, and Austin. Choose one market for a longer operating test only after paid demand and repeat purchasing are visible.
+For the next 12 months, build the business as a **content-led Chinese tea brand supported by paid tastings, pop-ups, sampler sales, e-commerce, corporate/private events, and selective wholesale**. Use the first 90 days to run comparable paid tests in a manageable subset of the five researched markets. Choose a market for a longer operating test only after paid demand and repeat purchasing are visible.
 
 The first physical location, if one becomes justified, should be an **appointment-led tasting studio or small showroom**, not a full manager-operated tea house. A conventional staffed tea house is the last escalation because it combines the highest capital requirement with the greatest operating complexity and dependence on reliable daily retail execution.
 
@@ -430,7 +432,7 @@ This can be reduced if the founder personally creates content and has low travel
 
 ### Weeks 1–2: define and source
 
-- Interview 30 prospective customers across LA/SGV, Seattle and Austin.
+- Interview at least 30 prospective customers across the selected city lanes, with the sample recorded by market and customer type.
 - Test three positions:
   1. approachable authentic Chinese tea,
   2. focused-energy coffee alternative,
@@ -578,7 +580,7 @@ That structure preserves operating flexibility, fits the founder's likely streng
 
 ## Selected source register
 
-The complete source ledger is included in the accompanying workbook. Key references include:
+Detailed citations are linked throughout this report. Selected references include:
 
 - [S01] U.S. Census Bureau, National Hot Tea Month: https://www.census.gov/newsroom/stories/hot-tea-month.html
 - [S02] Beverage Industry / Circana: https://www.bevindustry.com/articles/97646-2025-state-of-the-beverage-industry-tea-market-sees-sales-up-volume-declines

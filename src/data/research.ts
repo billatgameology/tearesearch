@@ -155,53 +155,48 @@ export const models = [
 
 export const cities = [
   {
-    rank: 1,
+    code: "LA",
     name: "Los Angeles / SGV",
-    score: 4.4,
-    role: "Primary validation",
-    neighborhoods: "Pasadena · Alhambra/Arcadia · Chinatown/Silver Lake",
-    strength: "Diaspora depth, tea proof, media reach and China logistics",
-    tension: "Competition, rent and multiple distinct submarkets",
+    role: "Two-lane validation",
+    neighborhoods: "Pasadena · Arcadia · follow-on SGV",
+    strength: "Tests mainstream-premium demand and knowledgeable product demand inside one metro",
+    tension: "High labor and occupancy costs across distinct submarkets",
     coordinates: [-118.2437, 34.0522]
   },
   {
-    rank: 2,
+    code: "SF",
     name: "San Francisco Bay Area",
-    score: 4.17,
-    role: "Premium pop-up / B2B",
-    neighborhoods: "Inner Richmond/Japantown · Berkeley · Peninsula",
-    strength: "Spending power, design sensitivity and tea literacy",
-    tension: "Very high labor and occupancy cost",
+    role: "Three-system validation",
+    neighborhoods: "SF Chinatown/North Beach · Mission · East and South Bay",
+    strength: "Deep specialist knowledge plus visitor, education and employer channels",
+    tension: "Free discovery, strong incumbents and exceptionally high operating costs",
     coordinates: [-122.4194, 37.7749]
   },
   {
-    rank: 3,
+    code: "SEA",
     name: "Seattle",
-    score: 4.15,
-    role: "Primary validation",
-    neighborhoods: "Fremont/Wallingford · Capitol Hill · International District",
-    strength: "Craft-beverage literacy and recurring community behavior",
-    tension: "High wage floor and strong incumbents",
+    role: "Rail-linked two-lane validation",
+    neighborhoods: "Bellevue · Redmond · Seattle CID",
+    strength: "Eastside purchasing power and employers paired with Seattle cultural credibility",
+    tension: "Geographic breadth, travel time, high wages and specialist alternatives",
     coordinates: [-122.3321, 47.6062]
   },
   {
-    rank: 4,
+    code: "NYC",
     name: "New York City",
-    score: 4.14,
-    role: "Pop-ups / collaborations",
-    neighborhoods: "Flushing · Lower Manhattan · Brooklyn",
-    strength: "Destination experiences, tourism and corporate demand",
-    tension: "Extreme cost and competition",
+    role: "Four-system validation",
+    neighborhoods: "Flushing North · Manhattan Chinatown/LES · K-town/Herald",
+    strength: "A broad paid-education ladder with dense visitor and workplace channels",
+    tension: "High wages, rent dispersion, capable incumbents and physical retreats",
     coordinates: [-74.006, 40.7128]
   },
   {
-    rank: 5,
+    code: "AUS",
     name: "Austin",
-    score: 3.96,
-    role: "Primary validation",
-    neighborhoods: "East Austin · North Loop · flexible central venues",
-    strength: "Community culture and relative white space",
-    tension: "Smaller direct market and specialist incumbent",
+    role: "Event-first validation",
+    neighborhoods: "North Austin/AARC · East Austin/Mueller · Downtown/Domain",
+    strength: "Employer, university, visitor and cultural channels suit a portable offer",
+    tension: "An incumbent owns the obvious community position and discovery is already inexpensive",
     coordinates: [-97.7431, 30.2672]
   }
 ];
@@ -219,9 +214,9 @@ export const marketDossiers = [
     constraint: "High rent, high labor cost and several distinct submarkets make a single storefront thesis unreliable.",
     nextMove: "Run matched paid sessions in Pasadena and Arcadia before extending to Monterey Park and Alhambra.",
     offers: [
-      ["Hero drink", "$5–$10"],
-      ["Guided tasting", "$35–$55"],
-      ["Premium occasion", "$69–$100"]
+      ["Hero drink", "$5–$10", "Observed evidence"],
+      ["Guided tasting", "$35–$55", "Observed evidence"],
+      ["Premium occasion", "$69–$100", "Observed evidence"]
     ],
     locations: [
       { name: "Arcadia", use: "Authenticity + product", community: 77.6, flagship: 70.7, b2b: 69.4 },
@@ -242,9 +237,9 @@ export const marketDossiers = [
     constraint: "Free retail tastings raise the bar for paid education while wages and occupancy remain exceptionally high.",
     nextMove: "Sequence Chinatown/North Beach collaborations, Mission ticketed sessions, resident repeat tests, then South Bay B2B.",
     offers: [
-      ["Hero drink", "$5–$8"],
-      ["Guided class", "$30–$75"],
-      ["Membership signal", "$59–$108/mo"]
+      ["Hero drink", "$5–$8", "Observed evidence"],
+      ["Guided class", "$30–$75", "Observed evidence"],
+      ["Membership signal", "$59–$108/mo", "Observed evidence"]
     ],
     locations: [
       { name: "Cupertino", use: "Product + B2B", community: 68.8, flagship: 73.9, b2b: 71.8 },
@@ -263,11 +258,11 @@ export const marketDossiers = [
     lanes: "Bellevue/Redmond premium groups · Seattle culture and specialist retail",
     advantage: "Strong Eastside income, Chinese-community and employer signals now linked more directly by regional rail.",
     constraint: "Specialist incumbents, a high wage floor and uncertain storefront leisure conversion remain unresolved.",
-    nextMove: "Launch matched beginner sessions in four contexts, sell private groups, then measure retail attachment and 30-day replenishment.",
+    nextMove: "Sequence Bellevue, Redmond and Seattle CID tests; sell private groups, then measure retail attachment and 30-day replenishment.",
     offers: [
-      ["Hero drink", "$5–$8.50"],
-      ["Guided tasting", "$30–$38"],
-      ["Premium occasion", "$55–$75"]
+      ["Hero drink", "$5–$8.50", "Observed evidence"],
+      ["Guided tasting", "$30–$38", "Observed evidence"],
+      ["Premium occasion", "$55–$75", "Proposed pilot"]
     ],
     locations: [
       { name: "Bellevue", use: "First Eastside test", community: 73.8, flagship: 77.8, b2b: 79.2 },
@@ -288,9 +283,9 @@ export const marketDossiers = [
     constraint: "Crowded specialists, free tastings, high wages, extreme rent dispersion and repeated physical retreats.",
     nextMove: "Run comparable paid tests in Flushing, downtown Manhattan, a workplace corridor and Sunset Park; require repeat across two demand systems.",
     offers: [
-      ["First comparative flight", "$18–$24"],
-      ["Regional journey", "$48–$62"],
-      ["Private team", "$650 min."]
+      ["First comparative flight", "$18–$24", "Proposed pilot"],
+      ["Regional journey", "$48–$62", "Proposed pilot"],
+      ["Private team", "$650 min.", "Proposed pilot"]
     ],
     locations: [
       { name: "Flushing North / core", use: "Product + community", community: 56.0, flagship: 48.5, b2b: 52.6 },
@@ -306,18 +301,18 @@ export const marketDossiers = [
     question: "Can a differentiated portable offer grow beside an incumbent community clubhouse?",
     thesis: "Enter through events, employers, cultural partners and education—not by copying West China Tea or opening another all-day specialist room.",
     format: "Portable experience + online replenishment",
-    lanes: "East lifestyle · North community · Downtown/Domain B2B · UT education",
+    lanes: "North community · East lifestyle · Downtown/Domain B2B · UT education",
     advantage: "A large visitor, university and technology-employer economy with proven serious-tea spending.",
     constraint: "West China Tea owns the obvious community position and Zhi Tea makes discovery inexpensive.",
-    nextMove: "Test a fast cold tea and timed beginner session across four acquisition lanes, with local-host delivery as a core gate.",
+    nextMove: "Start with a North Austin/AARC or night-market test, then compare East Austin, Downtown/Domain and UT acquisition lanes.",
     offers: [
-      ["Hero cold tea", "$7–$9"],
-      ["Timed introduction", "$25–$35"],
-      ["Deeper class", "$55–$65"]
+      ["Hero cold tea", "$7–$9", "Proposed pilot"],
+      ["Timed introduction", "$25–$35", "Proposed pilot"],
+      ["Deeper class", "$55–$65", "Proposed pilot"]
     ],
     locations: [
       { name: "Downtown", use: "Visitor + B2B", community: 59.8, flagship: 77.8, b2b: 75.0 },
-      { name: "UT / West Campus", use: "Education test", community: 70.1, flagship: 56.8, b2b: 66.2 },
+      { name: "UT / West Campus", use: "Education test", community: 71.5, flagship: 58.8, b2b: 67.6 },
       { name: "North Burnet / Domain", use: "Corporate events", community: 47.9, flagship: 47.6, b2b: 57.2 }
     ],
     report: "/research/austin-market-research.txt"
@@ -389,7 +384,7 @@ export const leaseGates = [
 export const roadmap = [
   { period: "Weeks 1–2", title: "Define and source", detail: "Interview customers, test three propositions and qualify a small beginner range." },
   { period: "Weeks 2–4", title: "Test language and payment", detail: "Launch city pages, paid traffic, content and a $28 sampler preorder." },
-  { period: "Weeks 5–8", title: "Test the live experience", detail: "Run six paid tastings across LA/SGV, Seattle and Austin." },
+  { period: "Weeks 5–8", title: "Test the live experience", detail: "Run matched paid tastings across a manageable subset of the five researched markets." },
   { period: "Weeks 5–10", title: "Test B2B", detail: "Approach corporate planners, hospitality, cultural groups and premium gifting buyers." },
   { period: "Weeks 9–12", title: "Test repeat", detail: "Measure replenishment, second purchase and subscription intent by cohort." }
 ];

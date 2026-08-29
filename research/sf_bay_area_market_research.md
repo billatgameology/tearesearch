@@ -102,7 +102,7 @@ The Blue Willow listing is evidence of the format and posted price; its event da
 
 **San Francisco:** heritage, tourism, conventions, restaurants, hotels, culture and dense transit create high-value group and visitor opportunities, but direct incumbents and occupancy/labor costs are substantial.
 
-**East Bay:** Berkeley and Oakland contain multiple serious tea operators, campus/community programming and BART-accessible districts. This proves category awareness but also means a generic “authentic tea house” enters a crowded specialist ecosystem.
+**East Bay:** Berkeley and Oakland contain multiple serious tea operators, campus/community programming and BART-accessible districts. This supports category awareness but also means a generic “authentic tea house” enters a crowded specialist ecosystem.
 
 **South Bay:** Cupertino and North San Jose combine high incomes, large Chinese-community proxies and large workplace-job counts. Their weaker walkability and rail access make an appointment, employer or destination format more plausible than a spontaneous walk-in room.
 
@@ -234,7 +234,7 @@ The market already has authenticity, inventory depth and beautiful rooms. The mo
 - Few continuously available Chinese-tea experiences show a clear public price, duration, skill level and guaranteed booking time.
 - Free retail tastings are common enough that a paid session must sell education, curation, hospitality or social value—not just sips.
 - SF specialist retail and East Bay tea communities are strong, but the path from a first guided visit to a tracked home reorder is usually invisible online.
-- Mobile workshops prove demand, yet a standardized Chinese regional curriculum, retail sampler and follow-up system are not clearly owned by one dominant operator.
+- Mobile workshops provide observed evidence of paid event demand, yet a standardized Chinese regional curriculum, retail sampler and follow-up system are not clearly owned by one dominant operator.
 - South Bay modern chains provide high-design prepared tea and some tastings, but the public evidence for small-group, prepaid, provenance-led Chinese education is thinner.
 
 ### Inferred opening

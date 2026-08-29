@@ -8,13 +8,19 @@
     "statement": "All five markets justify paid validation. None currently justifies a permanent lease."
   },
   "comparison_warning": "This dataset is not a city ranking. Structural scores are normalized separately within each report, and prices, rents, visitor measures and competitor counts are not directly comparable without format and geography controls.",
+  "coverage": {
+    "report_word_count_approx": 44000,
+    "distinct_external_urls_across_reports": 406,
+    "sum_of_within_report_unique_url_counts": 465,
+    "source_count_definition": "Each city's source_count is the number of unique URL strings in that city report. A URL used in more than one report is counted once in each relevant city."
+  },
   "cities": [
     {
       "id": "la_sgv",
       "name": "Los Angeles / San Gabriel Valley",
       "research_date": "2026-08-27",
       "report_path": "research/la_sgv_market_research.md",
-      "source_count": 101,
+      "source_count": 100,
       "decision": {
         "paid_validation": true,
         "lease_now": false,
@@ -236,7 +242,7 @@
           "max_usd": 38,
           "unit": "per person",
           "note": "Observed across several guided specialist formats.",
-          "source_urls": ["https://floatingleaves.com/", "https://teafairy.com/", "https://www.teahousegallery.com/"]
+          "source_urls": ["https://floatingleaves.com/", "https://www.teahousegallery.com/"]
         },
         {
           "offer": "Take-home loose-leaf tea",
@@ -436,7 +442,7 @@
       "key_sources": [
         { "label": "Asian American Resource Center rentals", "url": "https://www.austintexas.gov/aarc/asian-american-resource-center-rentals-and-reservations" },
         { "label": "Visit Austin annual meeting data", "url": "https://www.austintexas.org/about-acvb/annual-meeting/" },
-        { "label": "Austin minimum wage and compensation", "url": "https://www.austintexas.gov/department/compensation" },
+        { "label": "Texas minimum wage law", "url": "https://www.twc.texas.gov/programs/wage-and-hour/texas-minimum-wage-law" },
         { "label": "Texas tea import data", "url": "https://www.census.gov/foreign-trade/data/ISTHSM.html" }
       ]
     },
@@ -445,7 +451,7 @@
       "name": "New York City",
       "research_date": "2026-08-28",
       "report_path": "research/nyc_market_research.md",
-      "source_count": 80,
+      "source_count": 81,
       "decision": {
         "paid_validation": true,
         "lease_now": false,
