@@ -71,10 +71,10 @@ Four businesses are the strongest continuously operating traditional-experience 
 
 | Business | Area | Core format | Current price evidence | Important lesson |
 |---|---|---|---:|---|
-| [Steep LA](https://steepla.com/) | Chinatown | Chinese/Taiwanese tea, food, ceremonies and evening tea cocktails | Fresh/cold tea **$6-$8**; ceremony **$35/$45**; pots roughly **$12-$65** | Multiple dayparts and food/nightlife improve use of a small room |
+| [Steep LA](https://steepla.com/) | Chinatown | Chinese/Taiwanese tea, food, ceremonies and evening tea cocktails | Fresh/cold tea **$6-$8**; ceremony **$35/$45**; seated tea choices roughly **$15-$65** | Multiple dayparts and food/nightlife improve use of a small room |
 | [Callisto Tea House](https://callistoteahouse.com/pages/tea-tastings) | Pasadena | Beginner-friendly tea house, plant-forward food, classes and private tastings | Four-tea guided tasting **$35**; public classes generally **$35-$40** | Education and food make serious tea accessible |
 | [Tea Habitat](https://teahabitat.com/collections/tea-tasting) | Alhambra | Appointment-led specialist Chinese tea and teaware | Tastings **$50-$325** | Rare sourcing and expertise can be monetized in a tiny, low-footfall room |
-| [Yoshan Tea House USA](https://yoshanteausa.com/pages/yoshan-tea-house-usa) | Arcadia | Taiwanese producer showroom, oolong, tasting and retail | Public tasting listing about **$19.50**; brewed tea about **$5-$8** | Provenance matters, but hours and service expectations must be clear |
+| [Yoshan Tea House USA](https://yoshanteausa.com/pages/yoshan-tea-house-usa) | Arcadia | Taiwanese producer showroom, oolong, tasting and retail | Current public price evidence was not sufficiently auditable; field-check the active service and menu | Provenance matters, but hours, format and price must be verified before benchmarking |
 
 This is a small direct set for a county of Los Angeles's size. It does **not** mean competition is weak. The customer can instead choose specialty coffee, boba, matcha, dessert, wine tasting, a museum program, a wellness class, a cocktail bar or an alcohol-free evening event.
 
@@ -92,7 +92,7 @@ This is a small direct set for a county of Los Angeles's size. It does **not** m
 
 [CHICHA San Chen](https://www.chichasanchen.com/en/store/USA/SoCal/) now has a broad SGV/LA presence and makes tea to order with visible brewing theater. [CHAGEE's official locator](https://www.chagee.us/stores) listed 11 California stores by August 2026 after its first U.S. opening in Century City in 2025. [Odd One Out](https://www.oootea.world/location) operates in Sawtelle, Santa Monica, Pasadena and Koreatown. [HEYTEA's West Coast launch](https://www.latimes.com/food/story/2024-07-31/heytea-opening-beverly-hills-us-west-coast-first-location) brought another large Chinese beverage brand into LA.
 
-**Inference:** these openings support demand for contemporary East Asian tea branding and $5-$10 specialty drinks. They do not prove demand for a slow gongfu tasting room. Their recurring public-review friction around waits, handoff and value makes service design a competitive issue.
+**Inference:** these openings support demand for contemporary East Asian tea branding and $5-$10 specialty drinks. They do not prove demand for a slow gongfu tasting room. The contrast between fast beverage service and guided tea makes throughput and service design explicit pilot questions.
 
 ### 3.4 Visitor and institutional channels are unusually deep
 
@@ -126,7 +126,7 @@ In January-June 2026, California represented **34.54%** of U.S. tea customs valu
 | Tea Habitat | Alhambra | Collector Chinese tea and expert guidance | High-end tea/teaware, tastings, wholesale, consulting | Active online/by appointment; current tasting cards displayed sold out, so availability must be confirmed |
 | Yoshan | Arcadia | Producer-backed Taiwanese oolong | Tastings, drinks, retail/e-commerce, gifts, teaware | Active; official pages publish conflicting hours |
 | Wing Hop Fung | Monterey Park / Arcadia | Large Chinese tea, herb, food and gift retailer | Retail, e-commerce, wholesale, group buy, gifts, food, alcohol | Active; strongest assortment incumbent ([locations](https://winghopfung.com/pages/store-locations)) |
-| Ten Ren / Tea Station | Chinatown / San Gabriel / Monterey Park | Legacy tea retail plus Taiwanese food and boba | Food, drinks, delivery, packaged tea, teaware, ginseng | Active core, but its [official locator](https://tenrenfinetea.com/pages/stores) still lists closed Arcadia and Alhambra units |
+| Ten Ren / Tea Station | Chinatown / Arcadia / Alhambra / San Gabriel / Monterey Park | Legacy tea retail plus Taiwanese food and boba | Food, drinks, delivery, packaged tea, teaware, ginseng | Active; the current [official locator](https://tenrenfinetea.com/pages/stores) lists all five locations with hours. Because some public directories conflict, field-check the exact unit before using it in a site-level trade-area count. |
 | The Loose Teas Cafe | Monrovia | Loose tea differentiated by substantial cafe food | Food, drinks, delivery, tea/teaware/gifts, e-commerce | Official site indicates active despite conflicting directories ([hours](https://www.thelooseteas.com/pages/location-hours)) |
 | Golden Dragon Tea Room | West LA | Two-table tea room inside martial-arts club | Tea service, tea/teaware and martial-arts memberships | Active, very limited hours; co-location lowers occupancy exposure ([operator](https://goldendragon.club/)) |
 | Tile Cat Tea House | Westlake / pop-ups | Small community-led home/pop-up sessions | Classes, meditation, private/corporate events, mobile bar, ceramics | Episodic; no current upcoming events were posted ([format](https://www.tilecatteahouse.com/pages/about)) |
@@ -147,11 +147,11 @@ In January-June 2026, California represented **34.54%** of U.S. tea customs valu
 
 | Competitor | LA footprint signal | Typical current band or example | Lesson for this concept |
 |---|---|---:|---|
-| CHICHA San Chen | San Gabriel, Alhambra, Arcadia, Rowland Heights, Koreatown, Sawtelle | Roughly **$7-$9** | Brewing theater supports premium pricing, but long waits damage value |
+| CHICHA San Chen | San Gabriel, Alhambra, Arcadia, Rowland Heights, Koreatown, Sawtelle | Roughly **$7-$9** | Brewing theater can make precision and premium positioning visible in a fast-beverage format |
 | CHAGEE | Rapid multi-mall expansion | Launch prices about **$4.95-$5.95**; current prices vary | Design, consistency and digital ordering are formidable at scale |
 | Odd One Out | Four LA-area stores | Pure tea **$5**; milk tea **$6.50**; signature **$7.45** | A hero ingredient/product makes provenance legible |
 | HEYTEA | Beverly Hills, Monterey Park, San Gabriel | Generally **$7-$12** | Launch attention can be large; queue and consistency must be managed |
-| nana's green tea | 75-seat Old Pasadena store opened May 2026 | Tea **$4.50**; matcha **$5.60-$8.70**; meals **$15-$17** | Food, dessert and seat count create different economics from a tasting room ([current menu](https://www.toasttab.com/local/order/nanas-green-tea-45-n-raymond-ave)) |
+| nana's green tea | About 75 seats; Old Pasadena store opened May 9, 2026 ([operator news](https://www.nanasgreentea.com/blogs/news/20260625)) | Tea **$4.50**; matcha **$5.60-$8.70**; meals **$15-$17** | Food, dessert and seat count create different economics from a tasting room ([current menu](https://www.toasttab.com/local/order/nanas-green-tea-45-n-raymond-ave)) |
 | Tea Master of Little Tokyo | Little Tokyo | Soft serve **$5.25**; latte **$5.75**; matcha bowl **$6-$12** | One affordable hero SKU can recruit customers into serious retail ([menu](https://teamastermatcha.com/pages/menu)) |
 | Jin Tea Shop | Old Pasadena | Core drinks about **$7-$8**; premium drinks **$11-$12** | Tea-forward flavor can work in a fast takeaway format |
 
@@ -163,7 +163,6 @@ In January-June 2026, California represented **34.54%** of U.S. tea customs valu
 | International Tea Importers | Ceased operation in October 2025 after 35 years | Founder cited tea prices, production/climate disruption, post-COVID shipping costs, customer closures and tariffs; AP reported a tariff-driven cash-flow crunch ([letter](https://teavendor.com/2025/10/01/a-letter-to-our-valued-customers/), [AP](https://apnews.com/article/9ea92d8d87c3afd233356ac728de41c0)) | Importers finance both inventory and duties; landed-cost changes affect working capital, not only margin. This company was separate from the still-active Chado rooms. |
 | American Tea Room | All three stores abruptly closed in November 2017; e-commerce later ended | Founder said the company was reevaluating retail; detailed financial cause was not published ([report](https://la.eater.com/2017/11/29/16715288/american-tea-room-closed-shutter-all-locations)) | A costly multi-store footprint preceded closure. Overexpansion is plausible but remains an inference. |
 | Bird Pick Tea & Herb | Pasadena and Culver City rooms closed; online brand/wholesale survives | Cause and precise closure chronology not publicly confirmed ([current site](https://birdpicktea.com/)) | Product brands can survive after physical retreat; do not treat a room as necessary to brand survival. |
-| Ten Ren | Arcadia closed by January 2024; Alhambra closed by May 2025 | No reliable public explanation | Legacy and awareness do not guarantee every unit; official store lists require verification. |
 
 ## 5. Location strategy
 
@@ -179,16 +178,16 @@ Scores are 0-100 structural-fit indices. They are not probabilities, forecasts o
 |---|---:|---:|---:|---|
 | Arcadia | **77.6** | **70.7** | 69.4 | High |
 | Monterey Park | **73.3** | 57.7 | 59.2 | High |
-| San Gabriel | 64.9 | 50.2 | 48.7 | High |
-| Alhambra | 64.7 | 56.3 | 57.0 | High |
+| San Gabriel | 64.9 | 50.2 | 48.8 | High |
+| Alhambra | 64.8 | 56.3 | 57.0 | High |
 | Rowland Heights | 58.4 | 41.4 | 37.6 | High demographics; medium rent |
-| Chinatown | 57.0 | 65.8 | **72.2** | Low; ZIP 90012 includes Civic Center |
-| Culver City | 53.8 | **75.0** | **72.8** | High |
+| Chinatown | 57.1 | 65.7 | **72.2** | Low; ZIP 90012 includes Civic Center |
+| Culver City | 53.7 | **75.0** | **72.8** | High |
 | Arts District / Little Tokyo | 51.9 | 62.9 | 69.7 | Low; overlapping ZIP geography |
-| Pasadena | 48.2 | **68.2** | **66.9** | High |
-| West LA / Sawtelle | 42.3 | 57.4 | 51.5 | Medium |
-| Silver Lake / Echo Park | 32.3 | 47.4 | 43.8 | Medium |
-| Koreatown | 32.3 | 41.1 | 44.5 | Medium |
+| Pasadena | 48.1 | **68.2** | **66.9** | High |
+| West LA / Sawtelle | 42.2 | 57.4 | 51.5 | Medium |
+| Silver Lake / Echo Park | 32.1 | 47.2 | 43.6 | Medium |
+| Koreatown | 32.3 | 41.1 | 44.4 | Medium |
 
 The weights, variables, underlying figures and sensitivity cautions appear in Appendix A. The decision interpretation is:
 
@@ -330,7 +329,7 @@ Report free creator/partner attendance separately so it does not inflate paid de
 | Risk | Online evidence | Pilot control |
 |---|---|---|
 | Tea-only occupancy | Durable comparables layer other revenue; American Tea Room and Bird Pick retreated from rooms | Shared/temporary venues first; calculate contribution by format |
-| Slow service | Modern chains receive recurring wait/handoff criticism | Timed script, reservations for ritual, separate fast queue for hero product |
+| Slow service | Guided ritual and high-volume beverage service impose different throughput requirements | Timed script, reservations for ritual, separate fast queue for hero product |
 | Founder dependency | Expert-led businesses monetize trust but are difficult to reproduce | Written brewing/service curriculum; score local-host sessions |
 | Import interruption and duty cash flow | Denong and ITI provide direct examples | Domestic distributor first, safety stock, second supplier, broker model |
 | Authenticity without accessibility | Specialist expertise can intimidate beginners | Plain-language menu, visible duration/value, accessible hero offer |
@@ -364,7 +363,7 @@ Google Trends did not provide a reliable absolute LA keyword-volume result durin
 
 ## 12. Bottom line
 
-Los Angeles is the right first city to validate because one metro can test both sides of the proposition:
+Los Angeles has the right metro structure for a two-lane validation because it can test both sides of the proposition:
 
 - **Pasadena/Central LA:** can Chinese tea become a legible premium experience for mainstream, visitor, institutional and employer audiences?
 - **Arcadia/SGV:** is the tea, provenance and retail value strong enough for knowledgeable customers to buy again?
@@ -377,14 +376,15 @@ The company should proceed to paid tests, not a lease. If the same offer cannot 
 
 ### A1. Exact scoring method
 
-The score is an analyst-built comparison designed to make assumptions visible. Each base subindex is capped at 0-100:
+The score is an analyst-built comparison designed to make assumptions visible. Define `clip(x) = max(0, min(100, x))`; every component is clipped before weighting, full precision is retained through the final sum, and the displayed score is rounded once to one decimal.
 
-- **Culture:** 65% Chinese-alone proxy normalized to the observed maximum of 47%; 35% Chinese spoken at home normalized to 42.1%.
-- **Purchasing:** 55% median household income scaled from $50,000 = 0 to $120,000 = 100; 45% bachelor's degree or higher scaled from 20% = 0 to 72% = 100.
-- **Daytime:** 55% log-scaled workplace jobs from 10,000 = 0 to 180,000 = 100; 45% jobs per resident, capped at 1.5 = 100.
-- **Ecosystem/headroom:** 65% food-service establishments per 10,000 residents, capped at 50 = 100; 35% inverse snack/nonalcoholic-bar saturation, with 12 per 10,000 = 0.
+- **Culture `C`:** `0.65 × clip(100 × Chinese proxy / 47) + 0.35 × clip(100 × Chinese-language share / 42.1)`.
+- **Purchasing `P`:** `0.55 × clip(100 × (income - 50,000) / 70,000) + 0.45 × clip(100 × (BA+ - 20) / 52)`.
+- **Daytime `D`:** `0.55 × clip(100 × ln(jobs / 10,000) / ln(18)) + 0.45 × clip(100 × (jobs / population) / 1.5)`.
+- **Competitive headroom `H`:** `clip(100 × (12 - NAICS 722515 per 10,000) / 12)`.
+- **Ecosystem/headroom `E`:** `0.65 × clip(100 × NAICS 722 per 10,000 / 50) + 0.35 × H`.
 - **Access:** analyst index combining Metro rail, ACS transit/no-car measures and documented parking. This is the most subjective input.
-- **Cost:** 75% inverse representative asking rent, where $30/SF/year = 100 and $55 = 0; 25% inverse minimum wage, where $16.90 = 100 and $18.57 = 0.
+- **Cost `K`:** `0.75 × clip(100 × (55 - rent) / 25) + 0.25 × clip(100 × (18.57 - wage) / 1.67)`.
 - **Testability:** analyst index based on visitor/event evidence, partner density and the ability to run a reversible experiment.
 
 Scenario weights:
@@ -398,6 +398,27 @@ Scenario weights:
 | Cost | 15% | 10% | 15% |
 | Ecosystem/headroom | 15% | 10% | 5% |
 | Testability | -- | 10% | 10% |
+
+The explicit analyst and derived inputs used in the displayed scorecard are:
+
+| Market | Access `A` | Testability `T` | Representative rent $/SF/year | Wage $/hour | Cost `K` | Headroom `H` | Ecosystem/headroom `E` |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Alhambra | 55 | 75 | 35 | 16.90 | 85.00 | 65.83 | 60.87 |
+| Arcadia | 70 | 80 | 32 | 16.90 | 94.00 | 40.83 | 60.83 |
+| Culver City | 75 | 95 | 45 | 16.90 | 55.00 | 45.83 | 81.04 |
+| Monterey Park | 50 | 70 | 34 | 16.90 | 88.00 | 73.33 | 69.22 |
+| Pasadena | 90 | 100 | 44 | 18.57 | 33.00 | 36.67 | 70.68 |
+| Rowland Heights | 30 | 50 | 43 | 18.47 | 37.50 | 10.00 | 68.50 |
+| San Gabriel | 40 | 70 | 37 | 16.90 | 79.00 | 55.83 | 69.07 |
+| Chinatown | 95 | 75 | 34 | 18.42 | 65.25 | 10.83 | 68.79 |
+| West LA / Sawtelle | 65 | 75 | 48 | 18.42 | 23.25 | 42.50 | 71.94 |
+| Arts District / Little Tokyo | 95 | 75 | 37 | 18.42 | 56.25 | 6.67 | 67.33 |
+| Silver Lake / Echo Park | 55 | 85 | 47 | 18.42 | 26.25 | 52.50 | 56.59 |
+| Koreatown | 100 | 50 | 45 | 18.42 | 32.25 | 48.33 | 66.97 |
+
+The representative rent is an analyst comparison input selected from the disclosed A4 listing evidence; it is not a measured neighborhood median, executed rent or total occupancy cost. Access and testability are judgment inputs, not source-measured facts. For multi-ZCTA markets, the component rates and income heuristic are population-weighted from the displayed rows; the income result is not a Census-published combined median. Jobs per resident is recomputed as A3 workplace jobs divided by the A2 population proxy.
+
+The three final formulas apply the displayed scenario weights to `C`, `P`, `D`, `A`, `K`, `E` and `T`. For example, Community is `0.35C + 0.15P + 0.10D + 0.10A + 0.15K + 0.15E`; Testability is omitted from that scenario. Mainstream and Pop-up/B2B follow their respective weight columns exactly.
 
 The normalization endpoints and weights are judgment choices, not econometrically estimated predictors. Their purpose is to expose why a location ranks well, not to create false precision. A real venue quote and a paid test override the index.
 
@@ -430,7 +451,6 @@ Exact variables:
 - BA+: sum `B15003_022` through `B15003_025`, denominator `B15003_001`
 - Asian alone: `B02001_005 / B02001_001`
 - Chinese proxy: `B02015_002` (Chinese except Taiwanese) plus `B02015_008` (Taiwanese)
-- Foreign-born: `B05002_013 / B05002_001`
 - Non-English language at home: `(C16001_001 - C16001_002) / C16001_001`
 - Chinese spoken at home: `C16001_021 / C16001_001`
 - Transit commute: `B08006_008 / B08006_001`
@@ -440,7 +460,7 @@ Exact variables:
 Reproducible source calls:
 
 - [Population, income and Asian population](https://api.censusreporter.org/1.0/data/show/acs2024_5yr?table_ids=B01003,B19013,B02001&geo_ids=16000US0600884,16000US0602462,16000US0617568,16000US0648914,16000US0656000,16000US0663218,16000US0667042,86000US90012,86000US90013,86000US90026,86000US90039,86000US90005,86000US90020,86000US90006,86000US90025)
-- [Chinese population, foreign-born and home language](https://api.censusreporter.org/1.0/data/show/acs2024_5yr?table_ids=B02015,B05002,C16001&geo_ids=16000US0600884,16000US0602462,16000US0617568,16000US0648914,16000US0656000,16000US0663218,16000US0667042,86000US90012,86000US90013,86000US90026,86000US90039,86000US90005,86000US90020,86000US90006,86000US90025)
+- [Chinese population and home language](https://api.censusreporter.org/1.0/data/show/acs2024_5yr?table_ids=B02015,C16001&geo_ids=16000US0600884,16000US0602462,16000US0617568,16000US0648914,16000US0656000,16000US0663218,16000US0667042,86000US90012,86000US90013,86000US90026,86000US90039,86000US90005,86000US90020,86000US90006,86000US90025)
 - [Education, commute and vehicle availability](https://api.censusreporter.org/1.0/data/show/acs2024_5yr?table_ids=B15003,B08006,B08201&geo_ids=16000US0600884,16000US0602462,16000US0617568,16000US0648914,16000US0656000,16000US0663218,16000US0667042,86000US90012,86000US90013,86000US90026,86000US90039,86000US90005,86000US90020,86000US90006,86000US90025)
 - [2024 California Census Gazetteer](https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2024_Gazetteer/2024_gaz_place_06.txt)
 
@@ -547,7 +567,7 @@ The files are fixed-record-layout data. Values in this report were independently
 - Capacity is rarely published; no unsupported capacity estimate is used for underwriting.
 - Tea Habitat's tasting catalog displayed sold-out cards; appointment availability needs direct confirmation.
 - Yoshan's U.S. and parent-company pages conflict on hours.
-- Ten Ren's official locator contains closed locations.
+- Ten Ren's current official locator lists Arcadia and Alhambra as active with posted hours; conflicting third-party directory status should not override the operator's primary source without field verification.
 - NEHIMA and several home/private concepts are operationally opaque and are not counted as verified public walk-in competitors.
 - CHAGEE and HEYTEA store counts change quickly; this report dates the observation.
 - Import values are customs value, not retail sales.

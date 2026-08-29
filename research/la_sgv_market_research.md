@@ -178,16 +178,16 @@ Scores are 0-100 structural-fit indices. They are not probabilities, forecasts o
 |---|---:|---:|---:|---|
 | Arcadia | **77.6** | **70.7** | 69.4 | High |
 | Monterey Park | **73.3** | 57.7 | 59.2 | High |
-| San Gabriel | 64.9 | 50.2 | 48.7 | High |
-| Alhambra | 64.7 | 56.3 | 57.0 | High |
+| San Gabriel | 64.9 | 50.2 | 48.8 | High |
+| Alhambra | 64.8 | 56.3 | 57.0 | High |
 | Rowland Heights | 58.4 | 41.4 | 37.6 | High demographics; medium rent |
-| Chinatown | 57.0 | 65.8 | **72.2** | Low; ZIP 90012 includes Civic Center |
-| Culver City | 53.8 | **75.0** | **72.8** | High |
+| Chinatown | 57.1 | 65.7 | **72.2** | Low; ZIP 90012 includes Civic Center |
+| Culver City | 53.7 | **75.0** | **72.8** | High |
 | Arts District / Little Tokyo | 51.9 | 62.9 | 69.7 | Low; overlapping ZIP geography |
-| Pasadena | 48.2 | **68.2** | **66.9** | High |
-| West LA / Sawtelle | 42.3 | 57.4 | 51.5 | Medium |
-| Silver Lake / Echo Park | 32.3 | 47.4 | 43.8 | Medium |
-| Koreatown | 32.3 | 41.1 | 44.5 | Medium |
+| Pasadena | 48.1 | **68.2** | **66.9** | High |
+| West LA / Sawtelle | 42.2 | 57.4 | 51.5 | Medium |
+| Silver Lake / Echo Park | 32.1 | 47.2 | 43.6 | Medium |
+| Koreatown | 32.3 | 41.1 | 44.4 | Medium |
 
 The weights, variables, underlying figures and sensitivity cautions appear in Appendix A. The decision interpretation is:
 
@@ -376,14 +376,15 @@ The company should proceed to paid tests, not a lease. If the same offer cannot 
 
 ### A1. Exact scoring method
 
-The score is an analyst-built comparison designed to make assumptions visible. Each base subindex is capped at 0-100:
+The score is an analyst-built comparison designed to make assumptions visible. Define `clip(x) = max(0, min(100, x))`; every component is clipped before weighting, full precision is retained through the final sum, and the displayed score is rounded once to one decimal.
 
-- **Culture:** 65% Chinese-alone proxy normalized to the observed maximum of 47%; 35% Chinese spoken at home normalized to 42.1%.
-- **Purchasing:** 55% median household income scaled from $50,000 = 0 to $120,000 = 100; 45% bachelor's degree or higher scaled from 20% = 0 to 72% = 100.
-- **Daytime:** 55% log-scaled workplace jobs from 10,000 = 0 to 180,000 = 100; 45% jobs per resident, capped at 1.5 = 100.
-- **Ecosystem/headroom:** 65% food-service establishments per 10,000 residents, capped at 50 = 100; 35% inverse snack/nonalcoholic-bar saturation, with 12 per 10,000 = 0.
+- **Culture `C`:** `0.65 × clip(100 × Chinese proxy / 47) + 0.35 × clip(100 × Chinese-language share / 42.1)`.
+- **Purchasing `P`:** `0.55 × clip(100 × (income - 50,000) / 70,000) + 0.45 × clip(100 × (BA+ - 20) / 52)`.
+- **Daytime `D`:** `0.55 × clip(100 × ln(jobs / 10,000) / ln(18)) + 0.45 × clip(100 × (jobs / population) / 1.5)`.
+- **Competitive headroom `H`:** `clip(100 × (12 - NAICS 722515 per 10,000) / 12)`.
+- **Ecosystem/headroom `E`:** `0.65 × clip(100 × NAICS 722 per 10,000 / 50) + 0.35 × H`.
 - **Access:** analyst index combining Metro rail, ACS transit/no-car measures and documented parking. This is the most subjective input.
-- **Cost:** 75% inverse representative asking rent, where $30/SF/year = 100 and $55 = 0; 25% inverse minimum wage, where $16.90 = 100 and $18.57 = 0.
+- **Cost `K`:** `0.75 × clip(100 × (55 - rent) / 25) + 0.25 × clip(100 × (18.57 - wage) / 1.67)`.
 - **Testability:** analyst index based on visitor/event evidence, partner density and the ability to run a reversible experiment.
 
 Scenario weights:
@@ -397,6 +398,27 @@ Scenario weights:
 | Cost | 15% | 10% | 15% |
 | Ecosystem/headroom | 15% | 10% | 5% |
 | Testability | -- | 10% | 10% |
+
+The explicit analyst and derived inputs used in the displayed scorecard are:
+
+| Market | Access `A` | Testability `T` | Representative rent $/SF/year | Wage $/hour | Cost `K` | Headroom `H` | Ecosystem/headroom `E` |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Alhambra | 55 | 75 | 35 | 16.90 | 85.00 | 65.83 | 60.87 |
+| Arcadia | 70 | 80 | 32 | 16.90 | 94.00 | 40.83 | 60.83 |
+| Culver City | 75 | 95 | 45 | 16.90 | 55.00 | 45.83 | 81.04 |
+| Monterey Park | 50 | 70 | 34 | 16.90 | 88.00 | 73.33 | 69.22 |
+| Pasadena | 90 | 100 | 44 | 18.57 | 33.00 | 36.67 | 70.68 |
+| Rowland Heights | 30 | 50 | 43 | 18.47 | 37.50 | 10.00 | 68.50 |
+| San Gabriel | 40 | 70 | 37 | 16.90 | 79.00 | 55.83 | 69.07 |
+| Chinatown | 95 | 75 | 34 | 18.42 | 65.25 | 10.83 | 68.79 |
+| West LA / Sawtelle | 65 | 75 | 48 | 18.42 | 23.25 | 42.50 | 71.94 |
+| Arts District / Little Tokyo | 95 | 75 | 37 | 18.42 | 56.25 | 6.67 | 67.33 |
+| Silver Lake / Echo Park | 55 | 85 | 47 | 18.42 | 26.25 | 52.50 | 56.59 |
+| Koreatown | 100 | 50 | 45 | 18.42 | 32.25 | 48.33 | 66.97 |
+
+The representative rent is an analyst comparison input selected from the disclosed A4 listing evidence; it is not a measured neighborhood median, executed rent or total occupancy cost. Access and testability are judgment inputs, not source-measured facts. For multi-ZCTA markets, the component rates and income heuristic are population-weighted from the displayed rows; the income result is not a Census-published combined median. Jobs per resident is recomputed as A3 workplace jobs divided by the A2 population proxy.
+
+The three final formulas apply the displayed scenario weights to `C`, `P`, `D`, `A`, `K`, `E` and `T`. For example, Community is `0.35C + 0.15P + 0.10D + 0.10A + 0.15K + 0.15E`; Testability is omitted from that scenario. Mainstream and Pop-up/B2B follow their respective weight columns exactly.
 
 The normalization endpoints and weights are judgment choices, not econometrically estimated predictors. Their purpose is to expose why a location ranks well, not to create false precision. A real venue quote and a paid test override the index.
 

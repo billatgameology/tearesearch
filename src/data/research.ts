@@ -225,8 +225,8 @@ export const marketDossiers = [
     ],
     locations: [
       { name: "Arcadia", use: "Authenticity + product", community: 77.6, flagship: 70.7, b2b: 69.4 },
-      { name: "Pasadena", use: "Mainstream paid test", community: 48.2, flagship: 68.2, b2b: 66.9 },
-      { name: "Culver City", use: "B2B + private events", community: 53.8, flagship: 75.0, b2b: 72.8 }
+      { name: "Pasadena", use: "Mainstream paid test", community: 48.1, flagship: 68.2, b2b: 66.9 },
+      { name: "Culver City", use: "B2B + private events", community: 53.7, flagship: 75.0, b2b: 72.8 }
     ],
     report: "/research/la-sgv-market-research.txt"
   },
