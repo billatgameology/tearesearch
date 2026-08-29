@@ -1,0 +1,935 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import { zhTranslations } from "../data/zh";
+import { geoAlbersUsa, geoPath } from "d3-geo";
+import { feature, mesh } from "topojson-client";
+import statesAtlas from "us-atlas/states-10m.json";
+import {
+  marketSignals,
+  customerNeeds,
+  models,
+  cities,
+  cases,
+  laWorkstreams,
+  leaseGates,
+  roadmap
+} from "../data/research";
+
+const confidenceLabel = {
+  verified: "Verified evidence",
+  directional: "Directional analysis",
+  illustrative: "Illustrative scenario",
+  "not-tested": "Not yet tested"
+};
+
+const projection = geoAlbersUsa().scale(1160).translate([480, 292]);
+const mapPath = geoPath(projection);
+const atlas = statesAtlas as any;
+const nationPath = mapPath(feature(atlas, atlas.objects.nation) as any) || "";
+const statePath = mapPath(mesh(atlas, atlas.objects.states, (a, b) => a !== b) as any) || "";
+const cityMapPoints = cities.map((city) => {
+  const point = projection(city.coordinates as [number, number]) || [0, 0];
+  return { ...city, x: point[0], y: point[1] };
+});
+---
+
+<BaseLayout
+  title="Chinese Tea in America — Research Atlas"
+  description="An evidence-led study of demand, business models, cities, economics and the path to validation for a Chinese tea business in the United States."
+>
+  <SiteHeader />
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__wash" aria-hidden="true"></div>
+      <div class="hero__grid shell">
+        <div class="hero__copy">
+          <div class="hero__meta">
+            <span>Research atlas · 2026</span>
+            <span>United States</span>
+          </div>
+          <p class="eyebrow hero__eyebrow">The central question</p>
+          <h1 data-hero-title data-i18n-dynamic>What would it take to build a <em>durable</em> Chinese tea business in America?</h1>
+          <p class="hero__dek">
+            A study of customer behavior, operating models, cities, unit economics and prior attempts—designed to separate cultural possibility from commercial proof.
+          </p>
+          <div class="hero__actions">
+            <a class="button hero__button" href="#market">Begin with the evidence <span aria-hidden="true">↓</span></a>
+            <span class="status status--directional">Decision research, not completed validation</span>
+          </div>
+        </div>
+
+        <div class="hero__object" aria-hidden="true">
+          <div class="steam steam--one"></div>
+          <div class="steam steam--two"></div>
+          <div class="tea-orbit">
+            <span class="tea-orbit__label tea-orbit__label--one">Demand</span>
+            <span class="tea-orbit__label tea-orbit__label--two">Economics</span>
+            <span class="tea-orbit__label tea-orbit__label--three">Operations</span>
+            <div class="tea-bowl"><div class="tea-bowl__surface"></div></div>
+          </div>
+        </div>
+
+        <div class="hero__ledger" aria-label="Research sequence">
+          <span>01 Market</span>
+          <span>02 Behavior</span>
+          <span>03 Models</span>
+          <span>04 Place</span>
+          <span>05 Decision</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="legend-strip">
+      <div class="shell legend-strip__inner">
+        <p>How to read this research</p>
+        <div class="legend-strip__items">
+          <span class="status status--verified">Verified</span>
+          <span class="status status--directional">Directional</span>
+          <span class="status status--illustrative">Illustrative</span>
+          <span class="status status--not-tested">Not tested</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter market" id="market">
+      <div class="shell">
+        <header class="section-heading reveal">
+          <span class="section-index">01 / MARKET REALITY</span>
+          <p class="eyebrow">Begin with what the data can support</p>
+          <h2>Tea is familiar. This proposition is not.</h2>
+          <p>
+            Broad category awareness lowers one barrier, but it does not prove demand for gongfu-style experiences, unsweetened loose leaf, premium teaware or repeat specialist purchasing.
+          </p>
+        </header>
+
+        <div class="signal-grid">
+          {marketSignals.map((signal, index) => (
+            <article class="signal-card reveal" style={`--delay:${index * 80}ms`}>
+              <span class={`status status--${signal.confidence}`}>{confidenceLabel[signal.confidence]}</span>
+              <strong>{signal.value}</strong>
+              <h3>{signal.label}</h3>
+              <p>{signal.detail}</p>
+            </article>
+          ))}
+        </div>
+
+        <div class="proof-grid">
+          <article class="proof-card proof-card--positive reveal">
+            <p class="proof-card__label">The desk research supports</p>
+            <ul>
+              <li>Tea is already a mainstream U.S. category.</li>
+              <li>Specialist experiences sell in multiple cities.</li>
+              <li>Customers pay for tastings, memberships, leaves and teaware.</li>
+              <li>Tea can function as culture, community and an alcohol-free occasion.</li>
+            </ul>
+          </article>
+          <article class="proof-card proof-card--open reveal">
+            <p class="proof-card__label">The market has not yet proven</p>
+            <ul>
+              <li>That viewers of tea education become buyers.</li>
+              <li>That boba customers become unsweetened loose-leaf customers.</li>
+              <li>That a trained manager can reproduce a founder-led experience.</li>
+              <li>That any one neighborhood supports permanent rent and labor.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter customers" id="customers">
+      <div class="shell">
+        <header class="section-heading reveal">
+          <span class="section-index">02 / CUSTOMER BEHAVIOR</span>
+          <p class="eyebrow">The real competitive set</p>
+          <h2>People do not buy “tea culture” in the abstract.</h2>
+          <p>
+            They already spend against concrete needs: energy, discovery, craft, gifting, calm and social connection. Chinese tea must win an occasion before it can build a category.
+          </p>
+        </header>
+
+        <div class="opportunity-intro reveal">
+          <span class="status status--directional">Opportunity mapping</span>
+          <p>Each opportunity shows the existing spending habit and the specific way Chinese tea could enter it.</p>
+        </div>
+
+        <div class="opportunity-grid" role="list">
+          {customerNeeds.map((item, index) => (
+            <article class="opportunity-card reveal" role="listitem" style={`--delay:${index * 55}ms`}>
+              <div class="opportunity-card__top">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <i style={`--signal:${item.signal}%`} aria-hidden="true"></i>
+              </div>
+              <h3>{item.need}</h3>
+              <dl>
+                <div><dt>Current spending destination</dt><dd>{item.competesWith}</dd></div>
+                <div><dt>Potential entry point</dt><dd>{item.opening}</dd></div>
+              </dl>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter models-section" id="models">
+      <div class="shell">
+        <header class="section-heading reveal">
+          <span class="section-index">03 / BUSINESS MODELS</span>
+          <p class="eyebrow">Seven ways to enter the market</p>
+          <h2>The same mission creates very different businesses.</h2>
+          <p>
+            Compare each model by evidence speed, capital intensity, flexibility and dependence on a physical operator. The ordering below can be changed without changing the source data.
+          </p>
+        </header>
+
+        <div class="model-toolbar reveal" role="group" aria-label="Order business models">
+          <span>View by</span>
+          <button class="is-active" type="button" data-model-view="score" aria-pressed="true">Overall score</button>
+          <button type="button" data-model-view="capital" aria-pressed="false">Lowest capital</button>
+          <button type="button" data-model-view="flexible" aria-pressed="false">Remote flexibility</button>
+          <button type="button" data-model-view="physical" aria-pressed="false">Physical formats</button>
+        </div>
+
+        <div class="model-list" data-model-list>
+          {models.map((model, index) => (
+            <article
+              class="model-row reveal"
+              data-model-card
+              data-score={model.score}
+              data-capital={model.capital}
+              data-tags={model.tags.join(" ")}
+              style={`--delay:${Math.min(index * 55, 240)}ms`}
+            >
+              <div class="model-row__rank">{String(model.rank).padStart(2, "0")}</div>
+              <div class="model-row__main">
+                <h3>{model.name}</h3>
+                <p>{model.thesis}</p>
+              </div>
+              <div class="model-row__score">
+                <span>Weighted score</span>
+                <strong>{model.score.toFixed(2)}</strong>
+                <i style={`--score:${model.score / 5 * 100}%`}></i>
+              </div>
+              <div class="model-row__numbers">
+                <span>Startup <b>${Math.round(model.capital / 1000)}K</b></span>
+                <span>Fixed / mo <b>${Math.round(model.fixed / 1000)}K</b></span>
+              </div>
+              <p class="model-row__decision">{model.decision}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter cities-section" id="cities">
+      <div class="shell">
+        <header class="section-heading reveal">
+          <span class="section-index">04 / CITY ANALYSIS</span>
+          <p class="eyebrow">A market is not a neighborhood</p>
+          <h2>Five cities answer five different questions.</h2>
+          <p>
+            The scorecard is a screening device, not a site-selection conclusion. Paid behavior must still be tested in distinct neighborhood contexts.
+          </p>
+        </header>
+
+        <figure class="city-map card reveal" aria-labelledby="city-map-caption">
+          <svg class="city-map__graphic" viewBox="0 0 960 585" role="img" aria-labelledby="city-map-title city-map-description">
+            <title id="city-map-title">Five U.S. markets in the directional scorecard</title>
+            <desc id="city-map-description">A map of the United States labeling Los Angeles, San Francisco, Seattle, Austin and New York.</desc>
+            <path class="city-map__nation" d={nationPath} />
+            <path class="city-map__states" d={statePath} />
+            {cityMapPoints.map((city) => (
+              <g class="city-map__marker" transform={`translate(${city.x} ${city.y})`}>
+                <circle r="8" />
+                <circle class="city-map__marker-ring" r="15" />
+                <line x1={city.x > 720 ? -10 : 10} y1="-9" x2={city.x > 720 ? -30 : 30} y2="-24" />
+                <text x={city.x > 720 ? -35 : 35} y="-27" text-anchor={city.x > 720 ? "end" : "start"}>{city.name}</text>
+                <text class="city-map__score" x={city.x > 720 ? -35 : 35} y="-9" text-anchor={city.x > 720 ? "end" : "start"}>{city.score.toFixed(2)} / 5</text>
+              </g>
+            ))}
+          </svg>
+          <figcaption class="city-map__caption" id="city-map-caption">
+            <span class="status status--directional">Directional analyst score</span>
+            <p>City labels are always visible; the complete reasoning for every market appears below.</p>
+          </figcaption>
+        </figure>
+
+        <div class="city-card-grid">
+          {cities.map((city, index) => (
+            <article class="city-card reveal" style={`--delay:${index * 60}ms`}>
+              <div class="city-card__top">
+                <span>#{city.rank} directional rank</span>
+                <strong>{city.score.toFixed(2)}<small>/5</small></strong>
+              </div>
+              <h3>{city.name}</h3>
+              <p class="city-card__role">{city.role}</p>
+              <dl>
+                <div><dt>Candidate contexts</dt><dd>{city.neighborhoods}</dd></div>
+                <div><dt>Why it matters</dt><dd>{city.strength}</dd></div>
+                <div><dt>Unresolved tension</dt><dd>{city.tension}</dd></div>
+              </dl>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter evidence-section" id="evidence">
+      <div class="shell">
+        <header class="section-heading reveal">
+          <span class="section-index">05 / COMPARABLE EVIDENCE</span>
+          <p class="eyebrow">What prior attempts reveal</p>
+          <h2>A beloved room can still be a fragile business.</h2>
+          <p>
+            The most useful cases are not simple winners and failures. They show how durable brands change format while preserving knowledge, community, inventory and customer relationships.
+          </p>
+        </header>
+
+        <div class="case-timeline">
+          {cases.map((item, index) => (
+            <article class="case-item reveal" style={`--delay:${Math.min(index * 70, 280)}ms`}>
+              <div class="case-item__marker"><span>{String(index + 1).padStart(2,"0")}</span></div>
+              <div class="case-item__content">
+                <div class="case-item__meta"><span>{item.place}</span><span>{item.outcome}</span></div>
+                <h3>{item.company}</h3>
+                <p>{item.lesson}</p>
+                <div class="case-item__actions">
+                  <span class="case-item__mechanism">{item.mechanism.replaceAll("-", " ")}</span>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">Visit source <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <blockquote class="evidence-quote reveal">
+          <p>“The lease should be the result of proven demand—not the tool used to create it.”</p>
+          <cite>Pattern synthesized from the comparable-business analysis</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="chapter economics-section" id="economics">
+      <div class="shell">
+        <header class="section-heading reveal">
+          <span class="section-index">06 / UNIT ECONOMICS</span>
+          <p class="eyebrow">The cost of being wrong</p>
+          <h2>Rent turns uncertainty into a monthly obligation.</h2>
+          <p>
+            Use the simulator to see how fixed cost, contribution margin and transaction value translate into operating break-even. These are scenarios—not forecasts.
+          </p>
+        </header>
+
+        <div class="economics-lab reveal">
+          <div class="economics-controls">
+            <div class="economics-controls__heading">
+              <span class="status status--illustrative">Illustrative model</span>
+              <h3>Break-even laboratory</h3>
+            </div>
+            <label>
+              <span>Monthly fixed cost <output data-fixed-output>$12,000</output></span>
+              <input data-fixed type="range" min="5000" max="70000" step="1000" value="12000" />
+            </label>
+            <label>
+              <span>Contribution margin <output data-margin-output>55%</output></span>
+              <input data-margin type="range" min="30" max="75" step="1" value="55" />
+            </label>
+            <label>
+              <span>Average transaction <output data-ticket-output>$58</output></span>
+              <input data-ticket type="range" min="20" max="150" step="2" value="58" />
+            </label>
+            <div class="scenario-presets" aria-label="Load scenario">
+              <button class="is-active" type="button" data-scenario="12000,55,58">Tastings + e-com</button>
+              <button type="button" data-scenario="25000,65,72">Studio</button>
+              <button type="button" data-scenario="65000,68,26">Tea house</button>
+            </div>
+          </div>
+
+          <div class="economics-results" aria-live="polite">
+            <p>Required operating volume</p>
+            <div class="result-primary">
+              <span>Monthly break-even revenue</span>
+              <strong data-revenue>$21,818</strong>
+            </div>
+            <div class="result-grid">
+              <div><span>Transactions / month</span><strong data-transactions>376</strong></div>
+              <div><span>Average / day</span><strong data-daily>13</strong></div>
+              <div><span>Target to survive −30%</span><strong data-safe>$31,169</strong></div>
+            </div>
+            <p class="economics-results__note">Excludes debt service and investor return. Change the inputs; do not mistake precision for certainty.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter la-section" id="los-angeles">
+      <div class="la-section__glow" aria-hidden="true"></div>
+      <div class="shell">
+        <header class="section-heading section-heading--light reveal">
+          <span class="section-index">07 / NEXT RESEARCH LAYER</span>
+          <p class="eyebrow">Los Angeles / San Gabriel Valley</p>
+          <h2>From directional ranking to decision-grade local evidence.</h2>
+          <p>
+            A separate research workstream is now developing the first consistent metro-level dataset. This section is structured to accept verified rows, not another standalone narrative.
+          </p>
+        </header>
+
+        <div class="la-dashboard reveal">
+          <div class="la-dashboard__topline">
+            <div>
+              <span class="pulse" aria-hidden="true"></span>
+              <p>Deep-dive research in progress</p>
+            </div>
+            <span>Schema v1.0</span>
+          </div>
+          <div class="la-workstreams">
+            {laWorkstreams.map((item) => (
+              <article>
+                <span class="la-workstreams__number">{item.number}</span>
+                <div><h3>{item.title}</h3><p>{item.detail}</p></div>
+                <span class="la-workstreams__state">{item.state}</span>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div class="la-schema reveal">
+          <div>
+            <p class="eyebrow">Designed for comparison</p>
+            <h3>One schema, five future markets.</h3>
+          </div>
+          <p>
+            Each business, neighborhood and evidence row will carry a source URL, publication or access date, represented data period and confidence level. Once LA/SGV is complete, the same structure can be applied to Seattle, Austin, San Francisco and New York.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter synthesis-section" id="synthesis">
+      <div class="shell">
+        <header class="section-heading reveal">
+          <span class="section-index">08 / SYNTHESIS</span>
+          <p class="eyebrow">Patterns across the analysis</p>
+          <h2>The evidence begins to converge.</h2>
+          <p>No single data point decides the strategy. The recommendation follows from the same mechanisms recurring across market behavior, business models, cities, cases and economics.</p>
+        </header>
+
+        <div class="synthesis-grid">
+          <article class="reveal"><span>01</span><h3>Curiosity is easier than habit.</h3><p>Event excitement matters only when it becomes replenishment, repeat attendance or referral.</p></article>
+          <article class="reveal"><span>02</span><h3>Expertise is part of the product.</h3><p>A local operator must reproduce trust, hospitality and cultural interpretation—not just handle a register.</p></article>
+          <article class="reveal"><span>03</span><h3>Qualified traffic beats foot traffic.</h3><p>A crowded neighborhood can still supply the wrong customer for a guided specialist offer.</p></article>
+          <article class="reveal"><span>04</span><h3>Multiple channels create resilience.</h3><p>Experiences, product, e-commerce, B2B, gifting and membership protect one another.</p></article>
+          <article class="reveal"><span>05</span><h3>Physical space amplifies both sides.</h3><p>A room can deepen the brand, but it also magnifies weak demand, labor and inventory decisions.</p></article>
+          <article class="reveal"><span>06</span><h3>Proof must precede permanence.</h3><p>Paid behavior produces better evidence than followers, compliments, market-size slides or design ambition.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommendation-section" id="recommendation">
+      <div class="recommendation-section__ink" aria-hidden="true"></div>
+      <div class="shell">
+        <div class="recommendation-intro reveal">
+          <span class="section-index">09 / RECOMMENDATION</span>
+          <p class="eyebrow">After the evidence</p>
+          <h2>Build the company before building the tea house.</h2>
+          <p>
+            Begin as a content-led Chinese tea education and commerce brand, supported by paid tastings, sampler sales, corporate experiences and selective wholesale. Escalate to a compact appointment studio only when repeat local demand and manager-led delivery are visible.
+          </p>
+        </div>
+
+        <div class="sequence reveal" aria-label="Recommended business sequence">
+          {[
+            ["01", "Content", "Create curiosity"],
+            ["02", "Sampler", "Convert attention"],
+            ["03", "Paid events", "Create trust"],
+            ["04", "Repeat sales", "Prove habit"],
+            ["05", "Small studio", "Serve proven demand"]
+          ].map(([number, title, detail]) => (
+            <article><span>{number}</span><h3>{title}</h3><p>{detail}</p></article>
+          ))}
+        </div>
+
+        <div class="recommendation-grid">
+          <div class="lease-card reveal">
+            <div class="lease-card__heading">
+              <p class="eyebrow">Before any lease</p>
+              <h3>Evidence gates</h3>
+            </div>
+            <div class="lease-gates">
+              {leaseGates.map(([label, threshold]) => (
+                <div><span class="gate-box" aria-hidden="true"></span><p>{label}</p><strong>{threshold}</strong></div>
+              ))}
+            </div>
+          </div>
+
+          <div class="roadmap-card reveal">
+            <div class="roadmap-card__heading">
+              <p class="eyebrow">First operating cycle</p>
+              <h3>90-day validation</h3>
+            </div>
+            <div class="roadmap">
+              {roadmap.map((item, index) => (
+                <article>
+                  <span>{String(index + 1).padStart(2,"0")}</span>
+                  <div><small>{item.period}</small><h4>{item.title}</h4><p>{item.detail}</p></div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="closing-question reveal">
+          <p>The final go / no-go question</p>
+          <blockquote>Can the company acquire repeat local customers—and can a trained local operator deliver the experience profitably without depending on a permanent storefront?</blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="research-files">
+    <div class="shell site-footer__grid">
+      <div>
+        <p class="eyebrow">Tea Research Atlas</p>
+        <h2>Evidence before real estate.</h2>
+      </div>
+      <div class="site-footer__links">
+        <a href="/research/us-chinese-tea-business-report.txt" target="_blank" rel="noopener">Open research report <span>↗</span></a>
+        <a href="/research/full-research-transcript.txt" target="_blank" rel="noopener">Open full research transcript <span>↗</span></a>
+        <a href="/research/five-market-study.txt" target="_blank" rel="noopener">Open five-market study <span>↗</span></a>
+        <a href="/research/comparable-business-cases.txt" target="_blank" rel="noopener">Open comparable cases <span>↗</span></a>
+      </div>
+      <div class="site-footer__fineprint">
+        <p>Research date: August 2026</p>
+        <p>Desk research and illustrative analysis. Not legal, tax, investment or immigration advice.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script is:inline id="tea-translations" type="application/json" set:html={JSON.stringify(zhTranslations)}></script>
+
+  <script>
+    const translationElement = document.querySelector<HTMLScriptElement>("#tea-translations");
+    const translations: Record<string, string> = translationElement?.textContent
+      ? JSON.parse(translationElement.textContent)
+      : {};
+    const languageToggle = document.querySelector<HTMLButtonElement>("[data-language-toggle]");
+    const heroTitle = document.querySelector<HTMLElement>("[data-hero-title]");
+    const originalHeroTitle = heroTitle?.innerHTML || "";
+    const originalTitle = document.title;
+    const descriptionMeta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    const originalDescription = descriptionMeta?.content || "";
+    const staticTextNodes: Array<{ node: Text; english: string }> = [];
+    const textWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        const parent = node.parentElement;
+        if (!parent || !node.nodeValue?.trim()) return NodeFilter.FILTER_REJECT;
+        if (parent.closest("script, style, [data-i18n-dynamic]")) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    while (textWalker.nextNode()) {
+      const node = textWalker.currentNode as Text;
+      staticTextNodes.push({ node, english: node.nodeValue || "" });
+    }
+
+    const language = () => document.documentElement.lang === "zh-CN" ? "zh" : "en";
+
+    const applyLanguage = (nextLanguage: "en" | "zh") => {
+      document.documentElement.lang = nextLanguage === "zh" ? "zh-CN" : "en";
+      staticTextNodes.forEach(({ node, english }) => {
+        if (nextLanguage === "en") {
+          node.nodeValue = english;
+          return;
+        }
+        const trimmed = english.trim();
+        node.nodeValue = translations[trimmed] ? english.replace(trimmed, translations[trimmed]) : english;
+      });
+      document.title = nextLanguage === "zh" ? (translations[originalTitle] || originalTitle) : originalTitle;
+      if (descriptionMeta) descriptionMeta.content = nextLanguage === "zh" ? (translations[originalDescription] || originalDescription) : originalDescription;
+      if (heroTitle) {
+        heroTitle.innerHTML = nextLanguage === "zh"
+          ? '<span class="hero-title-line">在美国打造一个</span><span class="hero-title-line"><em>可持续的</em>中国茶</span><span class="hero-title-line">品牌，需要什么？</span>'
+          : originalHeroTitle;
+      }
+      if (languageToggle) {
+        languageToggle.textContent = nextLanguage === "zh" ? "EN" : "中文";
+        languageToggle.setAttribute("aria-pressed", String(nextLanguage === "zh"));
+        languageToggle.setAttribute("aria-label", nextLanguage === "zh" ? "切换到英文" : "Switch to Chinese");
+      }
+      try { localStorage.setItem("tea-research-language", nextLanguage); } catch {}
+    };
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reveals = document.querySelectorAll<HTMLElement>(".reveal");
+    if (reducedMotion) {
+      reveals.forEach((element) => element.classList.add("is-visible"));
+    } else {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement;
+            element.style.transitionDelay = element.style.getPropertyValue("--delay") || "0ms";
+            element.classList.add("is-visible");
+            revealObserver.unobserve(element);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -6%" });
+      reveals.forEach((element) => revealObserver.observe(element));
+    }
+
+    const modelButtons = document.querySelectorAll<HTMLButtonElement>("[data-model-view]");
+    const modelCards = [...document.querySelectorAll<HTMLElement>("[data-model-card]")];
+    modelButtons.forEach((button) => button.addEventListener("click", () => {
+      const view = button.dataset.modelView;
+      modelButtons.forEach((item) => {
+        item.classList.toggle("is-active", item === button);
+        item.setAttribute("aria-pressed", String(item === button));
+      });
+      modelCards.forEach((card) => card.hidden = false);
+      const sorted = [...modelCards].sort((a, b) => {
+        if (view === "capital") return Number(a.dataset.capital) - Number(b.dataset.capital);
+        if (view === "flexible") {
+          const aFlex = /remote|flexible/.test(a.dataset.tags || "") ? 1 : 0;
+          const bFlex = /remote|flexible/.test(b.dataset.tags || "") ? 1 : 0;
+          return bFlex - aFlex || Number(b.dataset.score) - Number(a.dataset.score);
+        }
+        return Number(b.dataset.score) - Number(a.dataset.score);
+      });
+      sorted.forEach((card, index) => {
+        card.style.order = String(index);
+        if (view === "physical") card.hidden = !(card.dataset.tags || "").includes("physical");
+      });
+    }));
+
+    const fixedInput = document.querySelector<HTMLInputElement>("[data-fixed]");
+    const marginInput = document.querySelector<HTMLInputElement>("[data-margin]");
+    const ticketInput = document.querySelector<HTMLInputElement>("[data-ticket]");
+    const currency = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+    const integer = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+    const updateEconomics = () => {
+      if (!fixedInput || !marginInput || !ticketInput) return;
+      const fixed = Number(fixedInput.value);
+      const margin = Number(marginInput.value);
+      const ticket = Number(ticketInput.value);
+      const revenue = fixed / (margin / 100);
+      const transactions = revenue / ticket;
+      const set = (selector: string, value: string) => { const element = document.querySelector<HTMLElement>(selector); if (element) element.textContent = value; };
+      set("[data-fixed-output]", currency.format(fixed));
+      set("[data-margin-output]", `${margin}%`);
+      set("[data-ticket-output]", currency.format(ticket));
+      set("[data-revenue]", currency.format(revenue));
+      set("[data-transactions]", integer.format(transactions));
+      set("[data-daily]", integer.format(transactions / 30));
+      set("[data-safe]", currency.format(revenue / .7));
+    };
+    [fixedInput, marginInput, ticketInput].forEach((input) => input?.addEventListener("input", updateEconomics));
+    document.querySelectorAll<HTMLButtonElement>("[data-scenario]").forEach((button) => button.addEventListener("click", () => {
+      const [fixed, margin, ticket] = (button.dataset.scenario || "").split(",");
+      if (fixedInput) fixedInput.value = fixed;
+      if (marginInput) marginInput.value = margin;
+      if (ticketInput) ticketInput.value = ticket;
+      document.querySelectorAll("[data-scenario]").forEach((item) => item.classList.toggle("is-active", item === button));
+      updateEconomics();
+    }));
+    updateEconomics();
+    languageToggle?.addEventListener("click", () => applyLanguage(language() === "zh" ? "en" : "zh"));
+    applyLanguage(document.documentElement.lang === "zh-CN" ? "zh" : "en");
+    if (window.location.hash) {
+      requestAnimationFrame(() => document.querySelector(window.location.hash)?.scrollIntoView({ block: "start" }));
+    }
+  </script>
+</BaseLayout>
+
+<style>
+  .chapter { padding: 100px 0; scroll-margin-top: 72px; }
+
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+    background: var(--forest-deep);
+    color: var(--paper-bright);
+  }
+
+  .hero__wash {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 77% 42%, rgba(148, 189, 165, 0.18), transparent 30%),
+      radial-gradient(circle at 12% 16%, rgba(191, 145, 81, 0.14), transparent 24%),
+      linear-gradient(135deg, transparent 45%, rgba(255,255,255,.025) 45.1%, transparent 45.2%);
+  }
+
+  .hero__grid { position: relative; display: grid; min-height: 100svh; padding-top: 102px; padding-bottom: 42px; }
+  .hero__copy { position: relative; z-index: 2; align-self: center; max-width: 900px; }
+  .hero__meta { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 50px; padding-bottom: 12px; border-bottom: 1px solid var(--line-light); color: rgba(255,255,255,.56); font-family: var(--mono); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; }
+  .hero__eyebrow { color: var(--celadon); }
+  .hero h1 { margin-top: 20px; max-width: 100%; font-family: var(--serif); font-size: clamp(2.95rem, 12vw, 8.4rem); font-weight: 400; letter-spacing: -.062em; line-height: .9; overflow-wrap: break-word; }
+  .hero h1 :global(em) { color: var(--celadon); font-weight: 400; }
+  .hero h1 :global(.hero-title-line) { display: block; }
+  .hero__dek { max-width: 660px; margin-top: 30px; color: rgba(255,255,255,.69); font-size: clamp(1rem, 3.5vw, 1.28rem); }
+  .hero__actions { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; margin-top: 34px; }
+  .hero__button { background: var(--paper-bright); color: var(--forest-deep); }
+  .hero__button:hover { background: var(--celadon); }
+  .hero .status { color: rgba(255,255,255,.58); }
+  .hero__object { position: absolute; right: -88px; bottom: 5%; width: 280px; height: 280px; opacity: .62; }
+  .tea-orbit { position: absolute; inset: 0; border: 1px solid rgba(181,203,189,.25); border-radius: 50%; animation: orbit 28s linear infinite; }
+  .tea-orbit::before, .tea-orbit::after { position: absolute; inset: 12%; border: 1px dashed rgba(181,203,189,.18); border-radius: 50%; content: ""; }
+  .tea-orbit::after { inset: 28%; }
+  .tea-bowl { position: absolute; inset: 31%; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; box-shadow: 0 30px 70px rgba(0,0,0,.28); }
+  .tea-bowl__surface { width: 82%; height: 82%; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #c6a56e, #5e3f25 60%, #211d16); box-shadow: inset 0 0 0 5px rgba(255,255,255,.12); }
+  .tea-orbit__label { position: absolute; color: rgba(255,255,255,.55); font-family: var(--mono); font-size: .55rem; letter-spacing: .08em; text-transform: uppercase; animation: counter-orbit 28s linear infinite; }
+  .tea-orbit__label--one { top: -4px; left: 43%; }.tea-orbit__label--two { right: -24px; top: 61%; }.tea-orbit__label--three { bottom: 10%; left: -15px; }
+  .steam { position: absolute; z-index: 2; width: 42px; height: 140px; border-left: 1px solid rgba(255,255,255,.22); border-radius: 50%; filter: blur(2px); animation: steam 5s ease-in-out infinite; }
+  .steam--one { left: 47%; top: -18%; }.steam--two { left: 57%; top: -12%; animation-delay: -2s; }
+  .hero__ledger { align-self: end; display: flex; gap: 16px; overflow: hidden; margin-top: 50px; padding-top: 17px; border-top: 1px solid var(--line-light); color: rgba(255,255,255,.44); font-family: var(--mono); font-size: .58rem; white-space: nowrap; }
+  @keyframes orbit { to { transform: rotate(360deg); } }
+  @keyframes counter-orbit { to { transform: rotate(-360deg); } }
+  @keyframes steam { 0%,100% { opacity: 0; transform: translateY(18px) skewX(-3deg); } 35% { opacity: .65; } 80% { opacity: 0; transform: translateY(-20px) skewX(8deg); } }
+
+  .legend-strip { border-bottom: 1px solid var(--line); background: var(--paper-bright); }
+  .legend-strip__inner { display: grid; gap: 18px; padding-block: 22px; }
+  .legend-strip__inner > p { color: var(--ink-soft); font-family: var(--mono); font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; }
+  .legend-strip__items { display: flex; flex-wrap: wrap; gap: 12px 22px; }
+
+  .signal-grid { display: grid; gap: 12px; }
+  .signal-card { min-height: 265px; padding: 24px; border: 1px solid var(--line); background: rgba(250,247,239,.46); }
+  .signal-card strong { display: block; margin-top: 46px; font-family: var(--serif); font-size: clamp(3.5rem, 15vw, 6rem); font-weight: 400; letter-spacing: -.06em; line-height: .8; }
+  .signal-card h3 { margin-top: 20px; font-size: .85rem; }
+  .signal-card p { margin-top: 8px; color: var(--ink-soft); font-size: .82rem; }
+  .proof-grid { display: grid; gap: 1px; margin-top: 58px; background: var(--line); border: 1px solid var(--line); }
+  .proof-card { padding: 30px 24px; background: var(--paper-bright); }
+  .proof-card__label { margin-bottom: 28px; font-family: var(--serif); font-size: 1.65rem; }
+  .proof-card li { position: relative; padding: 13px 0 13px 26px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: .9rem; }
+  .proof-card li::before { position: absolute; left: 0; color: var(--jade); content: "+"; }
+  .proof-card--open li::before { color: var(--vermillion); content: "?"; }
+
+  .customers { background: var(--paper-bright); }
+  .opportunity-intro { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .opportunity-intro p { max-width: 620px; color: var(--ink-soft); font-size: .86rem; }
+  .opportunity-grid { display: grid; gap: 12px; }
+  .opportunity-card { display: flex; flex-direction: column; min-height: 330px; padding: 24px; border: 1px solid var(--line); background: var(--paper); }
+  .opportunity-card__top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .opportunity-card__top span { color: var(--brass); font-family: var(--mono); font-size: .62rem; }
+  .opportunity-card__top i { width: 92px; height: 2px; background: linear-gradient(to right, var(--vermillion) var(--signal), var(--line) var(--signal)); }
+  .opportunity-card h3 { margin-top: 42px; font-family: var(--serif); font-size: 1.85rem; font-weight: 400; letter-spacing: -.025em; line-height: 1.05; }
+  .opportunity-card dl { display: grid; gap: 22px; margin-top: auto; padding-top: 34px; }
+  .opportunity-card dt { color: var(--ink-soft); font-family: var(--mono); font-size: .56rem; letter-spacing: .07em; text-transform: uppercase; }
+  .opportunity-card dd { margin-top: 6px; font-size: .82rem; line-height: 1.48; }
+  .opportunity-card dl div:last-child dd { color: var(--jade); font-family: var(--serif); font-size: 1.08rem; line-height: 1.3; }
+
+  .model-toolbar { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 14px; scrollbar-width: none; }
+  .model-toolbar::-webkit-scrollbar { display: none; }
+  .model-toolbar > span { align-self: center; margin-right: 8px; color: var(--ink-soft); font-family: var(--mono); font-size: .65rem; text-transform: uppercase; white-space: nowrap; }
+  .model-toolbar button { min-height: 36px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink-soft); cursor: pointer; font-size: .72rem; white-space: nowrap; }
+  .model-toolbar button.is-active { border-color: var(--forest); background: var(--forest); color: white; }
+  .model-list { display: flex; flex-direction: column; margin-top: 22px; border-top: 1px solid var(--line); }
+  .model-row[hidden] { display: none !important; }
+  .model-row { display: grid; grid-template-columns: 34px 1fr auto; gap: 18px 10px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+  .model-row__rank { padding-top: 5px; color: var(--brass); font-family: var(--mono); font-size: .65rem; }
+  .model-row__main h3 { font-family: var(--serif); font-size: clamp(1.45rem, 6vw, 2rem); font-weight: 400; line-height: 1.05; }
+  .model-row__main p { margin-top: 9px; color: var(--ink-soft); font-size: .82rem; }
+  .model-row__score { grid-column: 3; grid-row: 1; display: grid; align-content: start; min-width: 60px; text-align: right; }
+  .model-row__score span { display: none; }
+  .model-row__score strong { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; }
+  .model-row__score i { display: block; width: 56px; height: 2px; margin-top: 7px; margin-left: auto; background: linear-gradient(to right, var(--jade) var(--score), var(--line) var(--score)); }
+  .model-row__numbers { grid-column: 2 / -1; display: flex; gap: 18px; color: var(--ink-soft); font-family: var(--mono); font-size: .6rem; text-transform: uppercase; }
+  .model-row__numbers b { color: var(--ink); font-weight: 700; }
+  .model-row__decision { grid-column: 2 / -1; width: max-content; padding: 5px 9px; border-radius: 4px; background: var(--celadon-pale); color: var(--forest); font-size: .65rem; font-weight: 700; }
+
+  .cities-section { background: var(--paper-deep); }
+  .city-map { position: relative; overflow: hidden; margin: 0; background: var(--forest); color: var(--paper-bright); }
+  .city-map__graphic { width: 100%; height: auto; padding: 14px 8px 0; }
+  .city-map__nation { fill: rgba(214,229,220,.08); stroke: rgba(214,229,220,.58); stroke-width: 1.5; }
+  .city-map__states { fill: none; stroke: rgba(214,229,220,.17); stroke-width: .8; }
+  .city-map__marker circle:first-child { fill: var(--vermillion); stroke: var(--forest); stroke-width: 4; }
+  .city-map__marker-ring { fill: none; stroke: rgba(231,167,143,.5); stroke-width: 1; }
+  .city-map__marker line { stroke: rgba(255,255,255,.42); stroke-width: 1; }
+  .city-map__marker text { fill: var(--paper-bright); font-family: var(--sans); font-size: 12px; font-weight: 700; paint-order: stroke; stroke: var(--forest); stroke-width: 4px; stroke-linejoin: round; }
+  .city-map__marker .city-map__score { fill: var(--celadon); font-family: var(--mono); font-size: 9px; font-weight: 400; }
+  .city-map__caption { display: flex; flex-direction: column; gap: 8px; padding: 20px 22px 22px; border-top: 1px solid var(--line-light); }
+  .city-map__caption .status { color: rgba(255,255,255,.6); }
+  .city-map__caption p { max-width: 550px; color: rgba(255,255,255,.65); font-size: .76rem; }
+  .city-card-grid { display: grid; gap: 12px; margin-top: 18px; }
+  .city-card { display: flex; flex-direction: column; min-height: 410px; padding: 26px 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper-bright); }
+  .city-card__top { display: flex; justify-content: space-between; align-items: start; color: var(--ink-soft); font-family: var(--mono); font-size: .58rem; text-transform: uppercase; }
+  .city-card__top strong { color: var(--ink); font-family: var(--serif); font-size: 2.2rem; font-weight: 400; line-height: .85; }
+  .city-card__top small { color: var(--ink-soft); font-family: var(--sans); font-size: .7rem; }
+  .city-card h3 { margin-top: 30px; font-family: var(--serif); font-size: clamp(2rem, 8vw, 3rem); font-weight: 400; letter-spacing: -.04em; line-height: .96; }
+  .city-card__role { margin-top: 9px; color: var(--vermillion); font-size: .68rem; font-weight: 700; text-transform: uppercase; }
+  .city-card dl { display: grid; gap: 18px; margin-top: auto; padding-top: 30px; }
+  .city-card dt { color: var(--ink-soft); font-family: var(--mono); font-size: .55rem; letter-spacing: .06em; text-transform: uppercase; }
+  .city-card dd { margin-top: 4px; font-size: .78rem; }
+
+  .case-timeline { position: relative; }
+  .case-timeline::before { position: absolute; left: 17px; top: 16px; bottom: 16px; width: 1px; background: var(--line); content: ""; }
+  .case-item { position: relative; display: grid; grid-template-columns: 36px 1fr; gap: 20px; padding-bottom: 36px; }
+  .case-item__marker { position: relative; z-index: 1; display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; background: var(--paper); color: var(--brass); font-family: var(--mono); font-size: .58rem; }
+  .case-item__content { padding: 0 0 28px; border-bottom: 1px solid var(--line); }
+  .case-item__meta { display: flex; justify-content: space-between; gap: 10px; color: var(--ink-soft); font-family: var(--mono); font-size: .58rem; letter-spacing: .04em; text-transform: uppercase; }
+  .case-item h3 { margin-top: 14px; font-family: var(--serif); font-size: 2rem; font-weight: 400; }
+  .case-item p { margin-top: 8px; color: var(--ink-soft); font-size: .86rem; }
+  .case-item__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 18px; }
+  .case-item__mechanism { display: inline-block; padding: 5px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--vermillion); font-family: var(--mono); font-size: .56rem; letter-spacing: .05em; text-transform: uppercase; }
+  .case-item__actions a { display: inline-flex; align-items: center; gap: 8px; padding: 5px 10px; border-radius: 999px; background: var(--forest); color: var(--paper-bright); font-size: .62rem; font-weight: 700; transition: background 180ms ease, transform 180ms ease; }
+  .case-item__actions a:hover { background: var(--jade); transform: translateY(-1px); }
+  .evidence-quote { margin-top: 36px; padding: 38px 24px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+  .evidence-quote p { font-family: var(--serif); font-size: clamp(2rem, 9vw, 4.2rem); letter-spacing: -.04em; line-height: 1.03; }
+  .evidence-quote cite { display: block; margin-top: 24px; color: var(--ink-soft); font-size: .72rem; font-style: normal; }
+
+  .economics-section { background: var(--paper-bright); }
+  .economics-lab { display: grid; overflow: hidden; border-radius: var(--radius); background: var(--forest); color: var(--paper-bright); box-shadow: var(--shadow); }
+  .economics-controls { padding: 28px 24px 34px; }
+  .economics-controls__heading h3 { margin-top: 10px; font-family: var(--serif); font-size: 2.2rem; font-weight: 400; }
+  .economics-controls .status { color: rgba(255,255,255,.58); }
+  .economics-controls label { display: block; margin-top: 28px; }
+  .economics-controls label > span { display: flex; justify-content: space-between; gap: 12px; font-size: .72rem; }
+  .economics-controls output { color: var(--celadon); font-family: var(--mono); }
+  input[type="range"] { width: 100%; height: 3px; margin-top: 14px; appearance: none; background: rgba(255,255,255,.2); accent-color: var(--celadon); }
+  input[type="range"]::-webkit-slider-thumb { width: 18px; height: 18px; border: 4px solid var(--forest); border-radius: 50%; appearance: none; background: var(--celadon); box-shadow: 0 0 0 1px var(--celadon); }
+  .scenario-presets { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 30px; }
+  .scenario-presets button { padding: 8px 11px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: transparent; color: rgba(255,255,255,.6); cursor: pointer; font-size: .62rem; }
+  .scenario-presets button.is-active { border-color: var(--celadon); color: var(--celadon); }
+  .economics-results { padding: 28px 24px 32px; background: var(--celadon-pale); color: var(--ink); }
+  .economics-results > p:first-child { color: var(--ink-soft); font-family: var(--mono); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; }
+  .result-primary { margin-top: 22px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+  .result-primary span { display: block; color: var(--ink-soft); font-size: .68rem; }
+  .result-primary strong { display: block; margin-top: 8px; font-family: var(--serif); font-size: clamp(3.1rem, 15vw, 5.5rem); font-weight: 400; letter-spacing: -.06em; line-height: .9; }
+  .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 12px; margin-top: 26px; }
+  .result-grid div:last-child { grid-column: 1 / -1; }
+  .result-grid span { display: block; color: var(--ink-soft); font-size: .62rem; }
+  .result-grid strong { display: block; margin-top: 4px; font-family: var(--serif); font-size: 1.7rem; font-weight: 400; }
+  .economics-results__note { margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: .68rem; }
+
+  .la-section { position: relative; overflow: hidden; background: var(--forest-deep); color: var(--paper-bright); }
+  .la-section__glow { position: absolute; top: -300px; right: -300px; width: 720px; height: 720px; border-radius: 50%; background: rgba(99,163,134,.13); filter: blur(30px); }
+  .section-heading--light .eyebrow { color: var(--celadon); }
+  .section-heading--light p { color: rgba(255,255,255,.62); }
+  .la-dashboard { position: relative; overflow: hidden; border: 1px solid var(--line-light); border-radius: var(--radius); background: rgba(255,255,255,.035); }
+  .la-dashboard__topline { display: flex; justify-content: space-between; gap: 16px; padding: 18px 20px; border-bottom: 1px solid var(--line-light); color: rgba(255,255,255,.55); font-family: var(--mono); font-size: .58rem; letter-spacing: .06em; text-transform: uppercase; }
+  .la-dashboard__topline div { display: flex; align-items: center; gap: 8px; }
+  .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--celadon); box-shadow: 0 0 0 0 rgba(171,196,183,.6); animation: pulse 2s infinite; }
+  @keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(171,196,183,0); } 100% { box-shadow: 0 0 0 0 rgba(171,196,183,0); } }
+  .la-workstreams article { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 20px; border-bottom: 1px solid var(--line-light); }
+  .la-workstreams article:last-child { border-bottom: 0; }
+  .la-workstreams__number { color: var(--brass); font-family: var(--mono); font-size: .62rem; }
+  .la-workstreams h3 { font-family: var(--serif); font-size: 1.22rem; font-weight: 400; }
+  .la-workstreams p { margin-top: 3px; color: rgba(255,255,255,.52); font-size: .75rem; }
+  .la-workstreams__state { grid-column: 2; width: max-content; margin-top: 7px; color: var(--celadon); font-family: var(--mono); font-size: .55rem; letter-spacing: .05em; text-transform: uppercase; }
+  .la-schema { display: grid; gap: 24px; margin-top: 52px; padding-top: 34px; border-top: 1px solid var(--line-light); }
+  .la-schema h3 { margin-top: 12px; font-family: var(--serif); font-size: 2.4rem; font-weight: 400; letter-spacing: -.04em; line-height: 1; }
+  .la-schema > p { color: rgba(255,255,255,.6); font-size: .9rem; }
+
+  .synthesis-grid { display: grid; gap: 12px; }
+  .synthesis-grid article { min-height: 245px; padding: 24px; border: 1px solid var(--line); background: rgba(250,247,239,.45); }
+  .synthesis-grid span { color: var(--brass); font-family: var(--mono); font-size: .62rem; }
+  .synthesis-grid h3 { margin-top: 50px; font-family: var(--serif); font-size: 1.65rem; font-weight: 400; line-height: 1.1; }
+  .synthesis-grid p { margin-top: 12px; color: var(--ink-soft); font-size: .82rem; }
+
+  .recommendation-section { position: relative; padding: 112px 0 80px; overflow: hidden; background: var(--celadon-pale); scroll-margin-top: 70px; }
+  .recommendation-section__ink { position: absolute; left: 50%; top: -270px; width: 560px; height: 560px; border: 1px solid rgba(36,114,94,.16); border-radius: 50%; transform: translateX(-50%); box-shadow: 0 0 0 70px rgba(36,114,94,.035), 0 0 0 140px rgba(36,114,94,.025); }
+  .recommendation-intro { position: relative; max-width: 990px; }
+  .recommendation-intro .eyebrow { margin-top: 22px; }
+  .recommendation-intro h2 { margin-top: 24px; font-family: var(--serif); font-size: clamp(3.3rem, 13vw, 8rem); font-weight: 400; letter-spacing: -.065em; line-height: .86; }
+  .recommendation-intro > p:last-child { max-width: 710px; margin-top: 30px; color: var(--ink-soft); font-size: clamp(1rem, 3vw, 1.24rem); }
+  .sequence { display: grid; gap: 1px; margin-top: 74px; background: var(--line); border: 1px solid var(--line); }
+  .sequence article { position: relative; min-height: 180px; padding: 22px; background: var(--paper-bright); }
+  .sequence article:not(:last-child)::after { position: absolute; right: 18px; bottom: -10px; z-index: 2; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--vermillion); color: white; content: "↓"; font-size: .6rem; }
+  .sequence span { color: var(--brass); font-family: var(--mono); font-size: .62rem; }
+  .sequence h3 { margin-top: 45px; font-family: var(--serif); font-size: 1.6rem; font-weight: 400; }
+  .sequence p { color: var(--ink-soft); font-size: .74rem; }
+  .recommendation-grid { display: grid; gap: 18px; margin-top: 70px; }
+  .lease-card, .roadmap-card { padding: 28px 22px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(250,247,239,.6); }
+  .lease-card__heading h3, .roadmap-card__heading h3 { margin-top: 10px; font-family: var(--serif); font-size: 2.5rem; font-weight: 400; }
+  .lease-gates { margin-top: 32px; border-top: 1px solid var(--line); }
+  .lease-gates > div { display: grid; grid-template-columns: 18px 1fr auto; align-items: center; gap: 10px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+  .gate-box { width: 11px; height: 11px; border: 1px solid var(--brass); }
+  .lease-gates p { font-size: .74rem; }
+  .lease-gates strong { text-align: right; font-family: var(--mono); font-size: .62rem; }
+  .roadmap { margin-top: 28px; }
+  .roadmap article { display: grid; grid-template-columns: 30px 1fr; gap: 13px; padding: 16px 0; border-top: 1px solid var(--line); }
+  .roadmap > article > span { color: var(--brass); font-family: var(--mono); font-size: .58rem; }
+  .roadmap small { color: var(--vermillion); font-family: var(--mono); font-size: .56rem; letter-spacing: .04em; text-transform: uppercase; }
+  .roadmap h4 { margin-top: 3px; font-family: var(--serif); font-size: 1.25rem; font-weight: 400; }
+  .roadmap p { margin-top: 5px; color: var(--ink-soft); font-size: .72rem; }
+  .closing-question { margin-top: 70px; padding: 42px 0 0; border-top: 1px solid var(--ink); text-align: center; }
+  .closing-question > p { color: var(--ink-soft); font-family: var(--mono); font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; }
+  .closing-question blockquote { max-width: 900px; margin: 24px auto 0; font-family: var(--serif); font-size: clamp(2rem, 7vw, 4rem); line-height: 1.04; }
+
+  .site-footer { padding: 68px 0 32px; background: var(--forest-deep); color: var(--paper-bright); }
+  .site-footer__grid { display: grid; gap: 46px; }
+  .site-footer h2 { margin-top: 14px; font-family: var(--serif); font-size: 2.5rem; font-weight: 400; line-height: 1; }
+  .site-footer .eyebrow { color: var(--celadon); }
+  .site-footer__links { border-top: 1px solid var(--line-light); }
+  .site-footer__links a { display: flex; justify-content: space-between; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--line-light); color: rgba(255,255,255,.68); font-size: .76rem; }
+  .site-footer__links a:hover { color: white; }
+  .site-footer__fineprint { display: flex; flex-direction: column; gap: 7px; padding-top: 24px; border-top: 1px solid var(--line-light); color: rgba(255,255,255,.42); font-size: .65rem; }
+
+  @media (min-width: 600px) {
+    .signal-grid, .synthesis-grid { grid-template-columns: repeat(2, 1fr); }
+    .proof-grid { grid-template-columns: repeat(2, 1fr); }
+    .opportunity-grid, .city-card-grid { grid-template-columns: repeat(2, 1fr); }
+    .la-workstreams { display: grid; grid-template-columns: repeat(2, 1fr); }
+    .la-workstreams article:nth-child(odd) { border-right: 1px solid var(--line-light); }
+    .sequence { grid-template-columns: repeat(5, 1fr); }
+    .sequence article:not(:last-child)::after { right: -10px; bottom: 50%; content: "→"; transform: translateY(50%); }
+  }
+
+  @media (min-width: 760px) {
+    .chapter { padding: 150px 0; }
+    .hero__actions { flex-direction: row; align-items: center; }
+    .hero__object { right: -40px; bottom: 12%; width: 440px; height: 440px; }
+    .hero__ledger { gap: 34px; }
+    .legend-strip__inner { grid-template-columns: 1fr auto; align-items: center; }
+    .signal-grid { grid-template-columns: repeat(4, 1fr); }
+    .signal-card { min-height: 340px; }
+    .signal-card strong { margin-top: 80px; font-size: clamp(3.4rem, 7vw, 5.8rem); }
+    .proof-card { padding: 42px; }
+    .opportunity-intro { flex-direction: row; align-items: start; justify-content: space-between; }
+    .opportunity-intro p { text-align: right; }
+    .model-row { grid-template-columns: 38px minmax(260px,1.3fr) 120px 180px 140px; align-items: center; gap: 20px; padding: 27px 0; }
+    .model-row__main p { max-width: 520px; }
+    .model-row__score { grid-column: 3; grid-row: auto; text-align: left; }
+    .model-row__score span { display: block; color: var(--ink-soft); font-family: var(--mono); font-size: .55rem; text-transform: uppercase; }
+    .model-row__score i { margin-left: 0; }
+    .model-row__numbers { grid-column: 4; display: grid; grid-template-columns: 1fr 1fr; }
+    .model-row__numbers span { display: grid; gap: 4px; }
+    .model-row__decision { grid-column: 5; justify-self: end; text-align: right; }
+    .city-map__graphic { padding: 22px 30px 0; }
+    .city-map__caption { flex-direction: row; align-items: center; justify-content: space-between; }
+    .city-map__caption p { text-align: right; }
+    .case-timeline::before { left: 50%; }
+    .case-item { grid-template-columns: 1fr 42px 1fr; gap: 28px; padding-bottom: 0; }
+    .case-item__marker { grid-column: 2; width: 42px; height: 42px; }
+    .case-item__content { grid-column: 3; padding-bottom: 54px; }
+    .case-item:nth-child(even) .case-item__content { grid-column: 1; grid-row: 1; text-align: right; }
+    .case-item:nth-child(even) .case-item__meta { flex-direction: row-reverse; }
+    .case-item:nth-child(even) .case-item__actions { justify-content: flex-end; }
+    .economics-lab { grid-template-columns: .9fr 1.1fr; }
+    .economics-controls, .economics-results { padding: 48px; }
+    .result-grid { grid-template-columns: repeat(3, 1fr); }
+    .result-grid div:last-child { grid-column: auto; }
+    .la-schema { grid-template-columns: .8fr 1.2fr; align-items: end; }
+    .synthesis-grid { grid-template-columns: repeat(3, 1fr); }
+    .recommendation-section { padding: 170px 0 110px; }
+    .recommendation-grid { grid-template-columns: 1fr 1fr; }
+    .site-footer__grid { grid-template-columns: 1fr 1fr; }
+    .site-footer__fineprint { grid-column: 1 / -1; flex-direction: row; justify-content: space-between; }
+  }
+
+  @media (min-width: 1060px) {
+    .hero__object { right: 3%; bottom: 14%; width: 520px; height: 520px; }
+    .hero__copy { max-width: 1050px; }
+    .hero h1 { max-width: 1050px; font-size: clamp(6rem, 9.2vw, 8.4rem); }
+    .hero__dek { max-width: 610px; }
+    .opportunity-grid { grid-template-columns: repeat(3, 1fr); }
+    .city-card-grid { grid-template-columns: repeat(6, 1fr); }
+    .city-card { grid-column: span 2; }
+    .city-card:nth-child(4) { grid-column: 2 / span 2; }
+    .la-workstreams { grid-template-columns: repeat(5, 1fr); }
+    .la-workstreams article { min-height: 180px; grid-template-columns: 1fr; align-content: space-between; border-right: 1px solid var(--line-light); }
+    .la-workstreams article:nth-child(5n) { border-right: 0; }
+    .la-workstreams__state { grid-column: 1; }
+  }
+</style>

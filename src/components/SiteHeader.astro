@@ -1,0 +1,222 @@
+---
+const nav = [
+  ["Market", "#market"],
+  ["Customers", "#customers"],
+  ["Models", "#models"],
+  ["Cities", "#cities"],
+  ["Evidence", "#evidence"],
+  ["Economics", "#economics"],
+  ["LA / SGV", "#los-angeles"],
+  ["Recommendation", "#recommendation"]
+];
+---
+
+<header class="site-header" data-header>
+  <div class="progress" data-progress></div>
+  <div class="header-inner shell">
+    <a class="brand" href="#top" aria-label="Tea Research home">
+      <svg viewBox="0 0 38 38" aria-hidden="true">
+        <circle cx="19" cy="19" r="18" fill="none" stroke="currentColor" opacity=".25" />
+        <path d="M11 22c8 0 13-4 16-12 2 10-3 17-11 17-4 0-6-2-5-5Z" fill="currentColor" />
+        <path d="M11.5 24.5 26 12" fill="none" stroke="#f2ede3" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+      <span><b>Tea</b> Research Atlas</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {nav.map(([label, href]) => <a href={href}>{label}</a>)}
+    </nav>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+      <span>Explore</span>
+      <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
+
+    <button class="language-toggle" type="button" aria-label="Switch to Chinese" aria-pressed="false" data-language-toggle data-i18n-dynamic>
+      中文
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-mobile-menu>
+  <div class="mobile-menu__inner">
+    <p class="mobile-menu__label">Research chapters</p>
+    <nav aria-label="Mobile navigation">
+      {nav.map(([label, href], index) => (
+        <a href={href}>
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          {label}
+        </a>
+      ))}
+    </nav>
+    <p class="mobile-menu__note">Evidence first. Recommendation last.</p>
+  </div>
+</div>
+
+<style>
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 40;
+    color: var(--paper-bright);
+    border-bottom: 1px solid transparent;
+    transition: background 220ms ease, border-color 220ms ease, color 220ms ease;
+  }
+
+  .site-header.is-scrolled {
+    border-color: var(--line);
+    background: rgba(242, 237, 227, 0.88);
+    color: var(--ink);
+    backdrop-filter: blur(18px);
+  }
+
+  .progress {
+    position: absolute;
+    inset: auto auto -1px 0;
+    width: 100%;
+    height: 2px;
+    background: var(--vermillion);
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 68px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: inherit;
+  }
+
+  .brand svg { width: 31px; }
+  .brand b { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; }
+  .desktop-nav { display: none; }
+
+  .menu-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0 10px 12px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-size: 0.73rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .menu-icon { display: grid; gap: 5px; width: 22px; }
+  .menu-icon i { display: block; height: 1px; background: currentColor; transition: transform 200ms ease; }
+  .menu-button[aria-expanded="true"] .menu-icon i:first-child { transform: translateY(3px) rotate(45deg); }
+  .menu-button[aria-expanded="true"] .menu-icon i:last-child { transform: translateY(-3px) rotate(-45deg); }
+
+  .language-toggle {
+    display: grid;
+    place-items: center;
+    min-width: 43px;
+    height: 31px;
+    padding: 0 9px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: .66rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    opacity: .82;
+  }
+
+  .language-toggle:hover { opacity: 1; }
+
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 35;
+    display: grid;
+    align-items: end;
+    background: rgba(11, 28, 22, 0.54);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms ease;
+    backdrop-filter: blur(8px);
+  }
+
+  .mobile-menu.is-open { opacity: 1; pointer-events: auto; }
+
+  .mobile-menu__inner {
+    max-height: calc(100dvh - 76px);
+    padding: 32px 24px 28px;
+    border-radius: 28px 28px 0 0;
+    background: var(--paper-bright);
+    transform: translateY(100%);
+    transition: transform 350ms cubic-bezier(.2,.8,.2,1);
+    overflow-y: auto;
+  }
+
+  .mobile-menu.is-open .mobile-menu__inner { transform: translateY(0); }
+  .mobile-menu__label, .mobile-menu__note { color: var(--ink-soft); font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
+  .mobile-menu nav { margin: 24px 0 30px; border-top: 1px solid var(--line); }
+  .mobile-menu nav a { display: flex; align-items: baseline; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line); font-family: var(--serif); font-size: clamp(1.5rem, 7vw, 2.2rem); line-height: 1; }
+  .mobile-menu nav span { color: var(--brass); font-family: var(--mono); font-size: .6rem; }
+
+  @media (min-width: 1060px) {
+    .desktop-nav { display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); }
+    .desktop-nav a { position: relative; padding: 25px 0; color: var(--ink-soft); font-size: 0.72rem; font-weight: 650; }
+    .desktop-nav a::after { position: absolute; inset: auto 0 18px; height: 1px; background: var(--vermillion); content: ""; transform: scaleX(0); transition: transform 180ms ease; }
+    .desktop-nav a:hover::after, .desktop-nav a.is-active::after { transform: scaleX(1); }
+    .menu-button { display: none; }
+    .language-toggle { margin-left: 2px; }
+  }
+
+  @media (max-width: 420px) {
+    .brand { gap: 7px; font-size: .69rem; }
+    .brand svg { width: 28px; }
+    .menu-button { padding-left: 2px; font-size: .65rem; }
+    .language-toggle { min-width: 38px; padding-inline: 7px; }
+  }
+</style>
+
+<script>
+  const header = document.querySelector<HTMLElement>("[data-header]");
+  const progress = document.querySelector<HTMLElement>("[data-progress]");
+  const button = document.querySelector<HTMLButtonElement>("[data-menu-button]");
+  const menu = document.querySelector<HTMLElement>("[data-mobile-menu]");
+
+  const updateScroll = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const current = max > 0 ? window.scrollY / max : 0;
+    header?.classList.toggle("is-scrolled", window.scrollY > 24);
+    if (progress) progress.style.transform = `scaleX(${current})`;
+  };
+
+  const closeMenu = () => {
+    button?.setAttribute("aria-expanded", "false");
+    menu?.setAttribute("aria-hidden", "true");
+    menu?.classList.remove("is-open");
+    document.body.style.overflow = "";
+  };
+
+  button?.addEventListener("click", () => {
+    const next = button.getAttribute("aria-expanded") !== "true";
+    button.setAttribute("aria-expanded", String(next));
+    menu?.setAttribute("aria-hidden", String(!next));
+    menu?.classList.toggle("is-open", next);
+    document.body.style.overflow = next ? "hidden" : "";
+  });
+
+  menu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+  menu?.addEventListener("click", (event) => { if (event.target === menu) closeMenu(); });
+  window.addEventListener("scroll", updateScroll, { passive: true });
+  updateScroll();
+</script>
