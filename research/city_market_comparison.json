@@ -445,7 +445,7 @@
       "name": "New York City",
       "research_date": "2026-08-28",
       "report_path": "research/nyc_market_research.md",
-      "source_count": 79,
+      "source_count": 80,
       "decision": {
         "paid_validation": true,
         "lease_now": false,
@@ -502,7 +502,7 @@
           "min_usd": 650,
           "max_usd": 650,
           "unit": "minimum per booking",
-          "note": "Mansa lists $60 per person with a $650 minimum.",
+          "note": "Mansa displays a $60 class product and a $650 event minimum; the public page does not state a simple per-person event rate.",
           "source_urls": ["https://mansatea.com/products/tea-class"]
         },
         {

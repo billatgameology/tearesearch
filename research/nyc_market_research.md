@@ -196,20 +196,20 @@ Scores are 0-100 indices. Formula, inputs, geography and limitations appear in A
 
 | Market | Community storefront | Mainstream flagship | Pop-up / B2B | Confidence |
 |---|---:|---:|---:|---|
-| Koreatown / Herald | **57.3** | **71.0** | **75.1** | Medium; ZIP is broader than Koreatown and rent varies sharply by frontage/use |
-| Midtown East | 56.1 | **69.2** | **70.6** | Medium; workplace jobs are strong but hybrid occupancy is unknown |
-| Manhattan Chinatown / LES | **55.8** | 58.0 | **61.9** | Medium; two-ZIP index and strong rent block effects |
-| Flushing North / core | **56.0** | 48.5 | 52.6 | Medium; strongest direct benchmark, but Main Street asks vary widely |
-| Flushing South / Murray Hill | **54.7** | 39.7 | 44.5 | Medium-low; strong culture, low purchasing index and imprecise rent denominator |
-| Long Island City | 54.3 | **60.6** | **63.6** | Medium; large heterogeneous employment ZIP |
-| Sunset Park | **53.5** | 46.1 | 49.8 | Medium-low; selected ask is office/retail and not food-ready proof |
-| Downtown Brooklyn | 50.0 | 57.7 | **58.7** | Medium; strong access/purchasing, weak direct cultural signal |
-| East Village / NoHo | 44.2 | 56.1 | **59.1** | Medium; very high direct competition and one expensive live ask |
-| Jackson Heights / Elmhurst | **40.9** | 40.3 | **43.1** | Low-medium; two diverse ZIPs and asking rents range widely |
-| Williamsburg | 39.1 | 45.3 | **48.9** | Medium; direct incumbent and premium but expensive retail |
-| Greenpoint | 38.4 | 42.9 | **43.7** | Medium; rich adjacent tea ecosystem and weaker cultural fit |
+| Koreatown / Herald | 57.3 | 71.0 | 75.1 | Medium; ZIP is broader than Koreatown and rent varies sharply by frontage/use |
+| Midtown East | 56.1 | 69.2 | 70.6 | Medium; workplace jobs are strong but hybrid occupancy is unknown |
+| Manhattan Chinatown / LES | 55.8 | 58.0 | 61.9 | Medium; two-ZIP index and strong rent block effects |
+| Flushing North / core | 56.0 | 48.5 | 52.6 | Medium; strongest direct benchmark, but Main Street asks vary widely |
+| Flushing South / Murray Hill | 54.7 | 39.7 | 44.5 | Medium-low; strong culture, low purchasing index and imprecise rent denominator |
+| Long Island City | 54.3 | 60.6 | 63.6 | Medium; large heterogeneous employment ZIP |
+| Sunset Park | 53.5 | 46.1 | 49.8 | Medium-low; selected ask is office/retail and not food-ready proof |
+| Downtown Brooklyn | 50.0 | 57.7 | 58.7 | Medium; strong access/purchasing, weak direct cultural signal |
+| East Village / NoHo | 44.2 | 56.1 | 59.1 | Medium; very high direct competition and one expensive live ask |
+| Jackson Heights / Elmhurst | 40.9 | 40.3 | 43.1 | Low-medium; two diverse ZIPs and asking rents range widely |
+| Williamsburg | 39.1 | 45.3 | 48.9 | Medium; direct incumbent and premium but expensive retail |
+| Greenpoint | 38.4 | 42.9 | 43.7 | Medium; rich adjacent tea ecosystem and weaker cultural fit |
 
-Bold indicates the strongest one or two uses within each row, not a recommendation to lease.
+Use the scores to compare candidate locations within this New York study only. They are not a recommendation to lease and are not comparable with scores in the other city reports.
 
 ### 5.3 Decision interpretation
 
